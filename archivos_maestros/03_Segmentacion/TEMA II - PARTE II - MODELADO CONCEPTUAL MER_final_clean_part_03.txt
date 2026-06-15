@@ -1,0 +1,77 @@
+ ver claramente las ventajas de transformar los campos nombre y dirección a
+
+atributos simples, ya que al momento de la creación de las consultas es mas
+
+eficiente realizar las mismas por atributos simples Aquellos cuyo valor no
+
+provienen de ningún otro atributo o relación entre entidades. Ejemplo:
+
+Nacionalidad, Nombre, estatura. Unidad II: Modelo de Datos . Los valores de
+
+estos atributos pueden ser obtenidos a través de cálculos a partir de otros
+
+datos ya existentes en otros atributos (de la misma entidad o de otras
+
+relacionadas). Ejemplo: Edad, total de libros, número de ejemplares Unidad II:
+
+Modelo de Datos . Aquellos atributos con un solo valor. Ejemplo: Cedula, placa,
+
+color de ojos, año de nacimiento Unidad II: Modelo de Datos . Mas de un valor
+
+para un mismo atributo en una misma instancia de entidad. Ejemplo :Teléfono,
+
+titulo. Los atributos multivalorados deben considerarse como otro tipo de
+
+entidad con atributos propios Unidad II: Modelo de Datos . Los atributos
+
+multivalorados suelen ser un problema en el modelo relacional, es por ello que
+
+deben ser considerados como otra entidad dentro del modelo relacional. Lo
+
+explicaré en detalle en la siguiente lámina Tabla: Aspirante Cedula Nombres
+
+Apellidos Título .903.659 Dayana María Cáceres Sánchez Lic. Educación .678.090
+
+Luisa Miranda Jaramillo Hernández Ing. Industrial Mg. Economía Dr. Matemáticas
+
+Cedula Nombres Apellidos Título .903.659 Dayana María Cáceres Sánchez Lic.
+
+Educación .678.090 Luisa Miranda Jaramillo Hernández Ing. Industrial .678.090
+
+Luisa Miranda Jaramillo Hernández .678.090 Luisa Miranda Jaramillo Hernández Mg.
+
+Economía Dr. Matemáticas Unidad II: Modelo de Datos . Analicemos la tabla
+
+Aspirante. Esta tabla contiene atributos. Uno de ellos es Cédula, y esta es la
+
+clave primaria de la tabla, lo que significa que ningún valor ya cargado se
+
+puede repetir. De la Clave Primaria estaremos hablando más adelante. Continuando
+
+con nuestra tabla aspirante, vemos que además de la cédula existen los atributos
+
+nombres, apellidos y títulos. Pero existe un problema cuando un aspirante posee
+
+más de un título, como es el caso del 2do registro. En el modelo relacional,
+
+cada registro debe estar representado por una fila, pero estamos viendo que
+
+existen a su vez tres filas para el segundo registro (una para cada título de
+
+Luisa Jaramillo). En una BD de datos relacional es imposible almacenar la
+
+información de esa manera. Nos queda la opción de la segunda tabla que vemos en
+
+la lámina, en ella existe un registro por cada título, pero se nos presenta otro
+
+inconveniente. El primero que vemos a simple vista es la redundancia generada,
+
+pero este no es el peor problema. El peor problema es que estamos violando la
+
+clave primaria, pues estamos repitiendo valores para este campo. Es de aclarar
+
+que al intentar ingresar un valor duplicado para la clave primaria, el DBMS NO
+
+va a permitir el almacenamiento del registro. Entonces bien, como resolvemos
+
+estos problemas? Tabla: Aspira

@@ -1,0 +1,35 @@
+temas de bases de datos. En este
+
+esquema se describe la información de la organización (objetos y relaciones)
+
+desde un punto de vista no informático. (diagrama de clases) € Esquema Lógico:
+
+visión expresada en términos de un Sistema Gestor de Base de Datos concreto, o
+
+mejor dicho, de un modelo de datos soportado por un SGBD. En este esquema lógico
+
+se representan las entidades u objetos y relaciones de acuerdo a las
+
+características de dicho modelo, sin entrar todavía en detalles de
+
+representación física. E S Q U E M A E X T E R N O E S Q U E M A C O N C E P T U
+
+A L E S Q U E M A L O G I C O E S Q U E M A I N T E R N O € . El usuario
+
+solicita unos datos y crea una consulta a través de la aplicación . El DBMS
+
+verifica y acepta el esquema externo para ese usuario . Transforma la solicitud
+
+al esquema lógico . Verifica y acepta el esquema lógico . Transforma la
+
+solicitud al esquema físico o interno. . Selecciona la o las tablas implicadas
+
+en la consulta y ejecuta la consulta. . Transforma del esquema interno al
+
+conceptual, y del conceptual al externo Finalmente, el usuario ve los datos
+
+solicitados. . Con esta lámina finalizamos esta entrega, recordando que pueden
+
+dejar sus inquietudes en el foro o enviarlas a mi correo. En la próxima entrega
+
+estaremos hablando acerca de los modelos lógicos de datos.

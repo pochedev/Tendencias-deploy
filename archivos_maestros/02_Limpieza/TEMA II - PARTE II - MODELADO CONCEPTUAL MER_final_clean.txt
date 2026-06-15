@@ -1,0 +1,443 @@
+MODELADO CONCEPTUAL Unidad II: Modelo de Datos . En sesiones anteriores hemos
+
+estado viendo los modelos conceptuales y lógicos que se utilizan para crear una
+
+BD. En esta presentación estaremos abordando el modelo conceptual a través del
+
+Modelo Entidad Relación. Sin embargo también estaremos tocando algunas
+
+terminologías relativas al modelo relacional el cual como ya saben pertenecen a
+
+los modelos lógicos Modelado Conceptual ¿Qué tipo de información necesitamos
+
+guardar en la BD? ¿Qué tipo de información necesitamos obtener de la BD? Unidad
+
+II: Modelo de Datos . Para realizar un modelo conceptual Lo primero que debemos
+
+hacer es indagar que es lo que se quiere almacenar en la BD y qué información se
+
+espera obtener de ella, lo que en programación se conoce como entradas y salidas
+
+una representar herramienta Proporciona información del mundo real a nivel
+
+conceptual. Permite describir las entidades involucradas en la base de datos,
+
+así como las relaciones y restricciones de ellas haciendo uso de un diagrama
+
+para Unidad II: Modelo de Datos . El modelo E-R es la herramienta utilizada para
+
+el modelado conceptual cuando ya hemos decidido trabajar con el modelo
+
+relacional como modelo lógico, y como su nombre lo indica se trata de
+
+identificar las entidades presentes en el sistema a modelar y las relaciones
+
+existentes entre ellas .- Refleja tan solo la existencia de los datos, no lo que
+
+se hace con ellos .- Se incluye todos los datos relevantes del sistema en
+
+estudio .- No está orientado a aplicaciones especificas .- Es independiente del
+
+DBMS .- Esta abierto a la evolución del sistema Unidad II: Modelo de Datos . El
+
+MER que se diseñe como parte de una solución de datos, es independiente del DBMS
+
+a utilizar. En la fase de implementación del modelo es que se trabajará con el
+
+DBMS seleccionado .- Identificar las entidades .- Describir las relaciones entre
+
+las entidades (reglas semánticas) .- Crear el diagrama .- Agregar los atributos
+
+a cada entidad Unidad II: Modelo de Datos . Antes de empezar a diseñar MER
+
+debemos entender los elementos que lo conforman, es por ello que en las próximas
+
+láminas estaremos abordando las conceptualizaciones necesarias. Primero se
+
+explicará lo que son las entidades, luego los atributos, y posteriormente las
+
+relaciones entre entidades. Por último veremos la simbología usada para
+
+construir los MER Persona, lugar, cosa, concepto o suceso real o abstracto de
+
+interés para la empresa u organización Objeto del cual queremos almacenar
+
+información en la base de datos. ENTIDAD TANGIBLES- INTANGIBLES DEBILES- FUERTES
+
+Unidad II: Modelo de Datos . Una entidad es algo que deseamos caracterizar y que
+
+vamos a almacenar en la BD, puede ser un objeto (tangible o intangible), animal
+
+o persona. Las entidades pueden ser tangibles (aquellas que podemos ver o tocar)
+
+y las intangibles (aquellas que a pesar que sabemos que existen no pueden ser
+
+vistas) Indique qué tipo de entidad (tangible-intangible) son las siguientes:
+
+-Silla -Árbol -Coordinación -Venta -Producto -Asignatura -Profesor Unidad II:
+
+Modelo de Datos . Las entidades en rojo son intangibles, pues a pesar que
+
+sabemos que son eventos que ocurren y poseen sus características propias no las
+
+podemos tocar ni ver. No confundamos la “coordinación” con la oficina física,
+
+esta entidad esta referida a la unidad que opera dentro de un organigrama
+
+Entidades Débiles • Son aquellas que su existencia depende de otra entidad
+
+Entidades Fuertes • Su existencia no depende de otra entidad Unidad II: Modelo
+
+de Datos . Existen entidades que para poder existir se debió haber creado otra
+
+primero, la conceptualización es muy parecida o casi igual a la Integridad
+
+Referencial. Estas entidades se conocen como débiles y su opuesta como Fuertes o
+
+entidades Base Indique qué tipo de entidad (Débil - Fuerte) son las siguientes:
+
+- Estudiante - Libro - PrestamoLibro - Productos - Ventas - Clientes Unidad II:
+
+Modelo de Datos . Las entidades PréstamoLibro y Ventas son las entidades débiles
+
+de la lista, pues su existencia dependerá de las entidades libro y estudiante en
+
+el caso de la entidad Prestamolibro, y productos y clientes para el caso de
+
+ventas. - Conjuntos - Extensión - Ejemplares Instancias. Se denominan ejemplares
+
+a los registros que guardan una serie de características similares o que pueden
+
+ser agrupados o clasificados dadas sus características comunes en grupos bien
+
+delimitados. A los ejemplares también se los conoce como registros de una tabla
+
+de una base de datos. Unidad II: Modelo de Datos . Cuando se mencionan las
+
+palabras registros y tablas, estamos usando terminología del modelo relacional,
+
+vuelvo a repetir, no es lo mismo que el MER. El MER es el padre del modelo
+
+relacional a crear. En el modelo ER nos referimos a entidades, y en el
+
+relacional a las tablas que conforman la BD. Sin embargo, ya que estamos
+
+hablando de entidades conviene tocar algunos conceptos como los que vemos en la
+
+lamina. Tabla (Entidad) Doctor Cedula Nombre Apellido Especialidad Consultorio
+
+.098. SANDRA LUNA CARDIOLOGIA TORRE I, PISO , NRO .910.976 GUILLERMO JIMENEZ
+
+TRAUMATOLOGO TORRE , PISO , .789.653 ANGELA PEREZ CIRUJANO NRO TORRE I, PISO ,
+
+NRO Extensión Instancia, ocurrencia, ejemplar de un tipo de entidad Unidad II:
+
+Modelo de Datos . la intención de la entidad sería: INTENCIÓN DE UNA ENTIDAD.
+
+Esquema de la entidad, conjunto de atributos que la conforman. En la entidad
+
+DOCTOR, Cedula, Nombre,Apellido, Especialidad, Consultorio GRADO DE UNA ENTIDAD:
+
+número de atributos que posee la entidad Es importante señalar que el término
+
+ENTIDAD se puede referir a instancias u ocurrencias concretas (cada doctor en
+
+particular) o al tipo de entidad (el conjunto de todos los doctores) Unidad II:
+
+Modelo de Datos . Son las características, rasgos y propiedades de una entidad.
+
+Quienes moldean la entidad son los atributos, es decir, definen a una entidad.
+
+Ejm: Cedula, nombre, apellido, sexo Una instancia de entidad en particular es
+
+descrita por los valores de sus atributos Cedula .098. Nombre SANDRA Apellido
+
+Especialidad Consultorio LUNA CARDIOLOGIA TORRE I, PISO , NRO .910.976 GUILLERMO
+
+JIMENEZ TRAUMATOLOGO TORRE , PISO , NRO .789.653 ANGELA PEREZ CIRUJANO TORRE I,
+
+PISO , NRO Es importante mencionar que no se debe confundir un atributo con
+
+entidad. Para que exista una entidad esta debe caracterizarse por lo menos con
+
+DOS atributos Atributos Simples o compuestos Almacenados o Derivados
+
+Monovalorados o Multivalorados Opcionales Unidad II: Modelo de Datos . Son
+
+también llamados atómicos, ya que su valor no se puede dividir. Ejemplos de este
+
+tipo de atributo: precio, existencia, nota, peso. Unidad II: Modelo de Datos .
+
+En este tipo de atributo, su valor resulta de la concatenación de otros valores.
+
+Dicho de otro modo, su valor puede dividirse en otros sub valores. Para
+
+conveniente una serie de atributos simples las consultas dentro de la BD, es a
+
+llevar compuesto atributo facilitar un Unidad II: Modelo de Datos . Cedula
+
+.903.659 .678.090 Nombre Dirección Dayana Maria Caceres Sanchez Calle , casa ,
+
+Urb. Las Garzas- Puerto Ordaz Luisa Miranda Jaramillo Hernandez Calle Las
+
+Bonitas , casa , Urb. Cloudy Park, San Felix Calle Casa Urbanización Zona Primer
+
+nombre Segundo nombre Primer Apellido Segundo Apellido Unidad II: Modelo de
+
+Datos . Para crear consultas mas eficientes dentro de la BD, es recomendable
+
+transformar los atributos compuestos a atributos simples. En este ejemplo se
+
+puede ver claramente las ventajas de transformar los campos nombre y dirección a
+
+atributos simples, ya que al momento de la creación de las consultas es mas
+
+eficiente realizar las mismas por atributos simples Aquellos cuyo valor no
+
+provienen de ningún otro atributo o relación entre entidades. Ejemplo:
+
+Nacionalidad, Nombre, estatura. Unidad II: Modelo de Datos . Los valores de
+
+estos atributos pueden ser obtenidos a través de cálculos a partir de otros
+
+datos ya existentes en otros atributos (de la misma entidad o de otras
+
+relacionadas). Ejemplo: Edad, total de libros, número de ejemplares Unidad II:
+
+Modelo de Datos . Aquellos atributos con un solo valor. Ejemplo: Cedula, placa,
+
+color de ojos, año de nacimiento Unidad II: Modelo de Datos . Mas de un valor
+
+para un mismo atributo en una misma instancia de entidad. Ejemplo :Teléfono,
+
+titulo. Los atributos multivalorados deben considerarse como otro tipo de
+
+entidad con atributos propios Unidad II: Modelo de Datos . Los atributos
+
+multivalorados suelen ser un problema en el modelo relacional, es por ello que
+
+deben ser considerados como otra entidad dentro del modelo relacional. Lo
+
+explicaré en detalle en la siguiente lámina Tabla: Aspirante Cedula Nombres
+
+Apellidos Título .903.659 Dayana María Cáceres Sánchez Lic. Educación .678.090
+
+Luisa Miranda Jaramillo Hernández Ing. Industrial Mg. Economía Dr. Matemáticas
+
+Cedula Nombres Apellidos Título .903.659 Dayana María Cáceres Sánchez Lic.
+
+Educación .678.090 Luisa Miranda Jaramillo Hernández Ing. Industrial .678.090
+
+Luisa Miranda Jaramillo Hernández .678.090 Luisa Miranda Jaramillo Hernández Mg.
+
+Economía Dr. Matemáticas Unidad II: Modelo de Datos . Analicemos la tabla
+
+Aspirante. Esta tabla contiene atributos. Uno de ellos es Cédula, y esta es la
+
+clave primaria de la tabla, lo que significa que ningún valor ya cargado se
+
+puede repetir. De la Clave Primaria estaremos hablando más adelante. Continuando
+
+con nuestra tabla aspirante, vemos que además de la cédula existen los atributos
+
+nombres, apellidos y títulos. Pero existe un problema cuando un aspirante posee
+
+más de un título, como es el caso del 2do registro. En el modelo relacional,
+
+cada registro debe estar representado por una fila, pero estamos viendo que
+
+existen a su vez tres filas para el segundo registro (una para cada título de
+
+Luisa Jaramillo). En una BD de datos relacional es imposible almacenar la
+
+información de esa manera. Nos queda la opción de la segunda tabla que vemos en
+
+la lámina, en ella existe un registro por cada título, pero se nos presenta otro
+
+inconveniente. El primero que vemos a simple vista es la redundancia generada,
+
+pero este no es el peor problema. El peor problema es que estamos violando la
+
+clave primaria, pues estamos repitiendo valores para este campo. Es de aclarar
+
+que al intentar ingresar un valor duplicado para la clave primaria, el DBMS NO
+
+va a permitir el almacenamiento del registro. Entonces bien, como resolvemos
+
+estos problemas? Tabla: Aspirante Cedula Nombres Apellidos .903.659 Dayana María
+
+Cáceres Sánchez .678.090 Luisa Miranda Jaramillo Hernández Tabla: Titulos Codigo
+
+Cedula Título .903.659 Lic. Educación .678.090 Ing. Industrial .678.090 .678.090
+
+Mg. Economía Dr. Matemáticas Unidad II: Modelo de Datos . La solución es crear
+
+otra tabla con el atributo multivalorado y asociarlo al valor de la clave
+
+primaria al cual pertenecen en la tabla original. En esta nueva tabla tendremos
+
+una clave primaria (generalmente autonumérica), la clave primaria de la tabla
+
+original (en este caso cédula) y el atributo que originalmente era el
+
+multivalorado Atributos con valores nulos (Null Value), y significa la ausencia
+
+de valores en el campo Dependen de las reglas del entorno a modelar. Unidad II:
+
+Modelo de Datos . -Conjunto de valores permitidos para el atributo - Cada
+
+atributo simple está asociado a un dominio que especifica sus valores válidos. -
+
+Permite limitar el tamaño de los atributos Unidad II: Modelo de Datos . ATRIBUTO
+
+DOMINIO NOMBRE Cadena de hasta caracteres alfabéticos PRECIO SEXO EDOCIVIL OJOS
+
+Números reales mayores a Valor lógico (, ) Cadena de caracteres (Soltero(a),
+
+Casado(a), Divorciado(a), Viudo(a), Concubinato) Cadena de caracteres (azules,
+
+negros, ambar, marron oscuro, verdes, violeta, marrón claro) Extensión del
+
+dominio Unidad II: Modelo de Datos . Es importante estar claro en lo que es el
+
+dominio de un atributo, el concepto es similar al usado en matemáticas.
+
+Sencillamente son todos los posibles valores que puede asumir ese atributo.
+
+Muchos estudiantes se confunden con este concepto y usan valores del dominio
+
+como atributo. Por ejemplo, para modelar la entidad “persona” usan atributos
+
+como casado, soltero. Esto es claramente incorrecto, casado, soltero es parte
+
+del dominio del atributo Edo_civil. Otro ejemplo de modelado incorrecto es el
+
+siguiente: para modelar la entidad “auto” usan atributos como ford, chevrolet,
+
+fiat….Nuevamente, este análisis es incorrecto. Ford, Chevrolet, Fiat forman
+
+parte del dominio del atributo “Marca” y no son atributos en si Clave Primaria
+
+(Primary Key (PK)): Una clave primaria es aquella que identifica de forma
+
+univoca una instancia de entidad. Debe ser escogida de entre las claves
+
+candidatas Pueden ser simples o compuestas. Clave Primaria Simple: Está formada
+
+por un solo atributo. Ejemplo: Cédula Clave Primaria Compuesta: Formada por
+
+varios atributos que solos se repiten pero combinados identifican de forma
+
+univoca la instancia Unidad II: Modelo de Datos . Una entidad puede tener varios
+
+atributos cuyos valores no se repiten. Estos atributos son llamados “claves
+
+candidatas” . De estas candidatas se debe escoger una ganadora que fungirá como
+
+clave primaria. . Por ejemplo la entidad estudiante podría tener como claves
+
+candidatas el código del carnet y la CI del estudiante, pues sabemos que ninguno
+
+de estos valores se repetirá. De estos dos se escogerá la clave primaria de la
+
+entidad Clave Foránea (Foreing Key(FK)): Atributo presente en una entidad, y que
+
+es clave primaria en otra entidad Unique Key: Resto de las claves candidatas que
+
+no fueron elegidas como primarias Unidad II: Modelo de Datos . El concepto de
+
+clave foránea se comprenderá mejor cuando estemos realizando los modelos. Por
+
+ahora bastará con saber que es un atributo que a su vez es clave primaria en
+
+otra entidad. En el siguiente ejemplo se entiende mejor el concepto Sea la
+
+entidad Propietario con los siguientes atributos: Cedula(PK), Apellido, Nombre,
+
+dirección Y Sea la entidad vehiculo con los siguientes atributos: Placa (PK),
+
+modelo, color, cedpropietario (FK) Nos damos cuenta que el atributo
+
+“CedPropietario” de la entidad “Vehiculo” es una clave foránea, ya que es clave
+
+primaria en la tabla “Propietario” Se define como una “asociación de entidades”.
+
+Ejemplo: Un estudiante CURSA varias materias Unidad II: Modelo de Datos . La
+
+relación entre dos entidades nos indica la conexión semántica que existe entre
+
+ellas. ENTIDAD ATRIBUTO RELACION CONECTORES O LIGAS Unidad II: Modelo de Datos .
+
+Cuando empecemos a realizar los ejercicios de modelado comprenderán mejor las
+
+conceptualizaciones que se presentan en las siguientes láminas, por ahora es
+
+necesario que las vayan conociendo. El grado de las relaciones, número relaciona
+
+tipos de grados. Grado , Grado II y Grado III está asociado al se Existen con
+
+determinada. entidades entidad de una que las Unidad II: Modelo de Datos .
+
+relación GRADO : RELACIÓN UNARIA También son llamadas aquellas relaciones en las
+
+que sólo participan una entidad. Relaciona una entidad consigo misma por lo que
+
+también se les llaman relaciones reflexivas. anillo, y Unidad II: Modelo de
+
+Datos . GRADO II: RELACIÓN BINARIA Las relaciones en las que participan dos
+
+entidades son y de son las más comunes en cualquier modelo ER. binarias grado
+
+dos, o . Unidad II: Modelo de Datos . GRADO III: RELACIÓN TERNARIA Cuando en la
+
+relación participan tres entidades se Este de rán tipo de relación es poco
+
+común, pero se puede presentar. ternarias grado tres. o Unidad II: Modelo de
+
+Datos . Número mínimo y máximo de ocurrencias o de instancias de una entidad que
+
+pueden estar relacionadas con una instancia del otro tipo de entidad (min, máx.)
+
+La cardinalidad vendrá siempre expresada para relaciones entre dos entidades,
+
+dependiendo del numero de ocurrencias de cada una de las entidades pueden
+
+existir relaciones de uno a uno, uno a muchos, muchos a uno y muchos a muchos
+
+Unidad II: Modelo de Datos . Uno a Uno: Una ocurrencia de entidad del tipo A
+
+solo puede relacionada con una ocurrencia de una estar entidad del tipo B y
+
+vicerversa A R B Unidad II: Modelo de Datos . Uno a Muchos: Una ocurrencia de
+
+entidad del tipo A puede estar relacionada con varias ocurrencias de una entidad
+
+del tipo B, y una ocurrencia del tipo B solo puede estar relacionada con una
+
+ocurrencia del tipo A A R M B Unidad II: Modelo de Datos . Muchos a Uno: Una
+
+ocurrencia de entidad del tipo A puede estar relacionada con varias ocurrencias
+
+de una entidad del tipo B, y una ocurrencia del tipo B solo puede estar
+
+relacionada con una ocurrencia del tipo A A R M B Unidad II: Modelo de Datos .
+
+Muchos a Muchos: Una ocurrencia de entidad del tipo A puede estar relacionada
+
+con varias ocurrencias de una entidad del tipo B y viceversa A M R M B Unidad
+
+II: Modelo de Datos . Unidad II: Modelo de Datos . MER Entidad OBJETO EN LA BASE
+
+DE DATOS Tabla Ejemplares-conjunto- extensión Registros en la tabla (tupla)
+
+Atributos -intención Campos, columnas de una tabla Relación Relación entre
+
+tablas Unidad II: Modelo de Datos . Por último les dejo dos tablas donde pueden
+
+analizar las diferencias y similitudes del MER y del Modelo Relacional. Unidad
+
+II: Modelo de Datos . Hasta aquí el material que se estará evaluando en el
+
+primer examen. En las próximas unidades estaremos realizando ejercicios donde se
+
+pondrán en práctica las conceptualizaciones presentadas.

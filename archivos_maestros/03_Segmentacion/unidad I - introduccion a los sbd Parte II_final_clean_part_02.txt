@@ -1,0 +1,77 @@
+es o reglas impuestas al sistema ✓La seguridad de los datos: que
+
+sólo las personas autorizadas puedan acceder a determinados datos y que sólo
+
+puedan efectuar las operaciones para las que han sido autorizados. INTEGRIDAD DE
+
+LOS DATOS El término Integridad de datos está asociado a evitar que datos no
+
+válidos sean añadidos a la base de datos. Es decir, debe haber correctitud y
+
+completitud de los datos Vamos a profundizar un poco en la Integridad de datos.
+
+Existen tres tipos de restricciones cuya finalidad es garantizar la integridad
+
+de datos dentro de la BD. Estas tres restricciones las estaremos analizando en
+
+las próximas láminas. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad de
+
+dominio .a Datos Requeridos: establece que una columna tenga un valor no NULL.
+
+.b Chequeo de Validez: cuando se crea una tabla cada columna tiene un tipo de
+
+datos y el DBMS asegura que solamente los datos del tipo especificado sean
+
+ingresados en la tabla. La primera restricción está asociada al dominio. El
+
+dominio son todos los posibles valores que puede asumir un campo de una tabla de
+
+la BD. Un DBMS nos ayuda a controlar la integridad del dominio a través de la
+
+solicitud de datos considerados requeridos u obligatorios y chequeando la
+
+validez de los valores que se pretendan ingresar a la BD Asumamos que se quiera
+
+ingresar el registro de un estudiante dentro de la base de datos. Un dato
+
+obligatorio sería el numero de la cédula de identidad, por tanto cuando se crea
+
+la tabla la estructura de la tabla que almacenará esa data, le decimos al DBMS
+
+que ese campo (CI) debe ser llenado de forma obligatoria y que solamente debe
+
+ingresarse valores numéricos. Si el usuario que está ingresando los datos omite
+
+este valor o ingresa letras en vez de números, el DBMS enviará un mensaje de
+
+error y no permitirá que el registro sea guardado dentro de la BD a menos que se
+
+corrijan dichos errores TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad de
+
+entidad Establece que la clave primaria de una tabla debe tener un valor único
+
+para cada fila de la tabla La clave primaria es aquel campo dentro de la tabla
+
+que no puede contener valores repetidos (ejm: la cédula de identidad). Cuando
+
+configuramos un campo dentro de la BD como clave primaria, el DBMS no permitirá
+
+ingresar un valor que hayan sido ingresado con anterioridad, enviará un mensaje
+
+de error hasta que dicho error sea corregido. Esto es lo que nos permite
+
+asegurar que dos personas no sean registradas con la misma cédula o dos
+
+vehículos con la misma placa. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad
+
+Referencial Podemos definir integridad referencial al hecho de no hacer
+
+referencia a registros o campos que no existen por que nunca fueron creados o
+
+por que han dejado de existir en el transcurso de la base de datos. La
+
+integridad referencial impide a los usuarios: a.- Agregar o cambiar filas en una
+
+tabla relacionada si no hay ninguna fila asociada en la tabla principal. b.-
+
+Cambiar valores en una ta

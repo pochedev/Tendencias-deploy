@@ -1,0 +1,77 @@
+ en un aeropuerto. La información
+
+relevante es la siguiente: .Cada avión tiene un numero de registro y modelo
+
+especifico. Cada modelo es identificado por un numero de modelo (ej. DC-), con
+
+su capacidad y peso. .Cada avión corresponde a una línea aérea. .Un numero de
+
+mecánicos trabaja en el aeropuerto, para los cuales se almacena la cedula,
+
+dirección, teléfono, y salario. . Cada mecánico es experto en uno o mas modelos,
+
+y su expertis puede ser común a otros mecánicos. . El controlador de trafico
+
+debe pasar un examen medico anual. Se debe almacenar la fecha del ultimo examen
+
+por cada controlador . Existen varios sindicatos para los controladores. Todos
+
+los controladores debe estar adscritos a Un solo sindicato. . El aeropuerto
+
+tiene un numero de pruebas que son usadas periódicamente para asegurar que los
+
+aviones están en condiciones de operar. Cada prueba tiene un numero
+
+identificador designado por la Federación Aeronáutica y un puntaje máximo
+
+posible. . Se pide registrar cada vez que un avión es sometido a una prueba
+
+particular y por un mecánico particular. Se necesita almacenar la fecha, el
+
+numero de horas que el mecánico tuvo que usar para la prueba y el puntaje que
+
+recibió el avión. La federación indica que la prueba debe hacerla un experto del
+
+modelo de avión. . Cuando un avión es sometido a mantenimiento se debe brindar
+
+una breve descripción del mantenimiento realizado al igual que se debe registrar
+
+el mecánico que estuvo a cargo .El estacionamiento se cobra por horas, debe
+
+quedar reflejado el costo de la hora UNEG MODELO AVION PRUEBAS LINEA ENTRADAS
+
+ESTACIONADO MANTENIMIENTO PERSONAL SINDICATO MECANICO CONTROLADOR MODELO ENTIDAD
+
+RELACION EXTENDIDO UNEG MODELO Codigo (PK) Nummodelo Capacidad Peso Año AVION
+
+Codigo (PK) Linea Modelo fechafabricacion ENTRADA Codigo (PK) codavion Hangar
+
+Fentrada Fsalida LINEA Codigo (PK) Nombre Paìs AVION_PRUEBA Codigo (PK) avion
+
+prueba codmecanico fecha Horas puntaje ESTACIONADO MANTENIMIENTO Codigo (PK)
+
+hraentrada hrasalida costoxhora Codigo (PK) Mecanico Descripcion MECANICO Codigo
+
+(PK) Salario Nivel MODELO RELACIONAL PRUEBA Codigo (PK) Descripcion PuntMax
+
+PuntMin MEC_MODELO Codigo (PK) mecanico modelo CONTROLADOR Codigo (PK)
+
+Fexamenmedico codsindicato PERSONAL Codigo (PK) Apellido Nombre Profesion cargo
+
+Tlf email SINDICATO Codigo (PK) Descripcion Presidente UNEG Una empresa se
+
+dedica al transporte de productos de construcción de viviendas. Se desea crear
+
+una base de datos que satisfaga los siguientes requerimientos del negocio: .-
+
+Los productos a transportar deben estar almacenados en la base de datos se
+
+necesita la descripción del producto, así como la unidad de medida (toneladas
+
+métricas, kilos, cuñetes, entre otros) .- Los vehículos de transporte con los
+
+que cuenta la empresa son gandolas y camiones. De las gandolas necesitamos
+
+conocer descripción del motor, marca del motor y de los camiones capacidad y
+
+numero de ejes . Además la empresa cuenta con una flota liviana pa

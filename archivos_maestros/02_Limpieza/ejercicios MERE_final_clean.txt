@@ -1,0 +1,207 @@
+EJERCICIOS MODELO ENTIDAD RELACION EXTENDIDO UNEG Se quiere modelar una base de
+
+datos que almacene los nacimientos ocurridos en una clínica. Para ello considere
+
+la siguiente información: - En un parto se da a luz uno o mas bebes y tienen una
+
+hora inicio y fin, y semanas de embarazo. - Un embarazo múltiple es considerado
+
+un parto, pero cada bebe nace a una hora determinada, tiene un peso, sexo y
+
+talla - Se debe guardar información del estado de salud del bebe - Hay una madre
+
+por nacimiento, un pediatra, un obstetra, y al menos una enfermera. -Un parto
+
+puede ser normal o por cesárea. (de ser cesárea existe un anestesiólogo y - un
+
+instrumentista). - Del instrumentista se desea conocer el nivel, el año en que
+
+se graduó y la institución educativa Si el parto es por cesárea, se debe guardar
+
+la información del quirófano usado (piso, costo por hora). Los obstetras pueden
+
+ser foráneos (se necesita saber la o las clínicas donde atiende), los pediatras,
+
+anestesiólogos e instrumentistas son personal propio de la clínica. Se debe
+
+guardar el consultorio del pediatra . Sin embargo, los anestesiólogos trabajan
+
+por días y horario. Se necesita tener esa información almacenada para poder
+
+planificar la cesárea. Los obstetras, instrumentistas, pediatras y
+
+anestesiólogos tienen una tarifa por parto. En el caso de los obstetras existen
+
+dos tarifas (cesárea y parto natural). Se debe llevar el control d ellos insumos
+
+utilizados en el parto o cesárea - - - - UNEG PERSONAL ENFERMERA OBSTETRA
+
+PEDIATRA ANESTESIOLOGO INSTRUMENTISTA CLINICA PARTO MADRE INSUMOS BEBE CESAREA
+
+QUIROFANO MODELO ENTIDAD RELACION EXTENDIDO UNEG PERSONAL C(PK) Apellidos
+
+Nombres Tlf Direccion profesion MADRE CI(PK) Apellido Nombre peso CLINICA ID
+
+(PK) Nombre Direccion tlf CLINICAOBST ID (PK) Clínica obstetra ENFERMERA CI(PK)
+
+nivel OBSTETRA CI(PK) Costo_cesa Costo_natur ENFERMERA _PARTO IDPK) Enfermera
+
+Parto INSUMO IDPK) Descripcion Unidad existencia INSUMOPARTO ID(PK) Parto Insumo
+
+cantidad PEDIATRA CI(PK) Consultorio Costo PARTO ID(PK) Pediatra Obstetra madre
+
+Fecha hinicio Hfin Semanas tipo HORARIO IDPK) anestesiólogo Dia Horario turno
+
+ANESTESIOLOGO CI(PK) costo BEBE ID(PK) Idparto Apellido Nombre Peso Talla Sexo
+
+Hranacimiento Fecha observacion INSTRUMENTISTA CI(PK) Nivel Costo Año_grad
+
+universidad QUIROFANO ID(PK) Descripcion Piso costoxhra CESAREA ID(PK)
+
+Anestesiólogo Instrument quirofano UNEG Se desea organizar la información acerca
+
+de los aviones estacionados o en mantenimiento en un aeropuerto. La información
+
+relevante es la siguiente: .Cada avión tiene un numero de registro y modelo
+
+especifico. Cada modelo es identificado por un numero de modelo (ej. DC-), con
+
+su capacidad y peso. .Cada avión corresponde a una línea aérea. .Un numero de
+
+mecánicos trabaja en el aeropuerto, para los cuales se almacena la cedula,
+
+dirección, teléfono, y salario. . Cada mecánico es experto en uno o mas modelos,
+
+y su expertis puede ser común a otros mecánicos. . El controlador de trafico
+
+debe pasar un examen medico anual. Se debe almacenar la fecha del ultimo examen
+
+por cada controlador . Existen varios sindicatos para los controladores. Todos
+
+los controladores debe estar adscritos a Un solo sindicato. . El aeropuerto
+
+tiene un numero de pruebas que son usadas periódicamente para asegurar que los
+
+aviones están en condiciones de operar. Cada prueba tiene un numero
+
+identificador designado por la Federación Aeronáutica y un puntaje máximo
+
+posible. . Se pide registrar cada vez que un avión es sometido a una prueba
+
+particular y por un mecánico particular. Se necesita almacenar la fecha, el
+
+numero de horas que el mecánico tuvo que usar para la prueba y el puntaje que
+
+recibió el avión. La federación indica que la prueba debe hacerla un experto del
+
+modelo de avión. . Cuando un avión es sometido a mantenimiento se debe brindar
+
+una breve descripción del mantenimiento realizado al igual que se debe registrar
+
+el mecánico que estuvo a cargo .El estacionamiento se cobra por horas, debe
+
+quedar reflejado el costo de la hora UNEG MODELO AVION PRUEBAS LINEA ENTRADAS
+
+ESTACIONADO MANTENIMIENTO PERSONAL SINDICATO MECANICO CONTROLADOR MODELO ENTIDAD
+
+RELACION EXTENDIDO UNEG MODELO Codigo (PK) Nummodelo Capacidad Peso Año AVION
+
+Codigo (PK) Linea Modelo fechafabricacion ENTRADA Codigo (PK) codavion Hangar
+
+Fentrada Fsalida LINEA Codigo (PK) Nombre Paìs AVION_PRUEBA Codigo (PK) avion
+
+prueba codmecanico fecha Horas puntaje ESTACIONADO MANTENIMIENTO Codigo (PK)
+
+hraentrada hrasalida costoxhora Codigo (PK) Mecanico Descripcion MECANICO Codigo
+
+(PK) Salario Nivel MODELO RELACIONAL PRUEBA Codigo (PK) Descripcion PuntMax
+
+PuntMin MEC_MODELO Codigo (PK) mecanico modelo CONTROLADOR Codigo (PK)
+
+Fexamenmedico codsindicato PERSONAL Codigo (PK) Apellido Nombre Profesion cargo
+
+Tlf email SINDICATO Codigo (PK) Descripcion Presidente UNEG Una empresa se
+
+dedica al transporte de productos de construcción de viviendas. Se desea crear
+
+una base de datos que satisfaga los siguientes requerimientos del negocio: .-
+
+Los productos a transportar deben estar almacenados en la base de datos se
+
+necesita la descripción del producto, así como la unidad de medida (toneladas
+
+métricas, kilos, cuñetes, entre otros) .- Los vehículos de transporte con los
+
+que cuenta la empresa son gandolas y camiones. De las gandolas necesitamos
+
+conocer descripción del motor, marca del motor y de los camiones capacidad y
+
+numero de ejes . Además la empresa cuenta con una flota liviana para uso de la
+
+empresa, y de ella se necesita conocer el modelo del vehículo, así como la marca
+
+y numero de póliza. De todos los vehículos se necesita conocer la marca, año de
+
+compra, año del modelo, placa .- Los choferes son empleados propios de la
+
+empresa. Se debe almacenar los datos de cada chofer incluyendo el tipo de sangre
+
+y persona de contacto en caso de accidente, numero de licencia, grado,
+
+vencimiento, numero de certificado medico y vencimiento del mismo. .- La empresa
+
+cuenta con mecánicos para realizarle el mantenimiento a todos los vehículos que
+
+posee la empresa. Se debe llevar un control del mantenimiento realizado a cada
+
+vehículo (fecha, mecánico encargado, entre otros) .- De los mecánicos
+
+necesitamos guardar la especialidad, grado de instrucción además de sus datos
+
+personales. .- Por otra parte, la empresa envía a cursos de especialización
+
+únicamente a el personal administrativo. Se necesita guardar toda la información
+
+de cada curso al que la empresa a enviado a su personal y el listado del
+
+personal que asistió a cada uno de ellos. .- De cada viaje se necesita tener la
+
+siguiente información: empresa solicitante, el vehículo usado, dirección de
+
+destino, horas de viaje, chofer, producto y su cantidad y el personal
+
+administrativo que gestiono el viaje. .- Las empresas solicitantes son los
+
+clientes de nuestra empresa, se debe guardar la información para las gestiones
+
+de cobro. .- Se necesita llevar un registro de las salidas de la flota liviana
+
+(fecha de salida, entrada, hora de salida y entrada, motivo, novedad y
+
+empleado).Solo el personal administrativo puede hacer uso de la flota liviana
+
+UNEG MARCA VEHICULOS REGISTRO EMPLEADOS GANDOLAS LIVIANA CAMIONES MECANICO
+
+ADMINISTRATIVO CHOFER CURSO PRODUCTO CLIENTE VIAJES UNEG MODELO ENTIDAD RELACION
+
+EXTENDIDO VEHICULO Placa (PK) Marca Añocompra Añomodelo Serialmotor serilcarroc
+
+CAMION placa (PK) Capacidad ejes tipo MARCA ID (PK) descripcion GANDOLA Placa
+
+(PK) Motor peso PRODUCTOS ID(PK) Descripcion Udad existemcia LIVIANO Placa (PK)
+
+Modelo Color poliza VIAJESPROD IDPK) Idviaje Idprod cantidad REGISTROFL MTTOVEHI
+
+MECANICO EMPLEADO CI (PK) Especialidad grdinstruccio CHOFER CI (PK) Tsangre
+
+Contacto Tlfcontacto Licencia Grado Venlic Certmed vencert CI (PK) Apellido
+
+Nombre Tlf Direccion Fingreso tipopersonal CURSOS ID(PK) Descripcion ADMINIST CI
+
+(PK) cargo CURSADMINI ID(PK) CI Curso fechaInicio Horas Fechafin modalidad
+
+IDCPK) Placa Mecanico Fecha des VIAJES ID(PK) Vehiculo Chofer Administrat
+
+Cliente Direccion costo ID (PK) Placa Empleado Fsalida Fentrada Hrasalida
+
+Hraentrada Motivo novedad CLIENTE ID(PK) RIF Nombre Direccion tlf UNEG

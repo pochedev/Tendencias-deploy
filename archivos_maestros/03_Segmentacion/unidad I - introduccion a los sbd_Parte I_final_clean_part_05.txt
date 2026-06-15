@@ -1,0 +1,81 @@
+ra mantener una copia de seguridad que
+
+hacerlo con un conjunto de archivos almacenados de forma no estructurada. -
+
+Ayuda al planeta: son amigables con el planeta, pues su existencia ayudan a
+
+disminuir el consumo de papel. COMPLEJIDAD COSTO DE LA INVERSION VULNERABILIDAD
+
+A FALLOS No todo son ventajas. Existen ciertas desventajas como: - Complejidad:
+
+La creación de BD supone el uso de programas muy complejos con una gran
+
+funcionalidad. Se necesita de personal especializado que las organizaciones
+
+deben contratar o subcontratar -Costo de la inversión: para algunas
+
+organizaciones el uso de una BD puede implicar costos elevados, en algunas
+
+ocasiones estos costos estarán asociados a inversión de hardware y en otros
+
+pagos de licencias de software. Hay que recalcar que algunos software
+
+especializados en la creación y gestión de BD, sus licencias debe pagarse en
+
+dólares y de forma anual. A estos costos hay que sumarle el personal capacitado.
+
+- Vulnerabilidad a fallos: Como todo en el mundo informático, las BD no están
+
+exentas de presentar fallos. Las Bd tienen un punto débil sobre todo en
+
+Venezuela, y es que su disponibilidad depende del suministro de energía
+
+eléctrica. Esto podría poner en jaque a organizaciones que tengan la mayoría de
+
+sus procesos o por lo menos los medulares, sujetos al uso de BD. Una universidad
+
+que lleve a cabo su proceso de inscripción de forma automatizada se verá
+
+paralizada en este proceso medular tan importante, o si existe un protocolo de
+
+sistema manual, el proceso se retardaría significativamente. ARCHIVO PARA
+
+MATRICULARSE EN “VALLE REAL” CI@NOMBRE@TLF@DIRECCION 25678987@LUISA
+
+VERA@0412-0009@0414-0959220SAN FELIX 19865324@ASBEL
+
+PINTOS@0414-9899@0000-00000@PUERTO ORDAZ 28908777@ENRIQUE
+
+FLORES@0416-9989@0286-9529039@PTO ORDAZ APLICACIÓN DE LA BIBLIOTECA DE VALLE
+
+REAL, PARA MANEJO DE SUS USUARIOS CI@NOMBRE@APELLIDO@FNACIMIENTO@TLF@DIRECCION
+
+25678987@LUISA@VERA@//1990@0412-0009@SAN FELIX
+
+19865324@ASBEL@PINTOS@//1992@0414-9890@PUERTO ORDAZ
+
+28908777@ENRIKE@FLORES@//1991@0416-9989@PUERTO ORDAZ Antes del uso masivo de
+
+software propios para la creación y manejo de BD, las bases de datos se creaban
+
+apoyadas en el uso de archivos planos (txt). Lo que vemos en esta lámina y en la
+
+siguiente es un ejemplo de un sistema de información de una universidad basado
+
+en archivos planos. En esta diapositiva se presentan archivos. En el primero
+
+descansan los datos de los estudiantes de nuevo ingreso (archivo de
+
+matriculación), y en el segundo se depositan los datos de los estudiantes para
+
+la parte del sistema que trabaja en la biblioteca. Nótese que a los usuarios del
+
+sistema de la biblioteca le interesan otros datos que no les interesa a los
+
+usuarios del sistema de matriculación. Podemos ver que no existe homogeneidad en
+
+la dirección de los estudiantes, aún cuando corresponda a la misma zona (elipse
+
+amarilla). Por si fuera poco el estudiante debe registrar dos veces su data
+
+conduciendo a errores de inconsistenc

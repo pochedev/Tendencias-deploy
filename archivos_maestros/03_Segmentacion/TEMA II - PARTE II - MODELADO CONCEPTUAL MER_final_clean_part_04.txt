@@ -1,0 +1,77 @@
+, en ella existe un registro por cada título, pero se nos presenta otro
+
+inconveniente. El primero que vemos a simple vista es la redundancia generada,
+
+pero este no es el peor problema. El peor problema es que estamos violando la
+
+clave primaria, pues estamos repitiendo valores para este campo. Es de aclarar
+
+que al intentar ingresar un valor duplicado para la clave primaria, el DBMS NO
+
+va a permitir el almacenamiento del registro. Entonces bien, como resolvemos
+
+estos problemas? Tabla: Aspirante Cedula Nombres Apellidos .903.659 Dayana María
+
+Cáceres Sánchez .678.090 Luisa Miranda Jaramillo Hernández Tabla: Titulos Codigo
+
+Cedula Título .903.659 Lic. Educación .678.090 Ing. Industrial .678.090 .678.090
+
+Mg. Economía Dr. Matemáticas Unidad II: Modelo de Datos . La solución es crear
+
+otra tabla con el atributo multivalorado y asociarlo al valor de la clave
+
+primaria al cual pertenecen en la tabla original. En esta nueva tabla tendremos
+
+una clave primaria (generalmente autonumérica), la clave primaria de la tabla
+
+original (en este caso cédula) y el atributo que originalmente era el
+
+multivalorado Atributos con valores nulos (Null Value), y significa la ausencia
+
+de valores en el campo Dependen de las reglas del entorno a modelar. Unidad II:
+
+Modelo de Datos . -Conjunto de valores permitidos para el atributo - Cada
+
+atributo simple está asociado a un dominio que especifica sus valores válidos. -
+
+Permite limitar el tamaño de los atributos Unidad II: Modelo de Datos . ATRIBUTO
+
+DOMINIO NOMBRE Cadena de hasta caracteres alfabéticos PRECIO SEXO EDOCIVIL OJOS
+
+Números reales mayores a Valor lógico (, ) Cadena de caracteres (Soltero(a),
+
+Casado(a), Divorciado(a), Viudo(a), Concubinato) Cadena de caracteres (azules,
+
+negros, ambar, marron oscuro, verdes, violeta, marrón claro) Extensión del
+
+dominio Unidad II: Modelo de Datos . Es importante estar claro en lo que es el
+
+dominio de un atributo, el concepto es similar al usado en matemáticas.
+
+Sencillamente son todos los posibles valores que puede asumir ese atributo.
+
+Muchos estudiantes se confunden con este concepto y usan valores del dominio
+
+como atributo. Por ejemplo, para modelar la entidad “persona” usan atributos
+
+como casado, soltero. Esto es claramente incorrecto, casado, soltero es parte
+
+del dominio del atributo Edo_civil. Otro ejemplo de modelado incorrecto es el
+
+siguiente: para modelar la entidad “auto” usan atributos como ford, chevrolet,
+
+fiat….Nuevamente, este análisis es incorrecto. Ford, Chevrolet, Fiat forman
+
+parte del dominio del atributo “Marca” y no son atributos en si Clave Primaria
+
+(Primary Key (PK)): Una clave primaria es aquella que identifica de forma
+
+univoca una instancia de entidad. Debe ser escogida de entre las claves
+
+candidatas Pueden ser simples o compuestas. Clave Primaria Simple: Está formada
+
+por un solo atributo. Ejemplo: Cédula Clave Primaria Compuesta: Formada por
+
+varios atributos que solos se repiten pero combinados identifican de forma
+
+univoca la instanci

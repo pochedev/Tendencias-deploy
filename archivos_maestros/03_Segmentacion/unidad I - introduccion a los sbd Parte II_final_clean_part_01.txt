@@ -1,0 +1,79 @@
+tos
+
+(LDD o DDL) : Se utiliza para especificar el esquema de la BD, las vistas de los
+
+usuarios y las estructuras de almacenamiento. Es el que define el esquema
+
+conceptual y el esquema interno. Lo utilizan los diseñadores y los
+
+administradores de la BD. En pocas palabas, los comandos o sentencias
+
+pertenecientes al DDL permiten crear y modificar la estructura de la BD.
+
+Ejemplos de estos comandos son : CREATE: Utilizado para crear nuevas tablas,
+
+campos e índices. ALTER: Utilizado para modificar las tablas agregando campos o
+
+cambiando la definición de los campos. DROP: Empleado para eliminar tablas e
+
+índices. TRUNCATE: Empleado para eliminar todos los registros de una tabla.
+
+Lenguaje de manipulación de datos (LDM o DML) : Instrucciones para leer y
+
+actualizar los datos de la BD. Es el utilizado por usuarios para inserciones,
+
+eliminaciones y modificaciones realizar los consultas, Los comandos
+
+pertenecientes al DML permiten realizar diferentes operaciones para consultar o
+
+manipular datos. A este tipo de operaciones también se le conoce como
+
+operaciones CRUD (Create, Read, Update y Delete). Para ello el DML dispone
+
+cuatro instrucciones o comandos para realizar dichas operaciones: INSERT:
+
+inserta filas en una tabla. (Create) SELECT: Muestra información sobre los datos
+
+almacenados. (Read) UPDATE: Actualiza información de los registros de una tabla.
+
+(Update) DELETE: Borra o elimina la (s) fila(s) de una tabla. (Delete) Lenguaje
+
+de Control de datos (LCD o DCL): Instrucciones para ayudar a controlar el acceso
+
+a los datos contenidos en la base de datos (permisología a la BD) Hasta aquí
+
+hemos visto las sentencias usadas para crear y manipular datos pero también es
+
+necesario su control y administración. De esto se encarga el lenguaje DLC (Data
+
+Control Languaje) mediante el conjunto de comandos que permiten a un
+
+administrador del sistema de bases de datos controlar el acceso a usuarios
+
+mediante la asignación de permisos o roles para realizar determinadas tareas.
+
+Los comandos para controlar los permisos son los siguientes: GRANT, permite
+
+otorgar permisos. REVOKE, elimina los permisos que previamente se han concedido.
+
+UN DBMS POSEE HERRAMIENTAS QUE PERMITEN ASEGURAR: ✓La independencia de datos: a
+
+varios niveles, permitiendo la modificación de las definiciones de datos sin
+
+afectar a las aplicaciones o esquemas que no utilizan esos datos. ✓La integridad
+
+de los datos: que los datos sean correctos en todo momento, de acuerdo con las
+
+especificaciones o reglas impuestas al sistema ✓La seguridad de los datos: que
+
+sólo las personas autorizadas puedan acceder a determinados datos y que sólo
+
+puedan efectuar las operaciones para las que han sido autorizados. INTEGRIDAD DE
+
+LOS DATOS El término Integridad de datos está asociado a evitar que datos no
+
+válidos sean añadidos a la base de datos. Es decir, debe haber correctitud y
+
+completitud de los datos Vamos a profundizar un poco en la Integridad de datos.
+
+Existen tres tipos de restricciones c

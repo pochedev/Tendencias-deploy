@@ -1,0 +1,77 @@
+Normalizacion Una serie de reglas que sirven para ayudar a los diseñadores de
+
+bases de datos a desarrollar un esquema que minimice los problemas de lógica. La
+
+normalización es el proceso mediante el cual se transforman datos complejos a un
+
+conjunto de estructuras de datos más pequeñas, que además de ser más simples y
+
+más estables, son más fáciles de mantener Permitir la recuperación sencilla de
+
+los datos en La normalización se lleva a cabo por cuatro razones: ✓ Estructurar
+
+los datos de forma que se puedan representar las relaciones pertinentes entre
+
+los mismos. ✓ respuesta a las solicitudes de consultas y reportes. ✓
+
+insertándolos y borrándolos. ✓ datos cuando surjan nuevas aplicaciones. Reducir
+
+la necesidad de reestructurar o reorganizar los Simplificar el mantenimiento de
+
+los datos actualizándolos, La teoría de normalización tiene como fundamento el
+
+concepto de formas normales; se dice que una relación está en una determinada
+
+forma normal si satisface un conjunto de restricciones. Formas normales. Son las
+
+técnicas para prevenir las anomalías en las tablas. Dependiendo de su
+
+estructura, una tabla puede estar en primera forma normal, segunda forma normal
+
+o en cualquier otra. Una tabla de base de datos relacional que se adhiere a la
+
+1FN es una que satisface cierto conjunto mínimo de criterios. La regla de la
+
+Primera Forma Normal establece que las columnas repetidas deben eliminarse y
+
+colocarse en tablas separadas. . Verificar que los valores de los atributos sean
+
+atómicos (Un atributo es atómico si los elementos del dominio son indivisibles)
+
+. Eliminar los grupos repetitivos de la tablas individuales. . Crear una tabla
+
+separada por cada grupo de datos . relacionados. Identificar cada grupo de datos
+
+relacionados con una clave primaria. ARTISTA NACIONALIDAD NOMBRECD
+
+AÑOLANZAMIENTO ROCIO DURCAL ESPAÑOLA CARICIAS SHAKIRA COLOMBIANA PLACIDO
+
+DOMINGO, LUCIANO PAVAROTTI, JOSE CARRERAS EPAÑOLA ITALIANA ESPAÑOLA DONDE ESTAN
+
+LOS LADRONES TOGHETER 1979 1996 2003 COD ARTISTA NACIONALIDAD NOMBRECD
+
+AÑOLANZAMIENTO ROCIO DURCAL ESPAÑOLA CARICIAS SHAKIRA COLOMBIANA DONDE ESTAN LOS
+
+LADRONES EPAÑOLA TOGHETER 1979 1996 2003 ITALIANA TOGHETER 2003 ESPAÑOLA
+
+TOGHETER 2003 PLACIDO DOMINGO LUCIANO PAVAROTTI JOSE CARRERAS ARTISTA
+
+NACIONALIDAD NOMBRECD1 NOMBRECD2 NOMBRECD3 NOMBRECD4 ROCIO DURCAL ESPAÑOLA
+
+CARICIAS SIEMPRE PARA TODA LA VIDA CONFIDENCIAS SHAKIRA COLOMBIANA DONDE ESTAN
+
+LOS LADRONES PIES DESCALZOS SALE EL SOL EL DORADO VOZ VEIS VENEZOLANA COMO SE
+
+LLEGA A BELEN VIRAO VAS UNA NOCHE COMUN Y SIN CORRIENTE ARTISTA NACIONALIDAD
+
+NOMBRECD ROCIO DURCAL ESPAÑOLA SHAKIRA COLOMBIANA VOZ VEIS VENEZOLANA CARICIAS
+
+SIEMPRE PARA TODA LA VIDA CONFIDENCIAS DONDE ESTAN LOS LADRONES PIES DESCALZOS
+
+SALE EL SOL EL DORADO COMO SE LLEGA A BELEN VIRAO VAS UNA NOCHE COMUN Y SIN
+
+CORRIENTE TABLA ARTISTA CODIGO ARTISTA NACIONALIDAD ROCIO DURCAL ESPAÑOLA
+
+SHAKIRA COLOMBIANA VOZ VEIS VENEZOLANA TABLA DISCOGRAFIA COD ARTIST A NOMBRECD
+
+CARICIAS SIEMPRE PARA TO

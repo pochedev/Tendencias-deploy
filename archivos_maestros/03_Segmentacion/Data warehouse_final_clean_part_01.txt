@@ -1,0 +1,77 @@
+la
+
+información? (Modelado Multidimensional) En lugar de pensar en muchas tablas
+
+conectadas por llaves foráneas para evitar redundancia, en DWH se usa el Modelo
+
+en Estrella. Componentes del Modelo: • • Tablas de Hechos (Fact Tables): Es la
+
+tabla central. Contiene los eventos cuantitativos (lo que se puede medir).
+
+Ejemplo: precio_vendido, cantidad_vendida. Tablas de Dimensiones: Son las tablas
+
+que rodean a la de hechos. Responden al "quién, dónde, cuándo y qué". Ejemplo:
+
+Dim_Producto, Dim_Tiempo, Dim_Cliente, Dim_Sucursal. DimSucursal (Dónde)
+
+DimCliente (Quíén) Ventas DimProducto (Qué) DimTiempo (Cuando) Ejemplo: Si se
+
+desea saber "Cuántos juguetes Mattel se vendieron en Navidad en la sucursal
+
+Norte", la venta es el hecho, y el juguete Mattel (qué), la fecha (cuando) y la
+
+sucursal (dónde)son las dimensiones. . Data Warehouse vs. Data Mining Es común
+
+confundirlos, pero son dos términos diferentes • Data Warehouse: Es el
+
+contenedor. Es donde se guarda la información de forma ordenada. • Data Mining
+
+(Minería de Datos): Es el proceso de búsqueda. Es entrar a ese almacén con
+
+algoritmos matemáticos para encontrar patrones que no son obvios a simple vista
+
+(ej. descubrir que la gente que compra pañales los viernes también suele comprar
+
+cerveza). El DWH proporciona los datos limpios; el Data Mining extrae el
+
+conocimiento "oculto". Pág. Ejemplo de un Dashboard en Power BI . ¿Para qué
+
+sirve todo esto? (Business Intelligence) Un Data Warehouse no es para que el
+
+usuario final escriba INSERT. Es para que herramientas de visualización (como
+
+Power BI o Tableau) se conecten y generen gráficos que ayuden a responder: • • •
+
+¿Cuál es el producto más vendido en los últimos años? ¿En qué mes perdemos más
+
+dinero? ¿Qué clientes dejaron de comprarnos este semestre? . Ventajas y
+
+Desventajas del Data Warehouse Algunas ventajas y desventajas se presentan en el
+
+siguiente cuadro Ventajas Desventajas Facilita el acceso y por ende análisis de
+
+grandes volúmenes de datos Costo elevado: Implementar un DWH es caro (software y
+
+hardware). Mejor la toma de decisiones basadas en datos históricos. Complejidad:
+
+Requiere infraestructura y personal muy especializado. Optimiza mediante
+
+estructuras organizadas consultas complejas Rigidez: Si el negocio cambia mucho,
+
+el modelo debe rediseñarse . El Analista de Datos y su papel dentro del Data
+
+Warehouse Es el profesional encargado de recopilar, limpiar e interpretar
+
+conjuntos de datos para responder preguntas o resolver problemas de negocio. Su
+
+objetivo principal es convertir datos crudos en información accionable (consejos
+
+reales para los jefes). Pág. El Analista es el "usuario VIP" del Data Warehouse.
+
+Su rol aquí es de consumo y validación: • Consulta y Extracción: Utiliza SQL
+
+avanzado para extraer datos de los Data Marts o del DWH central. • Aseguramiento
+
+de Calidad: Es el primero en notar si algo anda mal. Si el DWH dice que ayer se
+
+vendieron cafés en un Starbucks de Nueva York, el analista reporta el er

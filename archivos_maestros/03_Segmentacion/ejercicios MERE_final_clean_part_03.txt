@@ -1,0 +1,17 @@
+escripcion Udad existemcia LIVIANO Placa (PK)
+
+Modelo Color poliza VIAJESPROD IDPK) Idviaje Idprod cantidad REGISTROFL MTTOVEHI
+
+MECANICO EMPLEADO CI (PK) Especialidad grdinstruccio CHOFER CI (PK) Tsangre
+
+Contacto Tlfcontacto Licencia Grado Venlic Certmed vencert CI (PK) Apellido
+
+Nombre Tlf Direccion Fingreso tipopersonal CURSOS ID(PK) Descripcion ADMINIST CI
+
+(PK) cargo CURSADMINI ID(PK) CI Curso fechaInicio Horas Fechafin modalidad
+
+IDCPK) Placa Mecanico Fecha des VIAJES ID(PK) Vehiculo Chofer Administrat
+
+Cliente Direccion costo ID (PK) Placa Empleado Fsalida Fentrada Hrasalida
+
+Hraentrada Motivo novedad CLIENTE ID(PK) RIF Nombre Direccion tlf UNEG

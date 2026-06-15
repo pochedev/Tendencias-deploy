@@ -1,0 +1,77 @@
+ándares necesarios, tanto los establecidos a
+
+nivel de la empresa como los nacionales e internacionales. Estos estándares
+
+pueden establecerse sobre el formato de los datos para facilitar su intercambio;
+
+pueden ser estándares de documentación, procedimientos de actualización y
+
+también reglas de acceso -Mejora en la integridad de datos: Normalmente, la
+
+integridad se expresa mediante restricciones o reglas que no se pueden violar.
+
+Estas restricciones se pueden aplicar tanto a los datos, como a sus relaciones,
+
+y es el software que gestiona la BD quien se encarga de mantenerlas. -Mejora en
+
+la Seguridad: La seguridad de la base de datos consiste en la protección de la
+
+base de datos frente a usuarios no autorizados. Las BD presentan una gran
+
+ventaja en cuanto a seguridad se refiere, pues permiten la implantación de
+
+políticas destinadas a la protección de la data. Los programas para la creación
+
+y gestión de BD permiten mantener niveles de seguridad para el resguardo de la
+
+data CONTROL SOBRE LA REDUNDANCIA CONSISTENCIA DE DATOS COMPARTICION DE DATOS
+
+FACILIDAD DE RESPALDO AYUDA AL PLANETA -Control sobre la redundancia y
+
+Consistencia de Datos: En una base de datos no se puede eliminar la redundancia
+
+completamente, ya que en ocasiones es necesaria para modelar las relaciones
+
+entre los datos, o bien es necesaria para mejorar las prestaciones. Lo que se
+
+busca es tener un control sobre esta redundancia, para que no llegue a ser una
+
+redundancia innecesaria. Eliminando o controlando las redundancias de datos se
+
+reduce en gran medida el riesgo de que haya inconsistencias. Si un dato está
+
+almacenado una sola vez, cualquier actualización se debe realizar sólo una vez,
+
+y está disponible para todos los usuarios inmediatamente. Si un dato está
+
+duplicado y el sistema conoce esta redundancia, el propio sistema puede
+
+encargarse de garantizar que todas las copias se mantengan consistentes.
+
+-Compartición de datos: En los sistemas que hacen unos de una BD basado en
+
+archivos planos, los archivos pertenecen a los departamentos o usuarios que los
+
+utilizan, pero en los sistemas de bases de datos creadas con software
+
+especializado para tal fin, la base de datos pertenece a la empresa y puede ser
+
+compartida por todos los usuarios que estén autorizados. Además, las nuevas
+
+aplicaciones que se vayan creando pueden utilizar los datos de la base de datos
+
+existente. -Facilidad de respaldo: con el software especializado resulta más
+
+fácil replicar una base de datos para mantener una copia de seguridad que
+
+hacerlo con un conjunto de archivos almacenados de forma no estructurada. -
+
+Ayuda al planeta: son amigables con el planeta, pues su existencia ayudan a
+
+disminuir el consumo de papel. COMPLEJIDAD COSTO DE LA INVERSION VULNERABILIDAD
+
+A FALLOS No todo son ventajas. Existen ciertas desventajas como: - Complejidad:
+
+La creación de BD supone el uso de programas muy complejos con una gran
+
+funcionalidad. Se necesita de personal especializado que las organizaci

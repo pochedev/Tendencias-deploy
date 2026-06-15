@@ -1,0 +1,131 @@
+PO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Solapada - parcial:
+
+Una instancia del supertipo puede ser miembro de varios
+
+subtipos, y además algunas instancias del supertipo no son
+
+instancia de ningún subtipo
+
+E.SUPERTIPO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+Si el subtipo esta definido por atributo,
+
+implica que al haber una inserción en el
+
+supertipo, se debe insertar en los subtipos
+
+para los cuales satisface la condición
+
+✓ Si existe una especialización TOTAL
+
+entonces, al insertar una instancia en el
+
+supertipo se debe insertarla en AL MENOS en
+
+un subtipo
+
+✓ Si existe una especialización DISJUNTA
+
+entonces al insertar una instancia en el
+
+supertipo, implica insertarla en UNICO
+
+subtipo
+
+✓ Eliminar una instancia de un supertipo implica
+
+eliminarla de todos los subtipos a los que
+
+pertenece (hijos huérfanos)
+
+✓ Si la especialización es DISJUNTA y TOTAL al Eliminar
+
+una instancia de un subtipo implica eliminarla del
+
+supertipo
+
+✓ Si la especialización es SOLAPADA Y TOTAL, implica que
+
+al eliminar una instancia del subtipo, se debe eliminar
+
+del supertipo SI Y SOLO SI la instancia ya solo existe en
+
+el subtipo del que se elimina, es decir, se ha eliminado
+
+del resto de los subtipos a la que pertenecía
+
+✓ En el resto de casos, la instancia sólo se elimina del
+
+subtipo
+
+✓La agregación involucra un conjunto de entidades y de relaciones y consiste
+
+en considerar las como si fueran una entidad.
+
+✓Involucra un conjunto de entidades y de relaciones
+
+✓Permite tratar un conjunto de relaciones como un conjunto de entidades
+
+para propósitos de participación en otras relaciones.
+
+✓La agregación permite mejorar la conceptualización dentro del modelo
+
+entidad-relación
+
+EMPRESA
+
+M
+
+ENTREVISTA
+
+SOLICITANTE
+
+N
+
+¿Cómo expresar la
+
+cardinalidad entre dos relaciones?
+
+GENERA
+
+CONTRATACION
+
+EMPRESA
+
+M
+
+ENTREVISTA
+
+SOLICITANTE
+
+N
+
+GENERA
+
+CONTRATACION

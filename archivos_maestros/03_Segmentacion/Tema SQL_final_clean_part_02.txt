@@ -1,0 +1,78 @@
+
+de un campo, agregar/quitar claves a una tabla. Sintaxis: La sintaxis dependerá
+
+del tipo de modificación que estemos realizando a la estructura de la base de
+
+datos (agregando, modificando o eliminando parte de la estructura) EJEMPLOS
+
+ALTER: Para agregar una columna: ALTER TABLE animal ADD nombre VARCHAR(); Para
+
+eliminar una columna: ALTER TABLE animal DROP COLUMN peso; Para modificar el
+
+tipo de dato de una columna: ALTER TABLE animal ALTER COLUMN nombre VARCHAR();
+
+Para agregar una PK: ALTER TABLE animal ADD PRIMARY KEY(Idmascota); DROP Este
+
+comando elimina un objeto de la base de datos. Puede ser una tabla, vista,
+
+índice, trigger, función, procedimiento o cualquier otro objeto que el motor de
+
+la base de datos soporte. Se puede combinar con la sentencia ALTER. EJEMPLOS
+
+DROP: Para eliminar una BD: DROP DATABASE petvets; Para eliminar una tabla: DROP
+
+TABLE animal; TRUNCATE Este comando elimina todo el contenido de una tabla,
+
+“vuela” la tabla (estructura y contenido) y vuelve a crear la estructura de la
+
+tabla. Es mucho más rápido que el comando DELETE del DML Sintaxis: TRUNCATE
+
+nombredetabla; Ejemplo: TRUNCATE animal; En el DML, existen cuatro operaciones
+
+básicas: INSERT, UPDATE, DELETE y SELECT. INSERT: Este comando permite agregar
+
+nuevos registros a una tabla. Su sintáxis es la siguiente: INSERT INTO
+
+nombretabla (campo1, campo2, campo3, campo4) VALUES (valor1, valor2, valor3,
+
+valor4) Ejemplo: INSERT INTO proveedores (codigo, nombre, tlf) VALUES (5676,
+
+“EMPRESAS POLAR”, “0212-9893334”) DELETE: Este comando permite eliminar
+
+registros en una tabla. Su sintáxis es la siguiente: DELETE FROM nombretabla;
+
+Este comando también permite establecer condiciones o criterios para la
+
+eliminación a través de la clausula WHERE. DELETE FROM nombretabla WHERE
+
+condicion(es); EJEMPLOS DEL COMANDO DELETE: DELETE FROM productos WHERE precio<
+
+100; DELETE FROM estudiante WHERE =“CONTADURIA” AND semestre >=; UPDATE: Este
+
+comando permite actualizar los valores de uno o más campos en uno o varios
+
+registros en una tabla. También hace uso de condiciones o criterios. Su sintáxis
+
+es la siguiente: UPDATE nombre_de_tabla SET nombre_de_campo = valor_nuevo WHERE
+
+condicion(es) EJEMPLOS UPDATE: UPDATE producto SET tasaiva = WHERE
+
+tipoart=“LUJO”; UPDATE vehiculo SET precio=40000 WHERE marca=“FORD” OR marca =
+
+“FIAT” AND año>=2016; SELECT: Este comando permite crear consultas. Una consulta
+
+es una serie de datos que extraemos de la tabla . También hace uso de
+
+condiciones o criterios. Su sintáxis es la siguiente: SELECT campo1,
+
+campo2,…campoN FROM nombretabla ( WHERE condicion(es)) EJEMPLOS SELECT: SELECT
+
+nombre, precio FROM ARTICULO WHERE tipoart=“LUJO”; SELECT nombre, precio FROM
+
+ARTICULO WHERE precio BETWEEN 120000 AND 5000000 SELECT * FROM Pedidos WHERE
+
+Provincia IN (“Madrid”, “Barcelona”, “Sevilla”); EJEMPLOS SELECT: SELECT nombre,
+
+cantidad FROM ARTICULO WHERE precio BETWEEN 120000 AND 5000000 ORDER BY nombre
+
+ASC (DESC) SELECT Apellidos, Nombre FR

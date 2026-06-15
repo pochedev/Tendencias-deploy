@@ -1,0 +1,33 @@
+r usar herramientas de IA (como ChatGPT, Copilot o
+
+Gemini) para escribir código más rápido, limpiar datos o generar ideas de
+
+análisis. Python/R para Automatización: No se necesita ser desarrollador, pero
+
+sí saber lo suficiente para automatizar tareas repetitivas de limpieza de datos
+
+que en Excel tomarían horas. Estadística Aplicada: Comprender pruebas de
+
+hipótesis y correlaciones para no decir "las ventas subieron por suerte", sino
+
+para demostrar que el cambio es estadísticamente significativo. Pág. Habilidades
+
+Blandas que debe tener un analista de datos (El "Saber Ser") • • • • Contexto de
+
+Negocio: Es la habilidad #. Se debe entender cómo gana dinero la empresa. Si no
+
+entienden se entiende el negocio, sus datos son solo números sin alma.
+
+Pensamiento Crítico: Cuestionar los datos. Si un reporte dice algo demasiado
+
+bueno para ser verdad, un buen analista duda y busca el error antes de
+
+presentarlo. Comunicación para no-técnicos: Traducir "lenguaje de base de datos"
+
+a "lenguaje de gerente". Un gerente no entiende sobre Inner Joins, pero si
+
+entiende sobre Retorno de Inversión (ROI). Ética de Datos: En un mundo lleno de
+
+regulaciones, saber qué datos se pueden usar y cómo proteger la privacidad del
+
+usuario es vital Pág.

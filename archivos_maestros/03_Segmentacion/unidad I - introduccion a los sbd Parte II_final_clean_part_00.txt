@@ -1,0 +1,77 @@
+En la entrega pasada estuvimos hablando un poco acerca de las BD y sus ventajas.
+
+Hoy vamos a conocer al hacedor de esas ventajas y los componentes que permiten
+
+mantener la data consistente. De acuerdo a Di Vasta y Díaz: “Un DBMS, consiste
+
+en la agrupación de programas que tienen como objetivo primordial proporcionar
+
+un entorno para recuperar y almacenar información en la Base de Datos” Bien,
+
+hemos llegado al “hacedor de la magia”, a los Sistemas Manejadores de Bases de
+
+datos (SMBD o DBMS por sus siglas en inglés). También son conocidos como
+
+Sistemas Gestores de Bases de Datos (SGBD). En palabras sencillas, un DBMS es un
+
+software especializado para la creación y gestión de Bases de Datos. Una BD
+
+creada con un DBMS es la que nos va a proporcionar todas las ventajas de la que
+
+habíamos hablado en láminas pasadas. Ejemplos de estos software son los que
+
+tenemos en esta lámina, unos más robustos que otros, algunos con pago de
+
+licencias, otros con licencia GPL Los DBMS presentados en esta lámina son de
+
+diferentes modelos de BD. Entre los DBMS para modelos relacionales (conocidos
+
+como RDBMS, R de Relational) tenemos a Informix, firebird, access, mysql,
+
+foxpro, sql server, oracle, Postgresql entre otros Los demás (mongoDB,
+
+cassandra, redis , db4o) siguen siendo gestores de bases de datos pero no del
+
+mundo relacional. De aquí en adelante usaremos el término DBMS en vez de RDBMS
+
+porque estaremos detallando los DBMS relacionales. •Un SGBD es un software de BD
+
+que centraliza los datos en un único “lugar” lógico al que acceden todos los
+
+usuarios y aplicaciones. •Es utilizable por múltiples usuarios y aplicaciones
+
+concurrentemente, por tanto controla los usuarios que acceden a la BD.
+
+•Proporcionar forma de almacenar y recuperar la información de manera practica y
+
+eficiente •Ofrece visiones parciales del conjunto total de información, según
+
+las necesidades de un usuario en particular. Un poco recopilando lo que hemos
+
+estado halando de los DBMS DML DCL DDL Ahora bien, vamos a hablar de tres
+
+componentes o lenguajes contenidos los gestores de BD del mundo relacional. En
+
+realidad el DDL, DML y DCL forman parte de lo que se conoce como SQL. SQL es el
+
+lenguaje de consulta de los manejadores de BD relacionales. En las próximas
+
+láminas se explicará brevemente cada uno de estos componentes, los comandos
+
+presentados por cada componente se mencionarán someramente. (En la unidad V
+
+estaremos hablando más en profundidad de SQL) Lenguaje de definición de datos
+
+(LDD o DDL) : Se utiliza para especificar el esquema de la BD, las vistas de los
+
+usuarios y las estructuras de almacenamiento. Es el que define el esquema
+
+conceptual y el esquema interno. Lo utilizan los diseñadores y los
+
+administradores de la BD. En pocas palabas, los comandos o sentencias
+
+pertenecientes al DDL permiten crear y modificar la estructura de la BD.
+
+Ejemplos de estos comandos son : CREATE: Utilizado para crear nuevas tablas,
+
+campos e índices. ALTER: Utilizado para modific

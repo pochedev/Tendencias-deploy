@@ -1,0 +1,77 @@
+; su
+
+definición y descripción han de ser únicas, estando almacenadas junto con los
+
+mismos. Los tratamientos habrán de conservar la integridad y seguridad de los
+
+datos. Otra definición que recoge lo que hemos venido comentando. Hernan
+
+Hollericht primer ingeniero estadístico de la historia Los discos duros dieron
+
+inicio a las BD, modelo red y jerarquica Consolidadción del modelo relacional
+
+Uso explosivo de WWW, bases de daos con protocolo para la transmisión se
+
+contenido en internet (OAI- PMH) Origen de las cintas magnéticas, automatizació
+
+n de tareas de procesamiento de datos Banco de Datos Edgar Frank Code y su
+
+modelo relacional Se estandariza SQL HANSEN Y HANSEN “La sofisticada filosofía
+
+de las bases de datos es el resultado de la evolución que ha tenido a lo largo
+
+de décadas el procesamiento de datos y la gestión de la información” Esta es una
+
+breve línea de tiempo en relación a la evolución de las BD. Podemos ver que es
+
+entre los y que se consolidan fuertemente como resultado de la aparición del
+
+modelo relacional, que posteriormente estaremos abordando. Lo más resaltante es
+
+que en relativamente pocos años, hemos pasado de tener bases de datos aisladas
+
+que servían a pocos usuarios, a bases de datos en línea que sirven a miles de
+
+usuarios conectados a la red. -Redundancia: La redundancia se define como la
+
+copia de un mismo dato en varias partes de la BD. esto hace que se desperdicie
+
+espacio de almacenamiento, además de provocar faltas de consistencia de datos
+
+(copias que no coinciden). -Inconsistencia de Datos: Un mismo dato arroja
+
+diferente información en varias partes de la BD. Por ejemplo, en una parte de la
+
+BD una determinada cédula corresponde a una persona de sexo femenino y en otra
+
+parte de la BD corresponde a una persona de sexo masculino. -Integridad de
+
+datos: Se refiere a la validez de los datos almacenados, es decir, está asociada
+
+a evitar que datos no válidos sean añadidos a la base de datos. Antes de seguir
+
+necesito que tengan claro estos conceptos. Más adelante estaremos profundizando
+
+en la integridad de datos. Por ahora deben entender estas definiciones para
+
+poder hablar de las ventajas de las BD ¿Por qué la redundancia es un problema?
+
+-Dificulta la tarea de modificación de datos -Genera inconsistencia de datos
+
+-Requiere mayor espacio de almacenamiento -Influye en el tiempo de acceso a los
+
+datos La redundancia es un problema en una BD porque al existir varias copias de
+
+un mismo dato, se debe asegurar que todas esas copias se actualicen al haber una
+
+modificación en alguna de ellas. Por supuesto que la existencia de más copias
+
+requiere mayor espacio de almacenamiento en la BD e influye en el tiempo para
+
+accesar los datos. Sin embargo, el mayor problema de la redundancia es que puede
+
+proporcionar la inconsistencia de datos. MEJORA EN LA PRODUCTIVIDAD MEJORA EN EL
+
+MANTENIMIENTO MEJORA EN LA CONCURRENCIA MANTENIMIENTO DE ESTANDARES MEJORA EN LA
+
+INTEGRIDAD DE DATOS MEJORA EN LA SEGURIDAD MEJORA EN L

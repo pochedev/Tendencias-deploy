@@ -1,0 +1,225 @@
+mbio, las entidades se asignan a
+
+un conjunto de entidades dado por el usuario de la base de datos
+
+No existe (o no interesa definir) ninguna condición de
+
+pertenencia a los subtipos
+
+El usuario, al
+
+pertenece
+
+insertar una instancia, elige a qué subtipo
+
+E. SUPERTIPO
+
+E. SUPERTIPO
+
+E. Subtipo1
+
+E.Subtipo2
+
+E.Subtipo1
+
+E.Subtipo2
+
+E.subtipo3
+
+E.Subtipo4
+
+Un segundo tipo de restricciones se define según si las entidades
+
+pueden pertenecer a más de un conjunto de entidades de nivel
+
+más bajo en una generalización simple
+
+• Disjunto o exclusivo: Una restricción sobre el carácter disjunto
+
+requiere que una instancia de entidad no pertenezca a más de
+
+una entidad de nivel más bajo.
+
+la misma
+
+• Solapado. En las generalizaciones solapadas,
+
+instancia de entidad puede pertenecer a más de una entidad de
+
+nivel más bajo. Es la opción por defecto
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+ANIMAL
+
+PERRO
+
+GATO
+
+E.SUPERTIPO
+
+O
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+PERSONAL
+
+DOCENTE
+
+ADMINISTRATIVO
+
+Por último, la restricción de completitud en una generalización o
+
+especialización, especifica si un conjunto de entidades de nivel más
+
+alto debe pertenecer o no a al menos a uno de los conjuntos de
+
+entidades de nivel más bajo en una generalización/especialización.
+
+• Generalización o especialización total: Cada entidad de nivel más
+
+alto debe pertenecer a un conjunto de entidades de nivel más bajo.
+
+• Generalización o especialización parcial: Algunas entidades de
+
+nivel más alto pueden no pertenecer a algún conjunto de entidades
+
+de nivel más bajo. La generalización parcial es la predeterminada
+
+E. SUPERTIPO
+
+E. SUPERTIPO
+
+E. Subtipo1
+
+E.Subtipo2
+
+E.Subtipo1
+
+E.Subtipo2
+
+E.subtipo3
+
+E.Subtipo4
+
+De acuerdo a las restricciones vistas se pueden presentar las
+
+siguientes combinaciones:
+
+-Disjunta - Total:
+
+Una instancia del supertipo es miembro como máximo de un
+
+subtipo, y además toda instancia del supertipo también deber ser
+
+instancia de algún subtipo
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Disjunta - parcial:
+
+Una instancia del supertipo es miembro como máximo de un
+
+subtipo, y además algunas instancias del supertipo no son
+
+instancia de ningún subtipo
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Solapada - Total:
+
+Una instancia del supertipo puede ser miembro de varios
+
+subtipos, y además toda instancia del supertipo también deber
+
+ser instancia de algún subtipo
+
+E.SUPERTIPO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Solapada - parcial:
+
+Una instancia del supertipo puede ser miembro de varios
+
+subtipos, y además algunas instancias del supertipo no son
+
+instancia de ningún subtipo
+
+E.SUPERTIPO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+Si el subtipo esta definido por atributo,
+
+implica que al haber una inserción en el
+
+supertipo, se debe insertar en los subtipos
+
+para los cuales satisface la condición
+
+✓ Si existe una especialización T

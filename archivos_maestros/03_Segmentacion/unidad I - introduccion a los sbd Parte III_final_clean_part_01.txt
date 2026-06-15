@@ -1,0 +1,77 @@
+ DBA de una BD creada en Oracle que ser un DBA de una BD creada en Access. La
+
+arquitectura o Modelo ANSI-SPARC, (American National Standards Institute,
+
+Standards Planning And Requirements Committee), es un estándar de diseño
+
+abstracto para un sistema de bases de datos, fue propuesto por primera vez en el
+
+año de 1975 por la empresa ANSI. El objetivo de esta arquitectura, también
+
+llamada Arquitectura de tres niveles, es separar la vista de los usuarios Esta
+
+arquitectura un enfoque de diseño para bases de datos que divide las vistas de
+
+datos en tres capas: lo que ven los usuarios, la estructura lógica y cómo se
+
+almacenan los datos Bajo este modelo de niveles, cada usuario debe ser capaz de
+
+acceder a los datos que le interesan, teniendo una vista personalizada de dichos
+
+datos. Salvo ciertas excepciones, los usuarios no deberían tener acceso a toda
+
+la data set. Las vistas de datos deben ser independientes: los cambios en una
+
+vista no deben afectar a las demás. Para los usuarios finales debe ser
+
+transparentes los detalles de almacenamiento y funcionamiento del sistema. Es el
+
+más cercano al almacenamiento físico, es decir,, describe la organización física
+
+de los datos, tal y como están almacenados en la computadora (estructuras de
+
+datos en disco y sus rutas de acceso). Describe los detalles de cómo se
+
+almacenan físicamente los relacionados a los archivos que contienen la datos,
+
+información, su organización, los registros, la longitud, los campos que los
+
+componen. € Es el más cercano a los usuarios, es decir, es donde se describen
+
+varios esquemas externos o vistas de usuarios. Cada esquema describe la parte de
+
+la BD que interesa a un grupo de usuarios en este nivel se representa la visión
+
+individual de un usuario o de un grupo de usuarios. € Este esquema describe las
+
+entidades, atributos, relaciones, operaciones de los usuarios y restricciones,
+
+ocultando los detalles de las estructuras físicas de almacenamiento. Representa
+
+la información conceptual contenida en la BD Esquema conceptual Esquema lógico
+
+Algunos expertos señalan que al modelo de capas debe agregarse un subnivel
+
+dentro del nivel lógico, se trata del nivel conceptual. Bajo este nuevo esquema,
+
+se separa el modelo lógico de datos y la conceptualización de la realidad se
+
+trabaja en el esquema conceptual. € Esquema Conceptual: visión desde un punto de
+
+vista organizativo, independiente del SGBD (también conocido como DBMS) que se
+
+utilice, e incluso de la utilización o no de sistemas de bases de datos. En este
+
+esquema se describe la información de la organización (objetos y relaciones)
+
+desde un punto de vista no informático. (diagrama de clases) € Esquema Lógico:
+
+visión expresada en términos de un Sistema Gestor de Base de Datos concreto, o
+
+mejor dicho, de un modelo de datos soportado por un SGBD. En este esquema lógico
+
+se representan las entidades u objetos y relaciones de acuerdo a las
+
+características de dicho modelo, sin entrar todavía en detalles de
+
+represen

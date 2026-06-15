@@ -1,0 +1,77 @@
+Es un lenguaje surgido de un proyecto de investigación de IBM para el acceso a
+
+bases de datos relacionales. Actualmente se ha convertido en un estándar de
+
+lenguaje de bases de datos Incluye características para definir la estructura de
+
+los datos, para la modificación de los datos en la base de datos y para la
+
+especificación de restricciones de seguridad. El lenguaje SQL sirve para manejar
+
+las bases de datos, es un lenguaje de texto plano, que podemos usar desde
+
+cualquier editor de textos Con SQL podemos hacer entre otras las siguientes
+
+operaciones en el programa que gestiona las bases de datos: •Crear nuevas bases
+
+de datos. •Crear nuevas tablas en una base de datos. •Crear nuevos registros en
+
+las tablas de una base de datos •Crear tablas de consulta en una base de datos.
+
+•Borrar tablas o bases de datos. •Borrar registros. •Cambiar uno o varios datos
+
+de un registro. • Buscar y mostrar los datos de una tabla o consulta. Además SQL
+
+se encarga de manejar el control de transacciones, autorización del uso de la
+
+BD, la integridad, el manejo de las instrucciones de SQL en lenguajes de
+
+programación , entre otros - Entre 1974 y 1975 IBM implementó en un prototipo
+
+llamado SEQUEL-XRM. -Entre 1976 y 1977, condujeron a una revisión del lenguaje
+
+(SEQUEL/) y finalmente cambió de nombre convirtiéndose en SQL. -En 1979,
+
+Relational Software (actualmente ORACLE), vio el potencial comercial del
+
+lenguaje SQL y lanzó su propia versión modificada, denominada Oracle V2. - A
+
+partir de 1981, IBM comenzó a entregar sus productos relacionales -En 1983
+
+empezó a vender DB2 -En 1986, el ANSI (Instituto Nacional Estadounidense de
+
+Estándares) adoptó SQL como estándar para los lenguajes relacionales. - En 1987
+
+se transformó en estándar ISO, con el nombre de SQL/. - Luego se presento la
+
+versión SQL/. (SQL1) - En 1992 se lanza un nuevo estándar ampliado y revisado
+
+del SQL llamado "SQL-" o "SQL2“. -SQL:1999 (SQL3) Se agregaron expresiones
+
+regulares, consultas recursivas (para relaciones jerárquicas), triggers y
+
+algunas características orientadas a objetos. -SQL:2003 Introduce algunas
+
+características de XML, cambios en las funciones, estandarización del objeto
+
+sequence y de las columnas autonuméricas. -SQL:2005 Define las maneras en las
+
+cuales SQL se puede utilizar conjuntamente con XML. -SQL:2008 Permite el uso de
+
+la cláusula ORDER BY fuera de las definiciones de los cursores. Incluye los
+
+disparadores del tipo INSTEAD OF. Añade la sentencia TRUNCATE. -SQL:2011 Datos
+
+temporales (PERIOD FOR). Mejoras en las funciones de ventana y de la cláusula
+
+FETCH. -SQL:2016 Permite búsqueda de patrones, funciones de tabla polimórficas y
+
+compatibilidad con los ficheros JSON DML SQL DDL DCL DML (lenguaje de
+
+manipulación de datos): El DML (Data Manipulation Language ) es un lenguaje que
+
+permite a los usuarios acceder o manipular los datos organizados (añadiendo,
+
+suprimiendo o modificando la data) mediante el modelo de datos apropiado. DDL
+
+(Lenguaje de definición d

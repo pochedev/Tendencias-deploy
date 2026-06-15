@@ -1,0 +1,75 @@
+EJERCICIOS MODELO ENTIDAD RELACION EXTENDIDO UNEG Se quiere modelar una base de
+
+datos que almacene los nacimientos ocurridos en una clínica. Para ello considere
+
+la siguiente información: - En un parto se da a luz uno o mas bebes y tienen una
+
+hora inicio y fin, y semanas de embarazo. - Un embarazo múltiple es considerado
+
+un parto, pero cada bebe nace a una hora determinada, tiene un peso, sexo y
+
+talla - Se debe guardar información del estado de salud del bebe - Hay una madre
+
+por nacimiento, un pediatra, un obstetra, y al menos una enfermera. -Un parto
+
+puede ser normal o por cesárea. (de ser cesárea existe un anestesiólogo y - un
+
+instrumentista). - Del instrumentista se desea conocer el nivel, el año en que
+
+se graduó y la institución educativa Si el parto es por cesárea, se debe guardar
+
+la información del quirófano usado (piso, costo por hora). Los obstetras pueden
+
+ser foráneos (se necesita saber la o las clínicas donde atiende), los pediatras,
+
+anestesiólogos e instrumentistas son personal propio de la clínica. Se debe
+
+guardar el consultorio del pediatra . Sin embargo, los anestesiólogos trabajan
+
+por días y horario. Se necesita tener esa información almacenada para poder
+
+planificar la cesárea. Los obstetras, instrumentistas, pediatras y
+
+anestesiólogos tienen una tarifa por parto. En el caso de los obstetras existen
+
+dos tarifas (cesárea y parto natural). Se debe llevar el control d ellos insumos
+
+utilizados en el parto o cesárea - - - - UNEG PERSONAL ENFERMERA OBSTETRA
+
+PEDIATRA ANESTESIOLOGO INSTRUMENTISTA CLINICA PARTO MADRE INSUMOS BEBE CESAREA
+
+QUIROFANO MODELO ENTIDAD RELACION EXTENDIDO UNEG PERSONAL C(PK) Apellidos
+
+Nombres Tlf Direccion profesion MADRE CI(PK) Apellido Nombre peso CLINICA ID
+
+(PK) Nombre Direccion tlf CLINICAOBST ID (PK) Clínica obstetra ENFERMERA CI(PK)
+
+nivel OBSTETRA CI(PK) Costo_cesa Costo_natur ENFERMERA _PARTO IDPK) Enfermera
+
+Parto INSUMO IDPK) Descripcion Unidad existencia INSUMOPARTO ID(PK) Parto Insumo
+
+cantidad PEDIATRA CI(PK) Consultorio Costo PARTO ID(PK) Pediatra Obstetra madre
+
+Fecha hinicio Hfin Semanas tipo HORARIO IDPK) anestesiólogo Dia Horario turno
+
+ANESTESIOLOGO CI(PK) costo BEBE ID(PK) Idparto Apellido Nombre Peso Talla Sexo
+
+Hranacimiento Fecha observacion INSTRUMENTISTA CI(PK) Nivel Costo Año_grad
+
+universidad QUIROFANO ID(PK) Descripcion Piso costoxhra CESAREA ID(PK)
+
+Anestesiólogo Instrument quirofano UNEG Se desea organizar la información acerca
+
+de los aviones estacionados o en mantenimiento en un aeropuerto. La información
+
+relevante es la siguiente: .Cada avión tiene un numero de registro y modelo
+
+especifico. Cada modelo es identificado por un numero de modelo (ej. DC-), con
+
+su capacidad y peso. .Cada avión corresponde a una línea aérea. .Un numero de
+
+mecánicos trabaja en el aeropuerto, para los cuales se almacena la cedula,
+
+dirección, teléfono, y salario. . Cada mecánico es experto en uno o mas modelos,
+
+y su expertis puede ser común a otros mecánicos. . El controlador de tr

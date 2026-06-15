@@ -1,0 +1,49 @@
+o simplemente incorrecta. -Cuando se
+
+trabaja con BD las modificaciones realizadas (agregar, borrar o modificar) deben
+
+seguir la regla de todo o nada. Esto significa que ante un fallo del sistema la
+
+transacción no puede quedar a medias, cuando ocurre una falla esta debería ser
+
+detectada, procediendo a restaurar los datos al estado de consistencia anterior.
+
+Esto se llama atomicidad y es la propiedad que asegura que una operación se ha
+
+realizado o no. En sistemas basados en archivos planos esta propiedad es difícil
+
+de asegurar. -La seguridad queda totalmente en manos del programador de
+
+aplicaciones dejando esta área tan importante vulnerable a fallos ASPECTO
+
+ENTIDADES SISTEMAS BASADOS EN ARCHIVOS SISTEMAS BASADOS EN BD tienen registros
+
+de una sola entidad tipo. tienen datos de varias entidades tipo. INTERRELACIONES
+
+el sistema no interrelaciona archivos REDUNDANCIA USUARIOS se crean archivos a
+
+la medida de cada aplicación, con todos los datos necesarios aunque algunos sean
+
+redundantes respecto de otros archivos sirven para un solo usuario o una sola
+
+aplicación. Dan una sola visión del mundo real. el sistema tiene previstas
+
+herramientas para interrelacionar entidades todas las aplicaciones trabajan con
+
+la misma BD y la integración de los datos es básica, de modo que se evita la
+
+redundancia. es compartida por muchos usuarios de distintos tipos. Ofrece varias
+
+visiones del mundo real. En esta lámina se presentan un resumen de las
+
+diferencias entre algunos aspectos de un sistema basado en archivos planos y un
+
+sistema basado en BD gestionadas con software para tal fin. Con esta lámina
+
+finalizo la primera entrega de la unidad. En la próxima entrega estaremos
+
+hablando entre otras cosas, del software especializado para la creación y
+
+gestión de BD. Cualquier comentario pueden o a mi dirección
+
+de correo

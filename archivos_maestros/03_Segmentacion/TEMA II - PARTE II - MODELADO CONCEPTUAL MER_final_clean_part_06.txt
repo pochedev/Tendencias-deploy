@@ -1,0 +1,63 @@
+ién son llamadas aquellas relaciones en las
+
+que sólo participan una entidad. Relaciona una entidad consigo misma por lo que
+
+también se les llaman relaciones reflexivas. anillo, y Unidad II: Modelo de
+
+Datos . GRADO II: RELACIÓN BINARIA Las relaciones en las que participan dos
+
+entidades son y de son las más comunes en cualquier modelo ER. binarias grado
+
+dos, o . Unidad II: Modelo de Datos . GRADO III: RELACIÓN TERNARIA Cuando en la
+
+relación participan tres entidades se Este de rán tipo de relación es poco
+
+común, pero se puede presentar. ternarias grado tres. o Unidad II: Modelo de
+
+Datos . Número mínimo y máximo de ocurrencias o de instancias de una entidad que
+
+pueden estar relacionadas con una instancia del otro tipo de entidad (min, máx.)
+
+La cardinalidad vendrá siempre expresada para relaciones entre dos entidades,
+
+dependiendo del numero de ocurrencias de cada una de las entidades pueden
+
+existir relaciones de uno a uno, uno a muchos, muchos a uno y muchos a muchos
+
+Unidad II: Modelo de Datos . Uno a Uno: Una ocurrencia de entidad del tipo A
+
+solo puede relacionada con una ocurrencia de una estar entidad del tipo B y
+
+vicerversa A R B Unidad II: Modelo de Datos . Uno a Muchos: Una ocurrencia de
+
+entidad del tipo A puede estar relacionada con varias ocurrencias de una entidad
+
+del tipo B, y una ocurrencia del tipo B solo puede estar relacionada con una
+
+ocurrencia del tipo A A R M B Unidad II: Modelo de Datos . Muchos a Uno: Una
+
+ocurrencia de entidad del tipo A puede estar relacionada con varias ocurrencias
+
+de una entidad del tipo B, y una ocurrencia del tipo B solo puede estar
+
+relacionada con una ocurrencia del tipo A A R M B Unidad II: Modelo de Datos .
+
+Muchos a Muchos: Una ocurrencia de entidad del tipo A puede estar relacionada
+
+con varias ocurrencias de una entidad del tipo B y viceversa A M R M B Unidad
+
+II: Modelo de Datos . Unidad II: Modelo de Datos . MER Entidad OBJETO EN LA BASE
+
+DE DATOS Tabla Ejemplares-conjunto- extensión Registros en la tabla (tupla)
+
+Atributos -intención Campos, columnas de una tabla Relación Relación entre
+
+tablas Unidad II: Modelo de Datos . Por último les dejo dos tablas donde pueden
+
+analizar las diferencias y similitudes del MER y del Modelo Relacional. Unidad
+
+II: Modelo de Datos . Hasta aquí el material que se estará evaluando en el
+
+primer examen. En las próximas unidades estaremos realizando ejercicios donde se
+
+pondrán en práctica las conceptualizaciones presentadas.

@@ -1,0 +1,3 @@
+seguiremos hablando del modelado
+
+pero relacionado específicamente al mundo relacional.

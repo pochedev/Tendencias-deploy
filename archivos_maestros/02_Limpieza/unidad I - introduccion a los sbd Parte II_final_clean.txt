@@ -1,0 +1,449 @@
+En la entrega pasada estuvimos hablando un poco acerca de las BD y sus ventajas.
+
+Hoy vamos a conocer al hacedor de esas ventajas y los componentes que permiten
+
+mantener la data consistente. De acuerdo a Di Vasta y Díaz: “Un DBMS, consiste
+
+en la agrupación de programas que tienen como objetivo primordial proporcionar
+
+un entorno para recuperar y almacenar información en la Base de Datos” Bien,
+
+hemos llegado al “hacedor de la magia”, a los Sistemas Manejadores de Bases de
+
+datos (SMBD o DBMS por sus siglas en inglés). También son conocidos como
+
+Sistemas Gestores de Bases de Datos (SGBD). En palabras sencillas, un DBMS es un
+
+software especializado para la creación y gestión de Bases de Datos. Una BD
+
+creada con un DBMS es la que nos va a proporcionar todas las ventajas de la que
+
+habíamos hablado en láminas pasadas. Ejemplos de estos software son los que
+
+tenemos en esta lámina, unos más robustos que otros, algunos con pago de
+
+licencias, otros con licencia GPL Los DBMS presentados en esta lámina son de
+
+diferentes modelos de BD. Entre los DBMS para modelos relacionales (conocidos
+
+como RDBMS, R de Relational) tenemos a Informix, firebird, access, mysql,
+
+foxpro, sql server, oracle, Postgresql entre otros Los demás (mongoDB,
+
+cassandra, redis , db4o) siguen siendo gestores de bases de datos pero no del
+
+mundo relacional. De aquí en adelante usaremos el término DBMS en vez de RDBMS
+
+porque estaremos detallando los DBMS relacionales. •Un SGBD es un software de BD
+
+que centraliza los datos en un único “lugar” lógico al que acceden todos los
+
+usuarios y aplicaciones. •Es utilizable por múltiples usuarios y aplicaciones
+
+concurrentemente, por tanto controla los usuarios que acceden a la BD.
+
+•Proporcionar forma de almacenar y recuperar la información de manera practica y
+
+eficiente •Ofrece visiones parciales del conjunto total de información, según
+
+las necesidades de un usuario en particular. Un poco recopilando lo que hemos
+
+estado halando de los DBMS DML DCL DDL Ahora bien, vamos a hablar de tres
+
+componentes o lenguajes contenidos los gestores de BD del mundo relacional. En
+
+realidad el DDL, DML y DCL forman parte de lo que se conoce como SQL. SQL es el
+
+lenguaje de consulta de los manejadores de BD relacionales. En las próximas
+
+láminas se explicará brevemente cada uno de estos componentes, los comandos
+
+presentados por cada componente se mencionarán someramente. (En la unidad V
+
+estaremos hablando más en profundidad de SQL) Lenguaje de definición de datos
+
+(LDD o DDL) : Se utiliza para especificar el esquema de la BD, las vistas de los
+
+usuarios y las estructuras de almacenamiento. Es el que define el esquema
+
+conceptual y el esquema interno. Lo utilizan los diseñadores y los
+
+administradores de la BD. En pocas palabas, los comandos o sentencias
+
+pertenecientes al DDL permiten crear y modificar la estructura de la BD.
+
+Ejemplos de estos comandos son : CREATE: Utilizado para crear nuevas tablas,
+
+campos e índices. ALTER: Utilizado para modificar las tablas agregando campos o
+
+cambiando la definición de los campos. DROP: Empleado para eliminar tablas e
+
+índices. TRUNCATE: Empleado para eliminar todos los registros de una tabla.
+
+Lenguaje de manipulación de datos (LDM o DML) : Instrucciones para leer y
+
+actualizar los datos de la BD. Es el utilizado por usuarios para inserciones,
+
+eliminaciones y modificaciones realizar los consultas, Los comandos
+
+pertenecientes al DML permiten realizar diferentes operaciones para consultar o
+
+manipular datos. A este tipo de operaciones también se le conoce como
+
+operaciones CRUD (Create, Read, Update y Delete). Para ello el DML dispone
+
+cuatro instrucciones o comandos para realizar dichas operaciones: INSERT:
+
+inserta filas en una tabla. (Create) SELECT: Muestra información sobre los datos
+
+almacenados. (Read) UPDATE: Actualiza información de los registros de una tabla.
+
+(Update) DELETE: Borra o elimina la (s) fila(s) de una tabla. (Delete) Lenguaje
+
+de Control de datos (LCD o DCL): Instrucciones para ayudar a controlar el acceso
+
+a los datos contenidos en la base de datos (permisología a la BD) Hasta aquí
+
+hemos visto las sentencias usadas para crear y manipular datos pero también es
+
+necesario su control y administración. De esto se encarga el lenguaje DLC (Data
+
+Control Languaje) mediante el conjunto de comandos que permiten a un
+
+administrador del sistema de bases de datos controlar el acceso a usuarios
+
+mediante la asignación de permisos o roles para realizar determinadas tareas.
+
+Los comandos para controlar los permisos son los siguientes: GRANT, permite
+
+otorgar permisos. REVOKE, elimina los permisos que previamente se han concedido.
+
+UN DBMS POSEE HERRAMIENTAS QUE PERMITEN ASEGURAR: ✓La independencia de datos: a
+
+varios niveles, permitiendo la modificación de las definiciones de datos sin
+
+afectar a las aplicaciones o esquemas que no utilizan esos datos. ✓La integridad
+
+de los datos: que los datos sean correctos en todo momento, de acuerdo con las
+
+especificaciones o reglas impuestas al sistema ✓La seguridad de los datos: que
+
+sólo las personas autorizadas puedan acceder a determinados datos y que sólo
+
+puedan efectuar las operaciones para las que han sido autorizados. INTEGRIDAD DE
+
+LOS DATOS El término Integridad de datos está asociado a evitar que datos no
+
+válidos sean añadidos a la base de datos. Es decir, debe haber correctitud y
+
+completitud de los datos Vamos a profundizar un poco en la Integridad de datos.
+
+Existen tres tipos de restricciones cuya finalidad es garantizar la integridad
+
+de datos dentro de la BD. Estas tres restricciones las estaremos analizando en
+
+las próximas láminas. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad de
+
+dominio .a Datos Requeridos: establece que una columna tenga un valor no NULL.
+
+.b Chequeo de Validez: cuando se crea una tabla cada columna tiene un tipo de
+
+datos y el DBMS asegura que solamente los datos del tipo especificado sean
+
+ingresados en la tabla. La primera restricción está asociada al dominio. El
+
+dominio son todos los posibles valores que puede asumir un campo de una tabla de
+
+la BD. Un DBMS nos ayuda a controlar la integridad del dominio a través de la
+
+solicitud de datos considerados requeridos u obligatorios y chequeando la
+
+validez de los valores que se pretendan ingresar a la BD Asumamos que se quiera
+
+ingresar el registro de un estudiante dentro de la base de datos. Un dato
+
+obligatorio sería el numero de la cédula de identidad, por tanto cuando se crea
+
+la tabla la estructura de la tabla que almacenará esa data, le decimos al DBMS
+
+que ese campo (CI) debe ser llenado de forma obligatoria y que solamente debe
+
+ingresarse valores numéricos. Si el usuario que está ingresando los datos omite
+
+este valor o ingresa letras en vez de números, el DBMS enviará un mensaje de
+
+error y no permitirá que el registro sea guardado dentro de la BD a menos que se
+
+corrijan dichos errores TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad de
+
+entidad Establece que la clave primaria de una tabla debe tener un valor único
+
+para cada fila de la tabla La clave primaria es aquel campo dentro de la tabla
+
+que no puede contener valores repetidos (ejm: la cédula de identidad). Cuando
+
+configuramos un campo dentro de la BD como clave primaria, el DBMS no permitirá
+
+ingresar un valor que hayan sido ingresado con anterioridad, enviará un mensaje
+
+de error hasta que dicho error sea corregido. Esto es lo que nos permite
+
+asegurar que dos personas no sean registradas con la misma cédula o dos
+
+vehículos con la misma placa. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad
+
+Referencial Podemos definir integridad referencial al hecho de no hacer
+
+referencia a registros o campos que no existen por que nunca fueron creados o
+
+por que han dejado de existir en el transcurso de la base de datos. La
+
+integridad referencial impide a los usuarios: a.- Agregar o cambiar filas en una
+
+tabla relacionada si no hay ninguna fila asociada en la tabla principal. b.-
+
+Cambiar valores en una tabla principal que crea filas huérfanas en una tabla
+
+relacionada. c.- Eliminar filas de una tabla principal cuando hay filas
+
+relacionadas coincidentes. Tabla: Propietarios TIPO DE RESTRICCIONES DE
+
+INTEGRIDAD .- Integridad Referencial Tabla Propietarios CI 81612298 15698425
+
+9856365 25394589 APELLIDOS ESPINOZA A HERNANDEZ F GARCIA M FLORES G NOMBRES
+
+CAROLINA M JOSE A DOLORES D MARTIN J DIRECCION XXXXXXXX XXXXXXXX XXXXXXX XXXXXXX
+
+TLF XXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX Tabla Vehículos PLACA ABCG-125
+
+ABCY-158 ABCZ-269 BAGY-874 BOPT-459 BZAM-594 MARCA FORD JEEP CHEVROLET CHEVROLET
+
+FIAT TOYOTA MODELO EXPLORER CHEROKEE CORSA OPTRA SIENNA CAMRY AÑO 1998 2014 2004
+
+2008 2006 2005 COLOR PLATA BLANCO AZUL BLANCO VERDE AZUL PROPIETARIO 15698425
+
+81612298 25394589 9856365 15365987--------- 25394589 Esta cédula no se
+
+encuentra registrada En la tabla Propietarios ¿Qué ocurriría al solicitar los
+
+datos del Propietario de este vehículo? Como ya hemos mencionado, en las BD los
+
+datos se encuentran relacionados. Así lo podemos observar en estas dos tablas ,
+
+el campo CI de la tabla Propietarios se encuentra relacionado con el campo
+
+Propietario de la tabla Vehículos Ahora bien, los DBMS nos ayudan a mantener la
+
+integridad de la data a través de la activación de la Integridad Referencial.
+
+Esta activación es opcional, pero de no activarla pueden surgir problemas como
+
+los presentados en la lámina. Si activamos la IR, el DBMS no permitirá el
+
+ingreso de la cédula de identidad 15365987 en la tabla Vehículo sin antes
+
+haberla ingresado en la tabla Propietarios. Se puede decir que los registros de
+
+la tabla Propietarios son considerados como Padres de los registros de la tabla
+
+Vehículos. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad Referencial Cuando
+
+activamos la IR se puede activar la Actualización y Eliminación en cascada
+
+Actualización en Cascada: Al activar esta opción, si realizamos alguna
+
+modificación en el campo clave principal de la tabla de los registros “padres”,
+
+el DBMS realizará una actualización automática en el campo relacionado de la
+
+tabla con los registros “hijos”. Eliminación en Cascada : Si eliminamos un
+
+registro en la tabla principal (tabla de los registros “padres”), se eliminaran
+
+automáticamente todos los registros “hijos” en las demás tablas relacionadas. La
+
+seguridad en bases de datos está dirigida a proteger los datos de accesos no
+
+autorizados. (Privacidad de la base de datos) Se debe cuidar de que accesos no
+
+autorizados ejecuten operaciones indebidas que pongan en riesgo su existencia,
+
+consistencia e integridad. La seguridad es independiente del diseño del modelo
+
+de datos Otro aspecto que el DBMS debe proporcionar es la Seguridad de la BD Las
+
+principales características de la seguridad en una base de datos son: ✓La
+
+Confidencialidad de la información ✓ La Integridad de la información ✓La
+
+Disponibilidad de la información Los datos deben poder ser sometidos a procesos
+
+de auditoria. Las acciones de los usuarios deben ser supervisadas, de modo tal
+
+que pueda descubrirse cualquier acción indebida o errónea. La auditoría de la
+
+base de datos permite realizar un seguimiento de las acciones específicas de los
+
+usuarios en la base de datos, como las actualizaciones de tablas, las consultas
+
+de lectura, las asignaciones de privilegios de usuario y otras. Tipos de
+
+usuarios de acuerdo a la permisología Usuario con derecho a crear, borrar y
+
+modificar objetos y que además puede conceder privilegios a otros usuarios sobre
+
+los objetos que ha creado. Usuario con derecho a consultar, o actualizar, y sin
+
+derecho a crear o borrar objetos. Privilegios sobre los objetos, añadir nuevos
+
+campos, indexar, alterar la estructura de los objetos, etc. Tipos de usuarios de
+
+acuerdo a la permisología •La autorización de lectura permite la lectura de los
+
+datos, pero no su modificación. • La autorización de inserción permite la
+
+inserción de datos nuevos, pero no la modificación de los existentes. • La
+
+autorización de actualización permite la modificación de los datos, pero no su
+
+borrado. • La autorización de borrado permite la eliminación de los datos
+
+TRANSACCION Conjunto de operaciones que se ejecutan y que forman una única
+
+unidad lógica y atómica de trabajo. También la podemos definir como conjunto de
+
+instrucciones, agrupadas lógicamente, que o bien se ejecutan todas sobre la base
+
+de datos o bien no se ejecuta ninguna. Imaginemos a una persona realizando una
+
+transferencia bancaria . Una transferencia está compuesta por dos operaciones o
+
+instrucciones: . Descontar de la cuenta de origen la cantidad indicada .
+
+Aumentar el saldo de la cuenta de destino con el monto de la cantidad
+
+transferida de la cuenta origen. Este conjunto de instrucciones conforman una
+
+transacción y está claro que las dos instrucciones que la componen (una
+
+transacción está conformada por dos o más instrucciones) deben ejecutarse. O se
+
+ejecutan todas o no se ejecuta ninguna. Para el ejemplo presentado es obvio que
+
+la transacción bancaria no se puede quedar “a medias” El concepto de transacción
+
+se desarrolló para atender los casos en los que el estado resultante de la base
+
+de datos depende del éxito completo en una serie de operaciones TRANSACCION
+
+Estado de una Transacción ✓Activa: el estado inicial; la transacción permanece
+
+en este estado durante su ejecución. ✓Parcialmente comprometida: después de
+
+ejecutarse la última instrucción. ✓ Fallida: tras descubrir que no puede
+
+continuar la ejecución normal. ✓Abortada: después de haber retrocedido la
+
+transacción y restablecido la base de datos a su estado anterior al comienzo de
+
+la transacción. ✓Comprometida o terminada: tras completarse con éxito La acción
+
+de cancelar o abortar una transacción se denomina deshacer la transacción.
+
+Deshacer una transacción permite anular los cambios y recuperar el estado de la
+
+base de datos previo a la transacción. La ejecución de una transacción debe
+
+conducir a un estado de la base de datos consistente (que cumple todas las
+
+restricciones de integridad definidas). TRANSACCION Estado de una Transacción
+
+Parcialmente comprometida Terminada activa Fallida Abortada TRANSACCION
+
+Propiedades de las Transacciones • Atomicidad. O todas las operaciones de la
+
+transacción se realizan adecuadamente en la base de datos o ninguna de ellas. •
+
+Consistencia. La ejecución aislada de la transacción (es decir, sin otra
+
+transacción que se ejecute concurrentemente) conserva la consistencia de la base
+
+de datos • Aislamiento. Los efectos de una transacción no se ven influenciados
+
+por otras transacciones concurrentes. Aunque se ejecuten varias transacciones
+
+concurrentemente, el sistema garantiza que para cada par de transacciones Ti y
+
+Tj, se cumple que para los efectos de Ti, o bien Tj ha terminado su ejecución
+
+antes de que comience Ti , o bien que Tj ha comenzado su ejecución después de
+
+que Ti termine, es decir la transacciones son independientes entre sí. •
+
+Durabilidad. Tras la finalización con éxito de una transacción, los cambios
+
+realizados en la base de datos permanecen, incluso si hay fallos en el sistema A
+
+C I D Componente de Control de Concurrencia Componente de Gestión de
+
+Recuperaciones Componente de Gestión de Transacciones DBMS Los DBMS poseen tres
+
+componentes para controlar la concurrencia, gestionar las recuperaciones y las
+
+transacciones EN RESUMEN, UN DBMS DEBE PERMITIR : ✓ La creación y definición de
+
+la base de datos. ✓ Manipulación de los datos ✓ Eficiencia ✓Privacidad de los
+
+datos ✓ Mantener integridad y consistencia de los datos. (Control de
+
+transacciones) ✓Seguridad de los datos ✓ Mecanismos de copias de respaldo y
+
+recuperación •OLTP: Las bases de datos de tipo OLTP (On Line Transaction
+
+Processing) también son llamadas bases de datos dinámicas lo que significa que
+
+la información se modifica en tiempo real Veamos ahora los tipos de BD. Estas se
+
+clasifican de acuerdo a varios criterios como lo son: -Variabilidad de datos
+
+almacenados -Número de usuarios -Ubicación de sus datos -Modelo de datos -Forma
+
+de administrar los datos •OLAP: Las bases de datos de tipo OLAP (On Line
+
+Analytical Processing) también son llamadas bases de datos estáticas lo que
+
+significa que la información en tiempo real no es generar afectada. Guardan
+
+información que soporte toma de decisiones. empleados datos para ✓BD de
+
+escritorio: soporta solo un usuario al tiempo ✓BD múltiples: múltiples usuarios
+
+al mismo tiempo BD de grupo de trabajo: menos de usuarios BD empresarial: mas de
+
+usuarios (cientos) ✓BD centralizada: todos los datos en un mismo lugar (el mismo
+
+servidor) ✓BD distribuida: datos distribuidos en varios servidores •BD
+
+Jerárquicas •BD de red •BD relacional •BD orientada a objetos •BD documentales
+
+•SQL: la información que almacena la BD está relacionada entre sí. Los datos
+
+relacionados (registros o filas) son almacenados en tablas que constan de varios
+
+campos (columnas). •NoSQL: este tipo de BD pertenecen al modelo No Relacional.
+
+En las BD NoSQL , los datos no tienen porqué estar relacionados entre sí y por
+
+lo tanto no tienen que almacenarse en estructuras fijas como las tablas del
+
+modelo de base de datos relacional. Este tipo de BD están ganando cada vez más
+
+espacio en el mundo de las BD debido a las limitaciones ofrecidas por las BD
+
+relacionales. Con esta lámina finalizamos esta segunda entrega de la unidad. En
+
+la próxima entrega estaremos hablando de los Sistemas de Bases de Datos que no
+
+son lo mismo que los Sistemas Manejadores de BD Les recuerdo que cualquier
+
+comentario pueden o a mi

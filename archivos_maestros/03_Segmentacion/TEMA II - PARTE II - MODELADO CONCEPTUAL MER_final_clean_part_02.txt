@@ -1,0 +1,77 @@
+r Cedula Nombre Apellido Especialidad Consultorio
+
+.098. SANDRA LUNA CARDIOLOGIA TORRE I, PISO , NRO .910.976 GUILLERMO JIMENEZ
+
+TRAUMATOLOGO TORRE , PISO , .789.653 ANGELA PEREZ CIRUJANO NRO TORRE I, PISO ,
+
+NRO Extensión Instancia, ocurrencia, ejemplar de un tipo de entidad Unidad II:
+
+Modelo de Datos . la intención de la entidad sería: INTENCIÓN DE UNA ENTIDAD.
+
+Esquema de la entidad, conjunto de atributos que la conforman. En la entidad
+
+DOCTOR, Cedula, Nombre,Apellido, Especialidad, Consultorio GRADO DE UNA ENTIDAD:
+
+número de atributos que posee la entidad Es importante señalar que el término
+
+ENTIDAD se puede referir a instancias u ocurrencias concretas (cada doctor en
+
+particular) o al tipo de entidad (el conjunto de todos los doctores) Unidad II:
+
+Modelo de Datos . Son las características, rasgos y propiedades de una entidad.
+
+Quienes moldean la entidad son los atributos, es decir, definen a una entidad.
+
+Ejm: Cedula, nombre, apellido, sexo Una instancia de entidad en particular es
+
+descrita por los valores de sus atributos Cedula .098. Nombre SANDRA Apellido
+
+Especialidad Consultorio LUNA CARDIOLOGIA TORRE I, PISO , NRO .910.976 GUILLERMO
+
+JIMENEZ TRAUMATOLOGO TORRE , PISO , NRO .789.653 ANGELA PEREZ CIRUJANO TORRE I,
+
+PISO , NRO Es importante mencionar que no se debe confundir un atributo con
+
+entidad. Para que exista una entidad esta debe caracterizarse por lo menos con
+
+DOS atributos Atributos Simples o compuestos Almacenados o Derivados
+
+Monovalorados o Multivalorados Opcionales Unidad II: Modelo de Datos . Son
+
+también llamados atómicos, ya que su valor no se puede dividir. Ejemplos de este
+
+tipo de atributo: precio, existencia, nota, peso. Unidad II: Modelo de Datos .
+
+En este tipo de atributo, su valor resulta de la concatenación de otros valores.
+
+Dicho de otro modo, su valor puede dividirse en otros sub valores. Para
+
+conveniente una serie de atributos simples las consultas dentro de la BD, es a
+
+llevar compuesto atributo facilitar un Unidad II: Modelo de Datos . Cedula
+
+.903.659 .678.090 Nombre Dirección Dayana Maria Caceres Sanchez Calle , casa ,
+
+Urb. Las Garzas- Puerto Ordaz Luisa Miranda Jaramillo Hernandez Calle Las
+
+Bonitas , casa , Urb. Cloudy Park, San Felix Calle Casa Urbanización Zona Primer
+
+nombre Segundo nombre Primer Apellido Segundo Apellido Unidad II: Modelo de
+
+Datos . Para crear consultas mas eficientes dentro de la BD, es recomendable
+
+transformar los atributos compuestos a atributos simples. En este ejemplo se
+
+puede ver claramente las ventajas de transformar los campos nombre y dirección a
+
+atributos simples, ya que al momento de la creación de las consultas es mas
+
+eficiente realizar las mismas por atributos simples Aquellos cuyo valor no
+
+provienen de ningún otro atributo o relación entre entidades. Ejemplo:
+
+Nacionalidad, Nombre, estatura. Unidad II: Modelo de Datos . Los valores de
+
+estos atributos pueden ser obtenidos a través de cálculos a partir de otros
+
+datos ya existentes en otros atributos (de l

@@ -1,0 +1,79 @@
+es”,
+
+el DBMS realizará una actualización automática en el campo relacionado de la
+
+tabla con los registros “hijos”. Eliminación en Cascada : Si eliminamos un
+
+registro en la tabla principal (tabla de los registros “padres”), se eliminaran
+
+automáticamente todos los registros “hijos” en las demás tablas relacionadas. La
+
+seguridad en bases de datos está dirigida a proteger los datos de accesos no
+
+autorizados. (Privacidad de la base de datos) Se debe cuidar de que accesos no
+
+autorizados ejecuten operaciones indebidas que pongan en riesgo su existencia,
+
+consistencia e integridad. La seguridad es independiente del diseño del modelo
+
+de datos Otro aspecto que el DBMS debe proporcionar es la Seguridad de la BD Las
+
+principales características de la seguridad en una base de datos son: ✓La
+
+Confidencialidad de la información ✓ La Integridad de la información ✓La
+
+Disponibilidad de la información Los datos deben poder ser sometidos a procesos
+
+de auditoria. Las acciones de los usuarios deben ser supervisadas, de modo tal
+
+que pueda descubrirse cualquier acción indebida o errónea. La auditoría de la
+
+base de datos permite realizar un seguimiento de las acciones específicas de los
+
+usuarios en la base de datos, como las actualizaciones de tablas, las consultas
+
+de lectura, las asignaciones de privilegios de usuario y otras. Tipos de
+
+usuarios de acuerdo a la permisología Usuario con derecho a crear, borrar y
+
+modificar objetos y que además puede conceder privilegios a otros usuarios sobre
+
+los objetos que ha creado. Usuario con derecho a consultar, o actualizar, y sin
+
+derecho a crear o borrar objetos. Privilegios sobre los objetos, añadir nuevos
+
+campos, indexar, alterar la estructura de los objetos, etc. Tipos de usuarios de
+
+acuerdo a la permisología •La autorización de lectura permite la lectura de los
+
+datos, pero no su modificación. • La autorización de inserción permite la
+
+inserción de datos nuevos, pero no la modificación de los existentes. • La
+
+autorización de actualización permite la modificación de los datos, pero no su
+
+borrado. • La autorización de borrado permite la eliminación de los datos
+
+TRANSACCION Conjunto de operaciones que se ejecutan y que forman una única
+
+unidad lógica y atómica de trabajo. También la podemos definir como conjunto de
+
+instrucciones, agrupadas lógicamente, que o bien se ejecutan todas sobre la base
+
+de datos o bien no se ejecuta ninguna. Imaginemos a una persona realizando una
+
+transferencia bancaria . Una transferencia está compuesta por dos operaciones o
+
+instrucciones: . Descontar de la cuenta de origen la cantidad indicada .
+
+Aumentar el saldo de la cuenta de destino con el monto de la cantidad
+
+transferida de la cuenta origen. Este conjunto de instrucciones conforman una
+
+transacción y está claro que las dos instrucciones que la componen (una
+
+transacción está conformada por dos o más instrucciones) deben ejecutarse. O se
+
+ejecutan todas o no se ejecuta ninguna. Para el ejemplo presentado es obvio que
+
+la 

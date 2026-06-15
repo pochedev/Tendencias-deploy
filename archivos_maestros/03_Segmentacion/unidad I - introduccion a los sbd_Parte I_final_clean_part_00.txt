@@ -1,0 +1,77 @@
+En esta unidad estaremos abordando conceptos que debemos tener claros antes de
+
+poder iniciar el diseño de una base de datos. Es de suma importancia que como
+
+ingenieros nos apropiemos correctamente del uso de las diversas terminologías en
+
+nuestro ambiente de trabajo profesional, así como la comprensión de los
+
+conceptos. Empecemos. - Representación Simbólica (numérica o alfabética) -
+
+Describen hechos o realidades - Aislados no poseen relevancia - Materia Prima de
+
+la Información Sabemos que un dato en sí mismo no es de mucha utilidad si no
+
+está en un contexto. El dato es la respuesta a una solicitud de información -
+
+Son hechos conocidos que pueden registrarse y que tienen un significado
+
+implícito. - Hecho individual acerca de algo de interés para alguien: númerico,
+
+alfanúmerico, etc. - Cuantitativos (numéricos) - Cualitativos : Nominales:
+
+etiquetado o codificación de información en categorías. Ordinales: describen el
+
+orden de los mismos con base en una escala Los datos cuantitativos como su
+
+palabra lo indica, se refiere a aquellos que indican cantidad. Por su parte, los
+
+cualitativos expresan cualidad de algo o alguien, y estos tipos de datos a su
+
+vez pueden ser nominales, que se utilizan para etiquetar variables sin ningún
+
+valor cuantitativo. Los ejemplos comunes incluyen género, color de cabello,
+
+nacionalidades, nombres de personas, etc. También tenemos a los datos ordinales
+
+que están expresados a partir de una escala, es decir, muestran cierto orden de
+
+intensidad o jerarquía (Bien, mal, regular. De acuerdo, en desacuerdo,
+
+Totalmente en desacuerdo… Etc.) - Un dato NO constituye información - La
+
+información viene a partir de la relación entre esos datos Fecha de nacimiento
+
+//2008 Nombre Gabriela Flores Los datos por sí mismos no brindan información
+
+relevante, es a través de la relación de estos que obtenemos información. Por
+
+ejemplo, no es lo mismo que nos digan - -2008, a que se relacione esa cadena de
+
+caracteres con la fecha de nacimiento de alguien llamado Gabriela Flores Desde
+
+la definición más básica o elemental, podemos decir simplemente que una base de
+
+datos es un “almacén o repositorio de datos”. Visto desde ese punto de vista,
+
+una BD podría estar constituida por una sencilla carpeta en físico donde estén
+
+contenidos los expedientes de unos estudiantes, o una hoja de excel donde
+
+tengamos los precios y las cantidades en existencia de un listado de productos,
+
+o un archivador donde se guarden las ventas por mes de una compañía de larga
+
+data. “Es una colección de datos persistentes, que pueden compartirse e
+
+interrelacionarse” “Las bases de datos no son meramente una colección de
+
+archivos. Más bien una base de datos es una fuente central de datos son
+
+significativos, compartidos por numerosos usuarios para diversas aplicaciones”
+
+cuales los Sin embargo, para nuestros propósitos, debemos profundizar el
+
+concepto y llevarlo a términos automatizados. Así vamos a conseguir la
+
+definición de varios autores que les comp

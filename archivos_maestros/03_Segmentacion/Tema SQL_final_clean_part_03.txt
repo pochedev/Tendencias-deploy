@@ -1,0 +1,77 @@
+ones o criterios. Su sintáxis es la siguiente: SELECT campo1,
+
+campo2,…campoN FROM nombretabla ( WHERE condicion(es)) EJEMPLOS SELECT: SELECT
+
+nombre, precio FROM ARTICULO WHERE tipoart=“LUJO”; SELECT nombre, precio FROM
+
+ARTICULO WHERE precio BETWEEN 120000 AND 5000000 SELECT * FROM Pedidos WHERE
+
+Provincia IN (“Madrid”, “Barcelona”, “Sevilla”); EJEMPLOS SELECT: SELECT nombre,
+
+cantidad FROM ARTICULO WHERE precio BETWEEN 120000 AND 5000000 ORDER BY nombre
+
+ASC (DESC) SELECT Apellidos, Nombre FROM Empleados WHERE Apellidos LIKE 'S*';
+
+expresiones con diferentes modelos. En la tabla siguiente se muestra cómo
+
+utilizar el operador Like para comprobar expresiones con diferentes modelos Tipo
+
+de coincidencia Modelo Planteado No coincide Coincide Varios caracteres Carácter
+
+especial Varios caracteres Un solo carácter Un solo dígito Rango de caracteres
+
+Fuera de un rango Distinto de un dígito 'a*a' 'a[*]a' 'ab*' 'a?a' 'a#a' '[a-z]'
+
+'[!a-z]' '[!-]' 'aa', 'aBa', 'aBBBa' 'a*a' 'aBC' 'aaa' 'abcdefg', 'abc' 'cab',
+
+'aab' 'aaa', 'a3a', 'aBa' 'aBBBa' 'a0a', 'a1a', 'a2a' 'aaa', 'a10a' 'f', 'p',
+
+'j' '', '&', '%' 'A', 'a', '&', '~' '', '&' 'b', 'a' '', '', '' 'abc', 'aj0'
+
+Combinada 'a[!b-m]#' 'An9', 'az0', 'a99' FUNCIONES AVANZADAS APLICABLES A
+
+CONSULTAS Existen funciones que permiten la agilización de consultas similares a
+
+una hoja de cálculo, ya que trabajan en base a renglones y columnas. Algunas de
+
+estas funciones son: •COUNT ( ): Cuenta el número de tuplas en la columna
+
+establecida •MIN ( ): Localiza el valor mínimo de la columna establecida •MAX (
+
+): Localiza el valor máximo de la columna establecida. •AVG ( ): Obtiene el
+
+promedio de valores de la columna establecida •SUM ( ): Obtiene el valor total
+
+que implican los valores obtenidos en la columna establecida. Realizar las
+
+siguientes consultas: . Mostrar los datos de los participantes cuyas edades
+
+estén comprendidas entre y años, ordenarlos alfabéticamente por apellidos .
+
+Mostrar los datos de todos los participantes ordenados por edades de menor a
+
+mayor . Mostrar el nombre, duración y costo de los cursos que se ofertaron para
+
+el mes de julio de 2005 . Mostrar los datos de los instructores que han hecho
+
+postgrado . Mostrar los datos de los instructores que han hecho postgrado
+
+egresados de la UCV . Mostrar los cursos programados para agosto de 2005 de cuya
+
+duración este por debajo de horas y tengan un costo por debajo de 200000 .
+
+Mostrar los datos de los particpiantes cuyo apellido inicie con “M” . Los cursos
+
+de wimax, wifi y telecomunicaciones aumentaron en un %, realizar la
+
+actualización respectiva CONSULTAS AVANZADAS Cuando en la sentencia From
+
+colocamos los nombres de las tablas separados por comas se dice que efectuamos
+
+una consulta de la forma Join de Querys. La sentencia INNER JOIN es la sentencia
+
+JOIN por defecto, y consiste en combinar cada fila de una tabla con cada fila de
+
+la otra tabla, seleccionado aquellas filas que cumplan una determinada
+
+condición. SELECT * FROM tabl

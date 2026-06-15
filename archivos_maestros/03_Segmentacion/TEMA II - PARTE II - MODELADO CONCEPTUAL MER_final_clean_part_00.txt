@@ -1,0 +1,75 @@
+MODELADO CONCEPTUAL Unidad II: Modelo de Datos . En sesiones anteriores hemos
+
+estado viendo los modelos conceptuales y lógicos que se utilizan para crear una
+
+BD. En esta presentación estaremos abordando el modelo conceptual a través del
+
+Modelo Entidad Relación. Sin embargo también estaremos tocando algunas
+
+terminologías relativas al modelo relacional el cual como ya saben pertenecen a
+
+los modelos lógicos Modelado Conceptual ¿Qué tipo de información necesitamos
+
+guardar en la BD? ¿Qué tipo de información necesitamos obtener de la BD? Unidad
+
+II: Modelo de Datos . Para realizar un modelo conceptual Lo primero que debemos
+
+hacer es indagar que es lo que se quiere almacenar en la BD y qué información se
+
+espera obtener de ella, lo que en programación se conoce como entradas y salidas
+
+una representar herramienta Proporciona información del mundo real a nivel
+
+conceptual. Permite describir las entidades involucradas en la base de datos,
+
+así como las relaciones y restricciones de ellas haciendo uso de un diagrama
+
+para Unidad II: Modelo de Datos . El modelo E-R es la herramienta utilizada para
+
+el modelado conceptual cuando ya hemos decidido trabajar con el modelo
+
+relacional como modelo lógico, y como su nombre lo indica se trata de
+
+identificar las entidades presentes en el sistema a modelar y las relaciones
+
+existentes entre ellas .- Refleja tan solo la existencia de los datos, no lo que
+
+se hace con ellos .- Se incluye todos los datos relevantes del sistema en
+
+estudio .- No está orientado a aplicaciones especificas .- Es independiente del
+
+DBMS .- Esta abierto a la evolución del sistema Unidad II: Modelo de Datos . El
+
+MER que se diseñe como parte de una solución de datos, es independiente del DBMS
+
+a utilizar. En la fase de implementación del modelo es que se trabajará con el
+
+DBMS seleccionado .- Identificar las entidades .- Describir las relaciones entre
+
+las entidades (reglas semánticas) .- Crear el diagrama .- Agregar los atributos
+
+a cada entidad Unidad II: Modelo de Datos . Antes de empezar a diseñar MER
+
+debemos entender los elementos que lo conforman, es por ello que en las próximas
+
+láminas estaremos abordando las conceptualizaciones necesarias. Primero se
+
+explicará lo que son las entidades, luego los atributos, y posteriormente las
+
+relaciones entre entidades. Por último veremos la simbología usada para
+
+construir los MER Persona, lugar, cosa, concepto o suceso real o abstracto de
+
+interés para la empresa u organización Objeto del cual queremos almacenar
+
+información en la base de datos. ENTIDAD TANGIBLES- INTANGIBLES DEBILES- FUERTES
+
+Unidad II: Modelo de Datos . Una entidad es algo que deseamos caracterizar y que
+
+vamos a almacenar en la BD, puede ser un objeto (tangible o intangible), animal
+
+o persona. Las entidades pueden ser tangibles (aquellas que podemos ver o tocar)
+
+y las intangibles (aquellas que a pesar que sabemos que existen no pueden ser
+
+vistas) Indique qué tipo de entidad (tangible-intangible) son las siguientes:

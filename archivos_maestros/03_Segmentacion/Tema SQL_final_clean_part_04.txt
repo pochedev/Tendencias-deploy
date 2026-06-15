@@ -1,0 +1,79 @@
+Los cursos
+
+de wimax, wifi y telecomunicaciones aumentaron en un %, realizar la
+
+actualización respectiva CONSULTAS AVANZADAS Cuando en la sentencia From
+
+colocamos los nombres de las tablas separados por comas se dice que efectuamos
+
+una consulta de la forma Join de Querys. La sentencia INNER JOIN es la sentencia
+
+JOIN por defecto, y consiste en combinar cada fila de una tabla con cada fila de
+
+la otra tabla, seleccionado aquellas filas que cumplan una determinada
+
+condición. SELECT * FROM tabla1 INNER JOIN tabla2 ON tabla1.columna1 =
+
+tabla2.columna1 Claúsula RIGHT JOIN La instrucción RIGHT JOIN devuelve todas los
+
+registros de la tabla de la derecha (table2), y todas los registros
+
+correspondientes de la tabla de la izquierda (table1). El resultado será NULL
+
+cuando no haya registros correspondientes de la tabla de la izquierda. Sintaxis
+
+SQL RIGHT JOIN SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON
+
+table1.column_name=table2.column_name; Clausula LEFT JOIN La claúsula LEFT JOIN
+
+devuelve todas los registros de la tabla de la izquierda (table1), con las
+
+correspondientes de la tabla de la derecha (table2). El resultado es NULL en la
+
+parte de la derecha cuando no hay registros que correspondan con la condición.
+
+SINTAXIS SQL LEFT JOIN SELECT column_name(s) FROM table1 LEFT JOIN table2 ON
+
+table1.column_name=table2.column_name; Mostrar los productos en inventario del
+
+proveedor BHV cuya existencia este por debajo de cien unidades SELECT
+
+Productos.nombre, Productos.existencia FROM proveedor INNER JOIN Productos ON
+
+Proveedor.codigo = Productos.cod_prov; WHERE Productos.existencia < 100; AND
+
+Proveedor.nombre = "BHV" . Hacer una consulta que muestre la menor venta
+
+realizada por el vendedor LUIS A GOMEZ P . Hacer una consulta que muestra los
+
+totales de los montos vendidos agrupados por vendedor . Hacer una consulta que
+
+muestra cuantas ventas ha realizado el vendedor JOSE A FLORES P en el primer
+
+trimestre del 2002 . Mostrar el mayor monto vendido, el codigo de la venta y la
+
+fecha para el proveedor ACEROS VENEZOLANOS . Indicar la cantidad de productos de
+
+nombre SOLV01 vendidos en el primer trimestre del 2002 . Hacer una consulta que
+
+muestre un listado de los totales de las ventas realizadas agrupadas por
+
+clientes . Indique el promedio de ventas del cliente FERROVEN en el año 2001 .
+
+Hacer una consulta que ordene de mayor a menor las ventas realizadas en el
+
+primer trimestre del año 2000 . Seleccione las tres ventas de mayor monto
+
+realizadas en el año 2003 correspondiente al cliente TORCA . Listar todos los
+
+libros de la materia PROGRAMACION cuya existencia este por debajo de unidades .
+
+Listar los libros del autor FREDERICK MORLOCK . Listar todos los préstamos
+
+hechos en el mes de octubre de 2005 del usuario CLAUDIA ESTRADA de la materia
+
+BIOLOGIA . Listar todos los usuarios que realizaron prestamos en el mes de
+
+febrero de 2006 . Listar los libros del autor LAURA GUERRA de la materia QUIMICA
+
+. Listar todos los usuarios que se enc

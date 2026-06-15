@@ -1,0 +1,645 @@
+Un modelo de entidad-relación extendido, también conocido como
+
+modelo entidad-relación mejorado, es un tipo de diagrama de base
+
+de datos que es similar a los DER normales. Los DER extendidos son
+
+modelos conceptuales de alto nivel que representan de forma
+
+precisa los requisitos de bases de datos complejas.
+
+Los DER extendidos incluyen los mismos conceptos que abarcan los
+
+diagramas DER normales.
+
+¿Qué es lo nuevo en un MERE?
+
+•Subtipos y supertipos (conocidos también como
+
+subclases y superclases)
+
+•Especialización o generalización
+
+•Herencia
+
+•Agregación
+
+SUBTIPO (SUBCLASE):
+
+Cada uno de los subgrupos de instancias de una entidad con
+
+atributos únicos que se han de representar de forma explicita en
+
+el modelo de datos debido a su importancia para el diseño. Esta
+
+representación ha de hacerse en una nueva entidad.
+
+SUPERTIPO (SUPER CLASE):
+
+Una entidad que tiene una relación con uno o más subtipos, y
+
+que queda completamente definida como la unión de dos o más
+
+entidades
+
+La extensión de un subtipo es un sub conjunto de la extensión
+
+del supertipo
+
+RELACIONES SUPERTIPO-SUBTIPO:
+
+-Un subtipo puede tener atributos propios y puede participar en
+
+relaciones por separado.
+
+-Una instancia del subtipo también es instancia del supertipo
+
+-Una instancia no puede existir solo por ser miembro de un
+
+subtipo; también debe ser miembro del supertipo.
+
+-Una instancia del supertipo puede no ser miembro de ningún
+
+subtipo
+
+LEGADO O HERENCIA:
+
+-Un conjunto de entidades de nivel más bajo (subtipo) también
+
+heredan la participación en los de relaciones en los que su
+
+entidad de nivel más alto (supertipo) participa
+
+-Un subtipo “hereda” todos los atributos del supertipo y toda la
+
+relación en la que participa el supertipo.
+
+CLIENTE
+
+Codigo (PK)
+
+RIF
+
+Cedula
+
+TipoCliente
+
+Nombre
+
+Apellido
+
+Dirección
+
+Teléfono
+
+Email
+
+FechaNacimiento
+
+IngresoMensual
+
+EmpresaLabora
+
+DireccionEmpresa
+
+TelefonoEmpresa
+
+Antiguedad
+
+TipoEmpresa
+
+Gerente
+
+Patrimonio
+
+CLIENTE
+
+(SUPERTIPO)
+
+NATURAL
+
+(SUBTIPO)
+
+JURIDICO
+
+(SUBTIPO)
+
+CLIENTE
+
+Codigo (PK)
+
+RIF
+
+TipoCliente
+
+Dirección
+
+Teléfono
+
+Email
+
+JURIDICO
+
+Codigo (PK)
+
+TipoEmpresa
+
+Gerente
+
+Patrimonio
+
+NumeroEmpleados
+
+NumeroEmpleados
+
+Ramo
+
+Ramo
+
+NATURAL
+
+Codigo (PK)
+
+Cedula
+
+Primernombre
+
+SegundoNombre
+
+PrimerApellido
+
+SegundoApellido
+
+Celular
+
+FechaNacimiento
+
+IngresoMensual
+
+EmpresaLabora
+
+DireccionEmpresa
+
+TelefonoEmpresa
+
+Antiguedad
+
+ESPECIALIZACION :
+
+Es el proceso donde se definen subtipos de los supertipos y se
+
+forman las relaciones entre ellos.
+
+En otras palabras, en la especialización un supertipo se
+
+descompone en uno o varios subtipos, los cuales heredan todos
+
+los atributos y relaciones del supertipo, además de tener los
+
+suyos propios.
+
+El conjunto de subtipos se definen con base en las características
+
+diferenciadoras de las instancias de la entidad supertipo
+
+¿CUANDO HACER LA ESPECIALIZACION ?
+
+- Cuando existen atributos que sólo tienen sentido para algunas
+
+instancias de entidad y no para todas (atributos específicos)
+
+- Cuando existen relaciones en los que sólo participan algunas
+
+entidades de un tipo y no todas (relaciones específicas)
+
+En resumen:
+
+-La especialización hace énfasis en las diferencias
+
+-Permite definir un conjunto de subclases a partir de una entidad
+
+-Permite definir atributos específicos a cada subtipo
+
+-Permite establecer relaciones especificas entre cada subtipo con
+
+otras entidades
+
+GENERALIZACION:
+
+Es el proceso inverso de la especialización, se define un tipo de
+
+entidad general (supertipo) de una colección de tipos de
+
+entidades especializadas (subtipos).
+
+Los atributos comunes y relaciones de los subtipos se asignan al
+
+supertipo.
+
+GENERALIZACION:
+
+La generalización se usa para resaltar las similitudes entre los
+
+conjuntos de entidades de nivel más bajo y para ocultar las
+
+diferencias; también permite economizar la representación para
+
+que los atributos compartidos no estén repetidos.
+
+Un tipo de restricción implica determinar qué instancias de
+
+entidades pueden ser miembros de un conjunto de entidades de
+
+nivel más bajo dado:
+
+• Definido por condición, predicado o atributo. En los conjuntos
+
+entidades de nivel más bajo, la relación
+
+de instancias de
+
+miembro se evalúa en función de si una instancia de entidad
+
+satisface o no una condición explícita o predicado
+
+•Condición
+
+de
+
+pertenencia
+
+a
+
+cada
+
+subtipo
+
+con base en el valor de algún atributo del supertipo
+
+•Restricción que especifica que:
+
+✓Las instancias del subtipo deben satisfacer la condición
+
+✓Todas las instancias del supertipo que cumplen la condición,
+
+deben pertenecer al subtipo
+
+E. SUPERTIPO
+
+E. SUPERTIPO
+
+“nombreatributo”
+
+“nombreatributo”
+
+“Valor1”
+
+“Valor2”
+
+E. Subtipo1
+
+E.Subtipo2
+
+“valor1”
+
+“valor2”
+
+“valor3”
+
+“valor4”
+
+E.Subtipo1
+
+E.Subtipo2
+
+E.subtipo3
+
+E.Subtipo4
+
+Cuenta
+
+tipocuenta
+
+ahorro
+
+corriente
+
+C_ahorro
+
+C_corriente
+
+• Definido por el usuario. Los conjuntos de entidades de nivel
+
+más bajo definidos por el usuario no están restringidos mediante
+
+una condición de miembro; en cambio, las entidades se asignan a
+
+un conjunto de entidades dado por el usuario de la base de datos
+
+No existe (o no interesa definir) ninguna condición de
+
+pertenencia a los subtipos
+
+El usuario, al
+
+pertenece
+
+insertar una instancia, elige a qué subtipo
+
+E. SUPERTIPO
+
+E. SUPERTIPO
+
+E. Subtipo1
+
+E.Subtipo2
+
+E.Subtipo1
+
+E.Subtipo2
+
+E.subtipo3
+
+E.Subtipo4
+
+Un segundo tipo de restricciones se define según si las entidades
+
+pueden pertenecer a más de un conjunto de entidades de nivel
+
+más bajo en una generalización simple
+
+• Disjunto o exclusivo: Una restricción sobre el carácter disjunto
+
+requiere que una instancia de entidad no pertenezca a más de
+
+una entidad de nivel más bajo.
+
+la misma
+
+• Solapado. En las generalizaciones solapadas,
+
+instancia de entidad puede pertenecer a más de una entidad de
+
+nivel más bajo. Es la opción por defecto
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+ANIMAL
+
+PERRO
+
+GATO
+
+E.SUPERTIPO
+
+O
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+PERSONAL
+
+DOCENTE
+
+ADMINISTRATIVO
+
+Por último, la restricción de completitud en una generalización o
+
+especialización, especifica si un conjunto de entidades de nivel más
+
+alto debe pertenecer o no a al menos a uno de los conjuntos de
+
+entidades de nivel más bajo en una generalización/especialización.
+
+• Generalización o especialización total: Cada entidad de nivel más
+
+alto debe pertenecer a un conjunto de entidades de nivel más bajo.
+
+• Generalización o especialización parcial: Algunas entidades de
+
+nivel más alto pueden no pertenecer a algún conjunto de entidades
+
+de nivel más bajo. La generalización parcial es la predeterminada
+
+E. SUPERTIPO
+
+E. SUPERTIPO
+
+E. Subtipo1
+
+E.Subtipo2
+
+E.Subtipo1
+
+E.Subtipo2
+
+E.subtipo3
+
+E.Subtipo4
+
+De acuerdo a las restricciones vistas se pueden presentar las
+
+siguientes combinaciones:
+
+-Disjunta - Total:
+
+Una instancia del supertipo es miembro como máximo de un
+
+subtipo, y además toda instancia del supertipo también deber ser
+
+instancia de algún subtipo
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Disjunta - parcial:
+
+Una instancia del supertipo es miembro como máximo de un
+
+subtipo, y además algunas instancias del supertipo no son
+
+instancia de ningún subtipo
+
+E.SUPERTIPO
+
+d
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Solapada - Total:
+
+Una instancia del supertipo puede ser miembro de varios
+
+subtipos, y además toda instancia del supertipo también deber
+
+ser instancia de algún subtipo
+
+E.SUPERTIPO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+-Solapada - parcial:
+
+Una instancia del supertipo puede ser miembro de varios
+
+subtipos, y además algunas instancias del supertipo no son
+
+instancia de ningún subtipo
+
+E.SUPERTIPO
+
+o
+
+E.SUPERTIPO
+
+Subtipo1
+
+Subtipo2
+
+Subtipo1
+
+Subtipo2
+
+Si el subtipo esta definido por atributo,
+
+implica que al haber una inserción en el
+
+supertipo, se debe insertar en los subtipos
+
+para los cuales satisface la condición
+
+✓ Si existe una especialización TOTAL
+
+entonces, al insertar una instancia en el
+
+supertipo se debe insertarla en AL MENOS en
+
+un subtipo
+
+✓ Si existe una especialización DISJUNTA
+
+entonces al insertar una instancia en el
+
+supertipo, implica insertarla en UNICO
+
+subtipo
+
+✓ Eliminar una instancia de un supertipo implica
+
+eliminarla de todos los subtipos a los que
+
+pertenece (hijos huérfanos)
+
+✓ Si la especialización es DISJUNTA y TOTAL al Eliminar
+
+una instancia de un subtipo implica eliminarla del
+
+supertipo
+
+✓ Si la especialización es SOLAPADA Y TOTAL, implica que
+
+al eliminar una instancia del subtipo, se debe eliminar
+
+del supertipo SI Y SOLO SI la instancia ya solo existe en
+
+el subtipo del que se elimina, es decir, se ha eliminado
+
+del resto de los subtipos a la que pertenecía
+
+✓ En el resto de casos, la instancia sólo se elimina del
+
+subtipo
+
+✓La agregación involucra un conjunto de entidades y de relaciones y consiste
+
+en considerar las como si fueran una entidad.
+
+✓Involucra un conjunto de entidades y de relaciones
+
+✓Permite tratar un conjunto de relaciones como un conjunto de entidades
+
+para propósitos de participación en otras relaciones.
+
+✓La agregación permite mejorar la conceptualización dentro del modelo
+
+entidad-relación
+
+EMPRESA
+
+M
+
+ENTREVISTA
+
+SOLICITANTE
+
+N
+
+¿Cómo expresar la
+
+cardinalidad entre dos relaciones?
+
+GENERA
+
+CONTRATACION
+
+EMPRESA
+
+M
+
+ENTREVISTA
+
+SOLICITANTE
+
+N
+
+GENERA
+
+CONTRATACION

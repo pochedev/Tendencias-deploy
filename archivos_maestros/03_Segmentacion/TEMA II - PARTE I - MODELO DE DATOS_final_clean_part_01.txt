@@ -1,0 +1,77 @@
+como por ejemplo el MER, pasamos al diseño lógico. Aquí es donde el diseñador va
+
+a optar por trabajar con un modelo en particular, bien sea relacional, orientado
+
+a objetos, documental etc. El modelo más usado en la actualidad sigue siendo el
+
+modelo Relacional que no es lo mismo que el MER. Recordemos que el MER pertenece
+
+a la capa de diseño conceptual, y el Modelo Relacional pertenece a la capa
+
+lógica - Define un paradigma de almacenamiento, estableciendo cómo se
+
+estructuran los datos y las relaciones entre estos - Determina la estructura
+
+lógica de la base de datos según el modelo del SGBD que se vaya a utilizar, es
+
+decir, la forma de almacenar, organizar y la manipulación de los datos - Este
+
+modelo contiene más detalle que el modelo conceptual, sin tener en cuenta cómo
+
+la información se implementará físicamente en la base de datos. Los modelos
+
+lógicos de datos: ✓Incluyen todas las entidades y relaciones entre ellas
+
+✓Especifican atributos para cada entidad ✓Especifican claves primarias para cada
+
+entidad* ✓Especifican claves foránea, las cuales identifican la relación entre
+
+diferentes entidades* ✓Involucran la normalización, que es el proceso de
+
+eliminación de redundancia en una tabla* * Estas características aplican
+
+propiamente para el modelo lógico relacional Dentro de los modelos lógicos
+
+tenemos: ✓ Modelo jerárquico ✓ Modelo de Red ✓ Modelo Relacional ✓ Modelo
+
+Orientado a Objetos ✓ Modelo documental ✓ Otras Como les había mencionado
+
+anteriormente el modelo más usado hoy en día sigue siendo el relacional, aún
+
+cuando otro tipo de BD han ido cobrando auge debido a las limitaciones del
+
+modelo. El modelo relacional es el conocido como BD SQL, pues es este el modelo
+
+que trabaja con este lenguaje. Los demás modelos son conocidos como BD NoSQL
+
+pues al no ser relacionales no pueden trabajar con SQL como lenguaje de consulta
+
+Los modelos Jerarquico y de Red son los antecesores del modelo relacional. Hoy
+
+en día se encuentran en desuso. Las BD NoSql han ido cobrando auge como las BD
+
+documentales, BD clave-valor, BD orientada a grafos entre otros - Apareció a
+
+mediados de los sesenta - Los registros están organizados como colecciones de
+
+arboles - Los datos y las relaciones de registros se representan mediante
+
+registros y enlaces respectivamente - El acceso a un registro implica que se ha
+
+de pasar por sus padres, restando flexibilidad a la navegación por la base de
+
+datos) - Cobraron gran auge en esa década, la NASA utilizó este modelo en el
+
+programa espacial APOLO APOLO (el mismo programa espacial con el que el hombre
+
+llegó a la luna). El primer alunizaje con tripulación humana fue con el APOLO -
+
+No se garantiza la inexistencia de registros duplicados, pues existe el concepto
+
+de claves. El sistema gestor de base de datos no implementa ningún control sobre
+
+los propios datos, sino que las no queda en manos de las aplicaciones garantizar
+
+duplicaciones de datos - Presentan problemas de integridad referencial pues no
+
+existe gar

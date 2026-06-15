@@ -1,0 +1,77 @@
+olet, Fiat forman
+
+parte del dominio del atributo “Marca” y no son atributos en si Clave Primaria
+
+(Primary Key (PK)): Una clave primaria es aquella que identifica de forma
+
+univoca una instancia de entidad. Debe ser escogida de entre las claves
+
+candidatas Pueden ser simples o compuestas. Clave Primaria Simple: Está formada
+
+por un solo atributo. Ejemplo: Cédula Clave Primaria Compuesta: Formada por
+
+varios atributos que solos se repiten pero combinados identifican de forma
+
+univoca la instancia Unidad II: Modelo de Datos . Una entidad puede tener varios
+
+atributos cuyos valores no se repiten. Estos atributos son llamados “claves
+
+candidatas” . De estas candidatas se debe escoger una ganadora que fungirá como
+
+clave primaria. . Por ejemplo la entidad estudiante podría tener como claves
+
+candidatas el código del carnet y la CI del estudiante, pues sabemos que ninguno
+
+de estos valores se repetirá. De estos dos se escogerá la clave primaria de la
+
+entidad Clave Foránea (Foreing Key(FK)): Atributo presente en una entidad, y que
+
+es clave primaria en otra entidad Unique Key: Resto de las claves candidatas que
+
+no fueron elegidas como primarias Unidad II: Modelo de Datos . El concepto de
+
+clave foránea se comprenderá mejor cuando estemos realizando los modelos. Por
+
+ahora bastará con saber que es un atributo que a su vez es clave primaria en
+
+otra entidad. En el siguiente ejemplo se entiende mejor el concepto Sea la
+
+entidad Propietario con los siguientes atributos: Cedula(PK), Apellido, Nombre,
+
+dirección Y Sea la entidad vehiculo con los siguientes atributos: Placa (PK),
+
+modelo, color, cedpropietario (FK) Nos damos cuenta que el atributo
+
+“CedPropietario” de la entidad “Vehiculo” es una clave foránea, ya que es clave
+
+primaria en la tabla “Propietario” Se define como una “asociación de entidades”.
+
+Ejemplo: Un estudiante CURSA varias materias Unidad II: Modelo de Datos . La
+
+relación entre dos entidades nos indica la conexión semántica que existe entre
+
+ellas. ENTIDAD ATRIBUTO RELACION CONECTORES O LIGAS Unidad II: Modelo de Datos .
+
+Cuando empecemos a realizar los ejercicios de modelado comprenderán mejor las
+
+conceptualizaciones que se presentan en las siguientes láminas, por ahora es
+
+necesario que las vayan conociendo. El grado de las relaciones, número relaciona
+
+tipos de grados. Grado , Grado II y Grado III está asociado al se Existen con
+
+determinada. entidades entidad de una que las Unidad II: Modelo de Datos .
+
+relación GRADO : RELACIÓN UNARIA También son llamadas aquellas relaciones en las
+
+que sólo participan una entidad. Relaciona una entidad consigo misma por lo que
+
+también se les llaman relaciones reflexivas. anillo, y Unidad II: Modelo de
+
+Datos . GRADO II: RELACIÓN BINARIA Las relaciones en las que participan dos
+
+entidades son y de son las más comunes en cualquier modelo ER. binarias grado
+
+dos, o . Unidad II: Modelo de Datos . GRADO III: RELACIÓN TERNARIA Cuando en la
+
+relación participan tres entidades se Este de rán tipo de re

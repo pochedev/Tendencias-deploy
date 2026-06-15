@@ -1,0 +1,19 @@
+en el año 2003 correspondiente al cliente TORCA . Listar todos los
+
+libros de la materia PROGRAMACION cuya existencia este por debajo de unidades .
+
+Listar los libros del autor FREDERICK MORLOCK . Listar todos los préstamos
+
+hechos en el mes de octubre de 2005 del usuario CLAUDIA ESTRADA de la materia
+
+BIOLOGIA . Listar todos los usuarios que realizaron prestamos en el mes de
+
+febrero de 2006 . Listar los libros del autor LAURA GUERRA de la materia QUIMICA
+
+. Listar todos los usuarios que se encuentren morosos . Listar todos los libros
+
+del autor DOUGLAS ZURITA editados por la editorial PRENTICE HALL . Listar todos
+
+los usuarios que han solicitado libro de la materia BIOLOGIA MOLECULAR en el mes
+
+de marzo del 2005 que pertenezcan a la de medicina.

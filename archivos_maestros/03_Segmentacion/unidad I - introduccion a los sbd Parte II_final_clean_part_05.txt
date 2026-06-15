@@ -1,0 +1,77 @@
+está compuesta por dos operaciones o
+
+instrucciones: . Descontar de la cuenta de origen la cantidad indicada .
+
+Aumentar el saldo de la cuenta de destino con el monto de la cantidad
+
+transferida de la cuenta origen. Este conjunto de instrucciones conforman una
+
+transacción y está claro que las dos instrucciones que la componen (una
+
+transacción está conformada por dos o más instrucciones) deben ejecutarse. O se
+
+ejecutan todas o no se ejecuta ninguna. Para el ejemplo presentado es obvio que
+
+la transacción bancaria no se puede quedar “a medias” El concepto de transacción
+
+se desarrolló para atender los casos en los que el estado resultante de la base
+
+de datos depende del éxito completo en una serie de operaciones TRANSACCION
+
+Estado de una Transacción ✓Activa: el estado inicial; la transacción permanece
+
+en este estado durante su ejecución. ✓Parcialmente comprometida: después de
+
+ejecutarse la última instrucción. ✓ Fallida: tras descubrir que no puede
+
+continuar la ejecución normal. ✓Abortada: después de haber retrocedido la
+
+transacción y restablecido la base de datos a su estado anterior al comienzo de
+
+la transacción. ✓Comprometida o terminada: tras completarse con éxito La acción
+
+de cancelar o abortar una transacción se denomina deshacer la transacción.
+
+Deshacer una transacción permite anular los cambios y recuperar el estado de la
+
+base de datos previo a la transacción. La ejecución de una transacción debe
+
+conducir a un estado de la base de datos consistente (que cumple todas las
+
+restricciones de integridad definidas). TRANSACCION Estado de una Transacción
+
+Parcialmente comprometida Terminada activa Fallida Abortada TRANSACCION
+
+Propiedades de las Transacciones • Atomicidad. O todas las operaciones de la
+
+transacción se realizan adecuadamente en la base de datos o ninguna de ellas. •
+
+Consistencia. La ejecución aislada de la transacción (es decir, sin otra
+
+transacción que se ejecute concurrentemente) conserva la consistencia de la base
+
+de datos • Aislamiento. Los efectos de una transacción no se ven influenciados
+
+por otras transacciones concurrentes. Aunque se ejecuten varias transacciones
+
+concurrentemente, el sistema garantiza que para cada par de transacciones Ti y
+
+Tj, se cumple que para los efectos de Ti, o bien Tj ha terminado su ejecución
+
+antes de que comience Ti , o bien que Tj ha comenzado su ejecución después de
+
+que Ti termine, es decir la transacciones son independientes entre sí. •
+
+Durabilidad. Tras la finalización con éxito de una transacción, los cambios
+
+realizados en la base de datos permanecen, incluso si hay fallos en el sistema A
+
+C I D Componente de Control de Concurrencia Componente de Gestión de
+
+Recuperaciones Componente de Gestión de Transacciones DBMS Los DBMS poseen tres
+
+componentes para controlar la concurrencia, gestionar las recuperaciones y las
+
+transacciones EN RESUMEN, UN DBMS DEBE PERMITIR : ✓ La creación y definición de
+
+la base de datos. ✓ Manipulación de los datos ✓ Eficiencia ✓Privacidad de lo

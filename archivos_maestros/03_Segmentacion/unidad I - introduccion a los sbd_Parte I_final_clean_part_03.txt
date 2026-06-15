@@ -1,0 +1,77 @@
+s esas copias se actualicen al haber una
+
+modificación en alguna de ellas. Por supuesto que la existencia de más copias
+
+requiere mayor espacio de almacenamiento en la BD e influye en el tiempo para
+
+accesar los datos. Sin embargo, el mayor problema de la redundancia es que puede
+
+proporcionar la inconsistencia de datos. MEJORA EN LA PRODUCTIVIDAD MEJORA EN EL
+
+MANTENIMIENTO MEJORA EN LA CONCURRENCIA MANTENIMIENTO DE ESTANDARES MEJORA EN LA
+
+INTEGRIDAD DE DATOS MEJORA EN LA SEGURIDAD MEJORA EN LA ACCESIBILIDAD A LOS
+
+DATOS Son muchas las ventajas del uso de las BD (hago hincapié en que cuando me
+
+refiero estas ventajas, estoy hablando de aquellas ventajas que brindan las BD
+
+que han sido creadas con software especializados para su elaboración y gestión
+
+VS a aquellas basadas en archivos planos). Más adelante estaremos profundizando
+
+sobre este software de creación y gestión, pero por ahora hablaremos las
+
+ventajas : -Mejora en la productividad: es obvio que el uso de BD acelera el
+
+rendimiento de los empleados de una empresa pues disminuye el tiempo de
+
+respuesta ante la solicitud de información de cualquier ente interesado
+
+(cliente, gerencia, etc). Por ejemplo, el tiempo que lleva buscar en físico el
+
+estado de un reclamo no es el mismo que el tiempo que toma hacer la búsqueda en
+
+un sistema automatizado, la diferencia de tiempo habla por sí misma. Pero
+
+también la productividad no es solo para los usuarios finales sino además para
+
+los programadores, ya que se facilita la creación y mantenimiento de los
+
+sistemas acelerando su productividad de trabajo. -Mejora en el mantenimiento:
+
+Con las base de datos basadas en archivos planos, el realizar una modificación
+
+en la estructura de estos archivos puede implicar cambios importantes en los
+
+programas o aplicaciones que se sirven de la BD. Sin embargo, al trabajar con
+
+bases de datos creadas con software especializado, las descripciones de los
+
+datos se separan de las aplicaciones. Esto es lo que se conoce como
+
+independencia de datos, gracias a la cual se simplifica el mantenimiento de las
+
+aplicaciones que acceden a la base de datos. -Mejora en la concurrencia: El
+
+termino concurrencia se refiere al hecho de que muchas transacciones puedan
+
+realizarse en una misma base de datos a la vez. Los programas especializados
+
+para la gestión de BD ofrecen mecanismos de control para que las operaciones
+
+simultáneas no interfieran entre sí. -Mantenimiento de estándares: con el uso de
+
+BD es más fácil respetar los estándares necesarios, tanto los establecidos a
+
+nivel de la empresa como los nacionales e internacionales. Estos estándares
+
+pueden establecerse sobre el formato de los datos para facilitar su intercambio;
+
+pueden ser estándares de documentación, procedimientos de actualización y
+
+también reglas de acceso -Mejora en la integridad de datos: Normalmente, la
+
+integridad se expresa mediante restricciones o reglas que no se pueden violar.
+
+Estas restricciones se pueden aplicar tanto a los datos, como a

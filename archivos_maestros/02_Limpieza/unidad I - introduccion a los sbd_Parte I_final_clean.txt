@@ -1,0 +1,499 @@
+En esta unidad estaremos abordando conceptos que debemos tener claros antes de
+
+poder iniciar el diseño de una base de datos. Es de suma importancia que como
+
+ingenieros nos apropiemos correctamente del uso de las diversas terminologías en
+
+nuestro ambiente de trabajo profesional, así como la comprensión de los
+
+conceptos. Empecemos. - Representación Simbólica (numérica o alfabética) -
+
+Describen hechos o realidades - Aislados no poseen relevancia - Materia Prima de
+
+la Información Sabemos que un dato en sí mismo no es de mucha utilidad si no
+
+está en un contexto. El dato es la respuesta a una solicitud de información -
+
+Son hechos conocidos que pueden registrarse y que tienen un significado
+
+implícito. - Hecho individual acerca de algo de interés para alguien: númerico,
+
+alfanúmerico, etc. - Cuantitativos (numéricos) - Cualitativos : Nominales:
+
+etiquetado o codificación de información en categorías. Ordinales: describen el
+
+orden de los mismos con base en una escala Los datos cuantitativos como su
+
+palabra lo indica, se refiere a aquellos que indican cantidad. Por su parte, los
+
+cualitativos expresan cualidad de algo o alguien, y estos tipos de datos a su
+
+vez pueden ser nominales, que se utilizan para etiquetar variables sin ningún
+
+valor cuantitativo. Los ejemplos comunes incluyen género, color de cabello,
+
+nacionalidades, nombres de personas, etc. También tenemos a los datos ordinales
+
+que están expresados a partir de una escala, es decir, muestran cierto orden de
+
+intensidad o jerarquía (Bien, mal, regular. De acuerdo, en desacuerdo,
+
+Totalmente en desacuerdo… Etc.) - Un dato NO constituye información - La
+
+información viene a partir de la relación entre esos datos Fecha de nacimiento
+
+//2008 Nombre Gabriela Flores Los datos por sí mismos no brindan información
+
+relevante, es a través de la relación de estos que obtenemos información. Por
+
+ejemplo, no es lo mismo que nos digan - -2008, a que se relacione esa cadena de
+
+caracteres con la fecha de nacimiento de alguien llamado Gabriela Flores Desde
+
+la definición más básica o elemental, podemos decir simplemente que una base de
+
+datos es un “almacén o repositorio de datos”. Visto desde ese punto de vista,
+
+una BD podría estar constituida por una sencilla carpeta en físico donde estén
+
+contenidos los expedientes de unos estudiantes, o una hoja de excel donde
+
+tengamos los precios y las cantidades en existencia de un listado de productos,
+
+o un archivador donde se guarden las ventas por mes de una compañía de larga
+
+data. “Es una colección de datos persistentes, que pueden compartirse e
+
+interrelacionarse” “Las bases de datos no son meramente una colección de
+
+archivos. Más bien una base de datos es una fuente central de datos son
+
+significativos, compartidos por numerosos usuarios para diversas aplicaciones”
+
+cuales los Sin embargo, para nuestros propósitos, debemos profundizar el
+
+concepto y llevarlo a términos automatizados. Así vamos a conseguir la
+
+definición de varios autores que les comparto, de los cuales quiero destacar
+
+ciertos aspectos: Mannino habla de datos persistentes, esta persistencia está
+
+relacionada a la permanencia o durabilidad de los datos en el tiempo, y vemos
+
+también la palabra “compartirse”. Una de las bondades de las BD es que podemos
+
+compartir esos datos entre los usuarios que así lo requieran en tiempo real. Por
+
+su parte, Kendall y Kendall, hacen mención a “datos significativos”. Los datos
+
+deben tener un significado importante para la organización o usuarios que se
+
+sirvan de estos. No tiene sentido que así no sea. Todo dato almacenado debe
+
+brindar respuesta a una necesidad de información de los usuarios de la BD.
+
+Conjunto de datos relacionados entre si, almacenados sin redundancias en un
+
+soporte de acceso directo. Los datos están interrelacionados y estructurados de
+
+acuerdo a un modelo que sea capaz de recoger el máximo contenido semántico; su
+
+finalidad es servir a una o más aplicaciones de la mejor forma posible. Los
+
+resulten independientes de los programas que los usan; se emplean métodos para
+
+incluir nuevos datos y para modificar o extraer los datos almacenados de modo
+
+almacenan datos que se Esta definición está más completa en el sentido que se
+
+incorporan a los modelos en ella. Es así como vemos que una base de datos surge
+
+de un modelo basado en acontecimientos de la vida real, pues es precisamente que
+
+los datos deben dar respuesta a solicitudes de información de la vida real. El
+
+objetivo de una BD es proporcionar los datos que sean solicitados a tantos
+
+programas o aplicaciones que así lo requieran para dar respuesta a necesidades
+
+de información de los diferentes usuarios. El almacenamiento de estos datos es
+
+totalmente independiente de estos programas a quienes sirve. Colección de datos
+
+estructurados según un modelo que refleje las relaciones y restricciones
+
+existentes en el mundo real. Los datos han de ser compartidos por diferentes
+
+usuarios y aplicaciones, y deben mantenerse independientes de éstas; su
+
+definición y descripción han de ser únicas, estando almacenadas junto con los
+
+mismos. Los tratamientos habrán de conservar la integridad y seguridad de los
+
+datos. Otra definición que recoge lo que hemos venido comentando. Hernan
+
+Hollericht primer ingeniero estadístico de la historia Los discos duros dieron
+
+inicio a las BD, modelo red y jerarquica Consolidadción del modelo relacional
+
+Uso explosivo de WWW, bases de daos con protocolo para la transmisión se
+
+contenido en internet (OAI- PMH) Origen de las cintas magnéticas, automatizació
+
+n de tareas de procesamiento de datos Banco de Datos Edgar Frank Code y su
+
+modelo relacional Se estandariza SQL HANSEN Y HANSEN “La sofisticada filosofía
+
+de las bases de datos es el resultado de la evolución que ha tenido a lo largo
+
+de décadas el procesamiento de datos y la gestión de la información” Esta es una
+
+breve línea de tiempo en relación a la evolución de las BD. Podemos ver que es
+
+entre los y que se consolidan fuertemente como resultado de la aparición del
+
+modelo relacional, que posteriormente estaremos abordando. Lo más resaltante es
+
+que en relativamente pocos años, hemos pasado de tener bases de datos aisladas
+
+que servían a pocos usuarios, a bases de datos en línea que sirven a miles de
+
+usuarios conectados a la red. -Redundancia: La redundancia se define como la
+
+copia de un mismo dato en varias partes de la BD. esto hace que se desperdicie
+
+espacio de almacenamiento, además de provocar faltas de consistencia de datos
+
+(copias que no coinciden). -Inconsistencia de Datos: Un mismo dato arroja
+
+diferente información en varias partes de la BD. Por ejemplo, en una parte de la
+
+BD una determinada cédula corresponde a una persona de sexo femenino y en otra
+
+parte de la BD corresponde a una persona de sexo masculino. -Integridad de
+
+datos: Se refiere a la validez de los datos almacenados, es decir, está asociada
+
+a evitar que datos no válidos sean añadidos a la base de datos. Antes de seguir
+
+necesito que tengan claro estos conceptos. Más adelante estaremos profundizando
+
+en la integridad de datos. Por ahora deben entender estas definiciones para
+
+poder hablar de las ventajas de las BD ¿Por qué la redundancia es un problema?
+
+-Dificulta la tarea de modificación de datos -Genera inconsistencia de datos
+
+-Requiere mayor espacio de almacenamiento -Influye en el tiempo de acceso a los
+
+datos La redundancia es un problema en una BD porque al existir varias copias de
+
+un mismo dato, se debe asegurar que todas esas copias se actualicen al haber una
+
+modificación en alguna de ellas. Por supuesto que la existencia de más copias
+
+requiere mayor espacio de almacenamiento en la BD e influye en el tiempo para
+
+accesar los datos. Sin embargo, el mayor problema de la redundancia es que puede
+
+proporcionar la inconsistencia de datos. MEJORA EN LA PRODUCTIVIDAD MEJORA EN EL
+
+MANTENIMIENTO MEJORA EN LA CONCURRENCIA MANTENIMIENTO DE ESTANDARES MEJORA EN LA
+
+INTEGRIDAD DE DATOS MEJORA EN LA SEGURIDAD MEJORA EN LA ACCESIBILIDAD A LOS
+
+DATOS Son muchas las ventajas del uso de las BD (hago hincapié en que cuando me
+
+refiero estas ventajas, estoy hablando de aquellas ventajas que brindan las BD
+
+que han sido creadas con software especializados para su elaboración y gestión
+
+VS a aquellas basadas en archivos planos). Más adelante estaremos profundizando
+
+sobre este software de creación y gestión, pero por ahora hablaremos las
+
+ventajas : -Mejora en la productividad: es obvio que el uso de BD acelera el
+
+rendimiento de los empleados de una empresa pues disminuye el tiempo de
+
+respuesta ante la solicitud de información de cualquier ente interesado
+
+(cliente, gerencia, etc). Por ejemplo, el tiempo que lleva buscar en físico el
+
+estado de un reclamo no es el mismo que el tiempo que toma hacer la búsqueda en
+
+un sistema automatizado, la diferencia de tiempo habla por sí misma. Pero
+
+también la productividad no es solo para los usuarios finales sino además para
+
+los programadores, ya que se facilita la creación y mantenimiento de los
+
+sistemas acelerando su productividad de trabajo. -Mejora en el mantenimiento:
+
+Con las base de datos basadas en archivos planos, el realizar una modificación
+
+en la estructura de estos archivos puede implicar cambios importantes en los
+
+programas o aplicaciones que se sirven de la BD. Sin embargo, al trabajar con
+
+bases de datos creadas con software especializado, las descripciones de los
+
+datos se separan de las aplicaciones. Esto es lo que se conoce como
+
+independencia de datos, gracias a la cual se simplifica el mantenimiento de las
+
+aplicaciones que acceden a la base de datos. -Mejora en la concurrencia: El
+
+termino concurrencia se refiere al hecho de que muchas transacciones puedan
+
+realizarse en una misma base de datos a la vez. Los programas especializados
+
+para la gestión de BD ofrecen mecanismos de control para que las operaciones
+
+simultáneas no interfieran entre sí. -Mantenimiento de estándares: con el uso de
+
+BD es más fácil respetar los estándares necesarios, tanto los establecidos a
+
+nivel de la empresa como los nacionales e internacionales. Estos estándares
+
+pueden establecerse sobre el formato de los datos para facilitar su intercambio;
+
+pueden ser estándares de documentación, procedimientos de actualización y
+
+también reglas de acceso -Mejora en la integridad de datos: Normalmente, la
+
+integridad se expresa mediante restricciones o reglas que no se pueden violar.
+
+Estas restricciones se pueden aplicar tanto a los datos, como a sus relaciones,
+
+y es el software que gestiona la BD quien se encarga de mantenerlas. -Mejora en
+
+la Seguridad: La seguridad de la base de datos consiste en la protección de la
+
+base de datos frente a usuarios no autorizados. Las BD presentan una gran
+
+ventaja en cuanto a seguridad se refiere, pues permiten la implantación de
+
+políticas destinadas a la protección de la data. Los programas para la creación
+
+y gestión de BD permiten mantener niveles de seguridad para el resguardo de la
+
+data CONTROL SOBRE LA REDUNDANCIA CONSISTENCIA DE DATOS COMPARTICION DE DATOS
+
+FACILIDAD DE RESPALDO AYUDA AL PLANETA -Control sobre la redundancia y
+
+Consistencia de Datos: En una base de datos no se puede eliminar la redundancia
+
+completamente, ya que en ocasiones es necesaria para modelar las relaciones
+
+entre los datos, o bien es necesaria para mejorar las prestaciones. Lo que se
+
+busca es tener un control sobre esta redundancia, para que no llegue a ser una
+
+redundancia innecesaria. Eliminando o controlando las redundancias de datos se
+
+reduce en gran medida el riesgo de que haya inconsistencias. Si un dato está
+
+almacenado una sola vez, cualquier actualización se debe realizar sólo una vez,
+
+y está disponible para todos los usuarios inmediatamente. Si un dato está
+
+duplicado y el sistema conoce esta redundancia, el propio sistema puede
+
+encargarse de garantizar que todas las copias se mantengan consistentes.
+
+-Compartición de datos: En los sistemas que hacen unos de una BD basado en
+
+archivos planos, los archivos pertenecen a los departamentos o usuarios que los
+
+utilizan, pero en los sistemas de bases de datos creadas con software
+
+especializado para tal fin, la base de datos pertenece a la empresa y puede ser
+
+compartida por todos los usuarios que estén autorizados. Además, las nuevas
+
+aplicaciones que se vayan creando pueden utilizar los datos de la base de datos
+
+existente. -Facilidad de respaldo: con el software especializado resulta más
+
+fácil replicar una base de datos para mantener una copia de seguridad que
+
+hacerlo con un conjunto de archivos almacenados de forma no estructurada. -
+
+Ayuda al planeta: son amigables con el planeta, pues su existencia ayudan a
+
+disminuir el consumo de papel. COMPLEJIDAD COSTO DE LA INVERSION VULNERABILIDAD
+
+A FALLOS No todo son ventajas. Existen ciertas desventajas como: - Complejidad:
+
+La creación de BD supone el uso de programas muy complejos con una gran
+
+funcionalidad. Se necesita de personal especializado que las organizaciones
+
+deben contratar o subcontratar -Costo de la inversión: para algunas
+
+organizaciones el uso de una BD puede implicar costos elevados, en algunas
+
+ocasiones estos costos estarán asociados a inversión de hardware y en otros
+
+pagos de licencias de software. Hay que recalcar que algunos software
+
+especializados en la creación y gestión de BD, sus licencias debe pagarse en
+
+dólares y de forma anual. A estos costos hay que sumarle el personal capacitado.
+
+- Vulnerabilidad a fallos: Como todo en el mundo informático, las BD no están
+
+exentas de presentar fallos. Las Bd tienen un punto débil sobre todo en
+
+Venezuela, y es que su disponibilidad depende del suministro de energía
+
+eléctrica. Esto podría poner en jaque a organizaciones que tengan la mayoría de
+
+sus procesos o por lo menos los medulares, sujetos al uso de BD. Una universidad
+
+que lleve a cabo su proceso de inscripción de forma automatizada se verá
+
+paralizada en este proceso medular tan importante, o si existe un protocolo de
+
+sistema manual, el proceso se retardaría significativamente. ARCHIVO PARA
+
+MATRICULARSE EN “VALLE REAL” CI@NOMBRE@TLF@DIRECCION 25678987@LUISA
+
+VERA@0412-0009@0414-0959220SAN FELIX 19865324@ASBEL
+
+PINTOS@0414-9899@0000-00000@PUERTO ORDAZ 28908777@ENRIQUE
+
+FLORES@0416-9989@0286-9529039@PTO ORDAZ APLICACIÓN DE LA BIBLIOTECA DE VALLE
+
+REAL, PARA MANEJO DE SUS USUARIOS CI@NOMBRE@APELLIDO@FNACIMIENTO@TLF@DIRECCION
+
+25678987@LUISA@VERA@//1990@0412-0009@SAN FELIX
+
+19865324@ASBEL@PINTOS@//1992@0414-9890@PUERTO ORDAZ
+
+28908777@ENRIKE@FLORES@//1991@0416-9989@PUERTO ORDAZ Antes del uso masivo de
+
+software propios para la creación y manejo de BD, las bases de datos se creaban
+
+apoyadas en el uso de archivos planos (txt). Lo que vemos en esta lámina y en la
+
+siguiente es un ejemplo de un sistema de información de una universidad basado
+
+en archivos planos. En esta diapositiva se presentan archivos. En el primero
+
+descansan los datos de los estudiantes de nuevo ingreso (archivo de
+
+matriculación), y en el segundo se depositan los datos de los estudiantes para
+
+la parte del sistema que trabaja en la biblioteca. Nótese que a los usuarios del
+
+sistema de la biblioteca le interesan otros datos que no les interesa a los
+
+usuarios del sistema de matriculación. Podemos ver que no existe homogeneidad en
+
+la dirección de los estudiantes, aún cuando corresponda a la misma zona (elipse
+
+amarilla). Por si fuera poco el estudiante debe registrar dos veces su data
+
+conduciendo a errores de inconsistencia como los que están encerrados en la
+
+elipse roja. ARCHIVO DEL SISTEMA DE LA BIBLIOTECA PARA ALMACENAMIENTO DE DATOS
+
+DE LOS LIBROS IDENTIFICADOR@TITULO@AUTOR@EXISTENCIA 2334-222@FUNDAMENTOS DE
+
+CONTABILIDAD@ANA LUGO@ 19865324@LOGICA COMPUTACIONAL@EMA TOMPSON @
+
+45609/@CONTABILIDAD@LAURA LOPEZ@ 2334/222@FUNDAMENTOS DE CONTABILIDAD@ANA LUGO@
+
+ARCHIVO DEL SISTEMA DE LA BIBLIOTECA PARA PRESTAMO DE LOS LIBROS
+
+CI@IDLIBRO@FPRESTAMO@FDEVOLUCION 25678987@2334-222@//2015@//2015
+
+19865324@2334/222@//2015@//2015 Estos dos archivos corresponden al sistema de
+
+préstamos de libros de la biblioteca. Podemos observar como en el archivo de
+
+almacenamiento de los datos de los libros, se presenta un problema con el
+
+identificador del libro Fundamentos de Contabilidad. Aquí se percibe problemas
+
+de integridad de data que puede propagarse a otros archivos que conforman la
+
+base de datos ” ¿Qué problemas arrastran este tipo de sistemas basados en el uso
+
+de archivos planos? REDUNDANCIA → INCONSISTENCIA SEGURIDAD AISLAMIENTO DE LOS
+
+DATOS ATOMICIDAD (TODO O NADA) DIFICULTAD DE ACCESO PROBLEMAS DE CONCURRENCIA
+
+CONTROL DE INTEGRIDAD DE LOS DATOS -Lo primero que podemos ver es que existe
+
+redundancia, existe duplicidad de data de los alumnos, lo que conlleva a la
+
+inconsistencia, ya que vemos diferentes números de teléfono para el estudiante
+
+ASBEL PINTO. -Cada archivo (el de matriculación y el de registro de biblioteca)
+
+se convierte en una isla de datos, los datos no se están compartiendo con las
+
+aplicaciones que lo ameritan, lo que conlleva a la dificultad de acceso a la
+
+data. - La integridad de los datos también es otro problema, vimos que el
+
+identificador del libro Fundamentos de contabilidad tiene dos formatos
+
+distintos. -Al trabajar con archivos planos no existe control sobre la
+
+concurrencia, si dos o más usuarios estuvieran intentando acceder al mismo
+
+archivo al mismo tiempo podría generar problemas, el acceso simultáneo puede dar
+
+como resultados información inconsistente o simplemente incorrecta. -Cuando se
+
+trabaja con BD las modificaciones realizadas (agregar, borrar o modificar) deben
+
+seguir la regla de todo o nada. Esto significa que ante un fallo del sistema la
+
+transacción no puede quedar a medias, cuando ocurre una falla esta debería ser
+
+detectada, procediendo a restaurar los datos al estado de consistencia anterior.
+
+Esto se llama atomicidad y es la propiedad que asegura que una operación se ha
+
+realizado o no. En sistemas basados en archivos planos esta propiedad es difícil
+
+de asegurar. -La seguridad queda totalmente en manos del programador de
+
+aplicaciones dejando esta área tan importante vulnerable a fallos ASPECTO
+
+ENTIDADES SISTEMAS BASADOS EN ARCHIVOS SISTEMAS BASADOS EN BD tienen registros
+
+de una sola entidad tipo. tienen datos de varias entidades tipo. INTERRELACIONES
+
+el sistema no interrelaciona archivos REDUNDANCIA USUARIOS se crean archivos a
+
+la medida de cada aplicación, con todos los datos necesarios aunque algunos sean
+
+redundantes respecto de otros archivos sirven para un solo usuario o una sola
+
+aplicación. Dan una sola visión del mundo real. el sistema tiene previstas
+
+herramientas para interrelacionar entidades todas las aplicaciones trabajan con
+
+la misma BD y la integración de los datos es básica, de modo que se evita la
+
+redundancia. es compartida por muchos usuarios de distintos tipos. Ofrece varias
+
+visiones del mundo real. En esta lámina se presentan un resumen de las
+
+diferencias entre algunos aspectos de un sistema basado en archivos planos y un
+
+sistema basado en BD gestionadas con software para tal fin. Con esta lámina
+
+finalizo la primera entrega de la unidad. En la próxima entrega estaremos
+
+hablando entre otras cosas, del software especializado para la creación y
+
+gestión de BD. Cualquier comentario pueden o a mi dirección
+
+de correo

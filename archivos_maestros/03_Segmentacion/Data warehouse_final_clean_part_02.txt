@@ -1,0 +1,77 @@
+blemas de negocio. Su
+
+objetivo principal es convertir datos crudos en información accionable (consejos
+
+reales para los jefes). Pág. El Analista es el "usuario VIP" del Data Warehouse.
+
+Su rol aquí es de consumo y validación: • Consulta y Extracción: Utiliza SQL
+
+avanzado para extraer datos de los Data Marts o del DWH central. • Aseguramiento
+
+de Calidad: Es el primero en notar si algo anda mal. Si el DWH dice que ayer se
+
+vendieron cafés en un Starbucks de Nueva York, el analista reporta el error en
+
+el proceso ETL. • Creación de Dashboards: Toma los datos del DWH y los conecta a
+
+herramientas como Power BI o Tableau para que los gerentes vean gráficos bonitos
+
+y fáciles de entender en lugar de tablas aburridas. Su papel dentro del Data
+
+Mining Mientras que en el DWH solo mira "qué pasó", en el Data Mining busca "por
+
+qué pasó" y "qué pasará": • • • Identificación de Patrones: El analista aplica
+
+técnicas estadísticas para encontrar relaciones. (Ejemplo: “Noté que los
+
+usuarios que ven series de suspenso los martes tienen un % de probabilidad de
+
+cancelar su suscripción el próximo mes”). Segmentación: Agrupa a los clientes en
+
+"clusters". No todos los clientes de Netflix son iguales; el analista define
+
+quiénes son los "maratonistas", los "casuales" y los "fans del anime".
+
+Predicción: Utiliza modelos básicos de Machine Learning para predecir tendencias
+
+futuras basándose en los datos históricos que extrajo del almacén. Diferencia de
+
+roles de los distintos profesionales en el flujo de datos Para que no se
+
+confundan, vean esta jerarquía simple: . Ingeniero de Datos: Construye el Data
+
+Warehouse (el edificio). . Analista de Datos: Explora el edificio, limpia las
+
+salas y explica qué hay en cada una usando Data Mining y reportes. . Científico
+
+de Datos (Data Scientist): Usa algoritmos de inteligencia artificial muy
+
+complejos para crear productos automáticos (como el algoritmo de recomendación
+
+de TikTok). Habilidades Técnicas que debe tener un analista de datos (El "Saber
+
+Hacer") • SQL Avanzado (Indispensable): Se debe dominar CTEs (Common Table
+
+Expressions), funciones de ventana (WINDOW functions) y optimización de
+
+consultas para bases de datos en la nube (como BigQuery o Snowflake). •
+
+Visualización y Storytelling: Manejar Power BI o Tableau, pero con un enfoque en
+
+narrativa. Un analista exitoso no entrega un reporte; cuenta una historia donde
+
+el "villano" es la pérdida de dinero y el "héroe" es la solución encontrada en
+
+los datos. • • • IA: Saber usar herramientas de IA (como ChatGPT, Copilot o
+
+Gemini) para escribir código más rápido, limpiar datos o generar ideas de
+
+análisis. Python/R para Automatización: No se necesita ser desarrollador, pero
+
+sí saber lo suficiente para automatizar tareas repetitivas de limpieza de datos
+
+que en Excel tomarían horas. Estadística Aplicada: Comprender pruebas de
+
+hipótesis y correlaciones para no decir "las ventas subieron por suerte", sino
+
+para demostrar que el cambio es estadísticamente significa

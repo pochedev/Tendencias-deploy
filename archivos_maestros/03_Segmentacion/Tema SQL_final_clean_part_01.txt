@@ -1,0 +1,79 @@
+tos
+
+temporales (PERIOD FOR). Mejoras en las funciones de ventana y de la cláusula
+
+FETCH. -SQL:2016 Permite búsqueda de patrones, funciones de tabla polimórficas y
+
+compatibilidad con los ficheros JSON DML SQL DDL DCL DML (lenguaje de
+
+manipulación de datos): El DML (Data Manipulation Language ) es un lenguaje que
+
+permite a los usuarios acceder o manipular los datos organizados (añadiendo,
+
+suprimiendo o modificando la data) mediante el modelo de datos apropiado. DDL
+
+(Lenguaje de definición de datos): El DDL (Data Definition Language), incluye
+
+órdenes para definir, modificar o borrar las tablas en las que se almacenan los
+
+datos y de las relaciones entre estas. Es el que más varia de un sistema a otro.
+
+DCL (Lenguaje de control de datos): El DCL(Data Control Language) contiene
+
+elementos útiles para trabajar en un entorno multiusuario, en el que es
+
+importante la protección de los datos, la seguridad de las tablas y el
+
+establecimiento de restricciones en el acceso, así como elementos para coordinar
+
+la compartición de datos por parte de usuarios concurrentes, asegurando que no
+
+interfieren unos con otros. El SQL permite fundamentalmente dos modos de uso: -
+
+Un uso interactivo: destinado principalmente a los usuarios finales avanzados u
+
+ocasionales, en el que las diversas sentencias SQL se escriben y ejecutan en
+
+línea de comandos, o un entorno semejante. - Un uso integrado: destinado al uso
+
+por parte de los programadores dentro de programas escritos en cualquier
+
+lenguaje de programación anfitrión. En este caso el SQL asume el papel de
+
+sublenguaje de datos. En el DDL, existen cuatro operaciones básicas: CREATE,
+
+ALTER, DROP y TRUNCATE. CREATE Este comando crea un objeto dentro de la base de
+
+datos. Puede ser una tabla, vista, índice, trigger, función, procedimiento o
+
+cualquier otro objeto que el motor de la base de datos soporte. Sintaxis para la
+
+creación de la base de datos: CREATE DATABASE nombredelabasededatos; Sintaxis
+
+para la creación de una tabla: CREATE TABLE nombre_tabla ("columna "
+
+"tipo_de_datos_para_columna_1", "columna " "tipo_de_datos_para_columna_2", ...
+
+); Ejemplo para la creación de la base de datos: CREATE DATABASE petvet;
+
+Sintaxis para la creación de una tabla: CREATE TABLE Customer (First_Name
+
+char(), Last_Name char(), Address char(), City char(), Country char(),
+
+Birth_Date datetime); ALTER: Este comando permite modificar la estructura de un
+
+objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de datos
+
+de un campo, agregar/quitar claves a una tabla. Sintaxis: La sintaxis dependerá
+
+del tipo de modificación que estemos realizando a la estructura de la base de
+
+datos (agregando, modificando o eliminando parte de la estructura) EJEMPLOS
+
+ALTER: Para agregar una columna: ALTER TABLE animal ADD nombre VARCHAR(); Para
+
+eliminar una columna: ALTER TABLE animal DROP COLUMN peso; Para modificar el
+
+tipo de dato de una columna: ALTER TABLE animal ALTER COLUMN nombre VARCHAR();
+
+Para agregar una PK: ALT

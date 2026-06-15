@@ -1,0 +1,79 @@
+la o dos
+
+vehículos con la misma placa. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad
+
+Referencial Podemos definir integridad referencial al hecho de no hacer
+
+referencia a registros o campos que no existen por que nunca fueron creados o
+
+por que han dejado de existir en el transcurso de la base de datos. La
+
+integridad referencial impide a los usuarios: a.- Agregar o cambiar filas en una
+
+tabla relacionada si no hay ninguna fila asociada en la tabla principal. b.-
+
+Cambiar valores en una tabla principal que crea filas huérfanas en una tabla
+
+relacionada. c.- Eliminar filas de una tabla principal cuando hay filas
+
+relacionadas coincidentes. Tabla: Propietarios TIPO DE RESTRICCIONES DE
+
+INTEGRIDAD .- Integridad Referencial Tabla Propietarios CI 81612298 15698425
+
+9856365 25394589 APELLIDOS ESPINOZA A HERNANDEZ F GARCIA M FLORES G NOMBRES
+
+CAROLINA M JOSE A DOLORES D MARTIN J DIRECCION XXXXXXXX XXXXXXXX XXXXXXX XXXXXXX
+
+TLF XXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX Tabla Vehículos PLACA ABCG-125
+
+ABCY-158 ABCZ-269 BAGY-874 BOPT-459 BZAM-594 MARCA FORD JEEP CHEVROLET CHEVROLET
+
+FIAT TOYOTA MODELO EXPLORER CHEROKEE CORSA OPTRA SIENNA CAMRY AÑO 1998 2014 2004
+
+2008 2006 2005 COLOR PLATA BLANCO AZUL BLANCO VERDE AZUL PROPIETARIO 15698425
+
+81612298 25394589 9856365 15365987--------- 25394589 Esta cédula no se
+
+encuentra registrada En la tabla Propietarios ¿Qué ocurriría al solicitar los
+
+datos del Propietario de este vehículo? Como ya hemos mencionado, en las BD los
+
+datos se encuentran relacionados. Así lo podemos observar en estas dos tablas ,
+
+el campo CI de la tabla Propietarios se encuentra relacionado con el campo
+
+Propietario de la tabla Vehículos Ahora bien, los DBMS nos ayudan a mantener la
+
+integridad de la data a través de la activación de la Integridad Referencial.
+
+Esta activación es opcional, pero de no activarla pueden surgir problemas como
+
+los presentados en la lámina. Si activamos la IR, el DBMS no permitirá el
+
+ingreso de la cédula de identidad 15365987 en la tabla Vehículo sin antes
+
+haberla ingresado en la tabla Propietarios. Se puede decir que los registros de
+
+la tabla Propietarios son considerados como Padres de los registros de la tabla
+
+Vehículos. TIPO DE RESTRICCIONES DE INTEGRIDAD .- Integridad Referencial Cuando
+
+activamos la IR se puede activar la Actualización y Eliminación en cascada
+
+Actualización en Cascada: Al activar esta opción, si realizamos alguna
+
+modificación en el campo clave principal de la tabla de los registros “padres”,
+
+el DBMS realizará una actualización automática en el campo relacionado de la
+
+tabla con los registros “hijos”. Eliminación en Cascada : Si eliminamos un
+
+registro en la tabla principal (tabla de los registros “padres”), se eliminaran
+
+automáticamente todos los registros “hijos” en las demás tablas relacionadas. La
+
+seguridad en bases de datos está dirigida a proteger los datos de accesos no
+
+autorizados. (Privacidad de la base de datos) Se debe cuidar de que accesos no
+
+autorizados ejecute

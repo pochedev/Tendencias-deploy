@@ -1,0 +1,79 @@
+O SE
+
+LLEGA A BELEN VIRAO VAS UNA NOCHE COMUN Y SIN CORRIENTE ARTISTA NACIONALIDAD
+
+NOMBRECD ROCIO DURCAL ESPAÑOLA SHAKIRA COLOMBIANA VOZ VEIS VENEZOLANA CARICIAS
+
+SIEMPRE PARA TODA LA VIDA CONFIDENCIAS DONDE ESTAN LOS LADRONES PIES DESCALZOS
+
+SALE EL SOL EL DORADO COMO SE LLEGA A BELEN VIRAO VAS UNA NOCHE COMUN Y SIN
+
+CORRIENTE TABLA ARTISTA CODIGO ARTISTA NACIONALIDAD ROCIO DURCAL ESPAÑOLA
+
+SHAKIRA COLOMBIANA VOZ VEIS VENEZOLANA TABLA DISCOGRAFIA COD ARTIST A NOMBRECD
+
+CARICIAS SIEMPRE PARA TODA LA VIDA CONFIDENCIAS DONDE ESTAN LOS LADRONES PIES
+
+DESCALZOS SALE EL SOL EL DORADO COMO SE LLEGA A BELEN VIRAO VAS UNA NOCHE COMUN
+
+Y SIN CORRIENTE La regla de la Segunda Forma Normal establece que todas las
+
+dependencias parciales se deben eliminar y separar dentro de sus propias tablas.
+
+Una dependencia parcial es un término que describe a aquellos datos que no
+
+dependen de la llave primaria de la tabla para identificarlo Sea la tabla
+
+Orden_Venta, con los siguientes atributos: •Cod_orden •Cod_cliente •Nom_cliente
+
+•Direccion_cliente •Condicion_venta •Fecha_orden •Total_orden TABLA ORDEN_COMPRA
+
+Cod_orden Cod_cliente Condicion_venta Fecha_orden Total_orden TABLA CLIENTE
+
+Cod_cliente Cod_orden Nom_cliente Direccion_cliente Una tabla está normalizada
+
+en esta forma si todas las columnas que no son clave son funcionalmente
+
+dependientes por completo de la clave primaria y no hay dependencias
+
+transitivas. Una dependencia transitiva es aquella en la cual existen columnas
+
+que no son clave que dependen de otras columnas que tampoco son clave. En otras
+
+palabras, los atributos no clave deben ser mutuamente independientes y
+
+dependientes por completo de la clave primaria Sea la tabla producto con los
+
+siguientes atributos: •Codigo •Descripción •Precio •Categoría •Impuesto Cada
+
+producto forma parte de una y solo una categoría, suponiendo que dependiendo de
+
+la categoría se aplica un impuesto determinado: Categoría …….Impuesto Categoría
+
+…….Impuesto Categoría N …….Impuesto N TABLA PRODUCTO CODIGO DESCRIPCION PRECIO
+
+CODCATEGORIA TABLA CATEGORIA CODIGO DESCRIPCION IMPUESTO Una tabla está en 4NF
+
+si y solo si esta en 3FN y no posee dependencia multivaluadas. Una tabla con una
+
+dependencia multivaluada es una donde la existencia de dos o más relaciones
+
+independientes muchos a muchos causa redundancia; y es esta redundancia la que
+
+es suprimida por la cuarta forma normal. RESTAURANTE ZONASENVIOS VARIEDAD Regla
+
+Descripción Primera Forma Normal (1FN) Incluye la eliminación de todos los
+
+grupos repetidos y/o atributos multivaluados Segunda Forma Normal (2FN) Elimina
+
+dependencias parciales. Tercera Forma Normal (3FN) Elimina cualquier dependencia
+
+transitiva. Cuarta Forma Normal(4FN) Elimina dependencia multivaluada. • La
+
+normalización es una “ciencia” subjetiva. • Determinar las necesidades de
+
+simplificación depende de nosotros. Las reglas de normalización existen como
+
+guías para crear tablas que sean fáciles de manejar, así como flexibles y
+
+eficientes. • A 

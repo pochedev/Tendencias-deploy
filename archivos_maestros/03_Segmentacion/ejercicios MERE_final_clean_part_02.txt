@@ -1,0 +1,77 @@
+os siguientes requerimientos del negocio: .-
+
+Los productos a transportar deben estar almacenados en la base de datos se
+
+necesita la descripción del producto, así como la unidad de medida (toneladas
+
+métricas, kilos, cuñetes, entre otros) .- Los vehículos de transporte con los
+
+que cuenta la empresa son gandolas y camiones. De las gandolas necesitamos
+
+conocer descripción del motor, marca del motor y de los camiones capacidad y
+
+numero de ejes . Además la empresa cuenta con una flota liviana para uso de la
+
+empresa, y de ella se necesita conocer el modelo del vehículo, así como la marca
+
+y numero de póliza. De todos los vehículos se necesita conocer la marca, año de
+
+compra, año del modelo, placa .- Los choferes son empleados propios de la
+
+empresa. Se debe almacenar los datos de cada chofer incluyendo el tipo de sangre
+
+y persona de contacto en caso de accidente, numero de licencia, grado,
+
+vencimiento, numero de certificado medico y vencimiento del mismo. .- La empresa
+
+cuenta con mecánicos para realizarle el mantenimiento a todos los vehículos que
+
+posee la empresa. Se debe llevar un control del mantenimiento realizado a cada
+
+vehículo (fecha, mecánico encargado, entre otros) .- De los mecánicos
+
+necesitamos guardar la especialidad, grado de instrucción además de sus datos
+
+personales. .- Por otra parte, la empresa envía a cursos de especialización
+
+únicamente a el personal administrativo. Se necesita guardar toda la información
+
+de cada curso al que la empresa a enviado a su personal y el listado del
+
+personal que asistió a cada uno de ellos. .- De cada viaje se necesita tener la
+
+siguiente información: empresa solicitante, el vehículo usado, dirección de
+
+destino, horas de viaje, chofer, producto y su cantidad y el personal
+
+administrativo que gestiono el viaje. .- Las empresas solicitantes son los
+
+clientes de nuestra empresa, se debe guardar la información para las gestiones
+
+de cobro. .- Se necesita llevar un registro de las salidas de la flota liviana
+
+(fecha de salida, entrada, hora de salida y entrada, motivo, novedad y
+
+empleado).Solo el personal administrativo puede hacer uso de la flota liviana
+
+UNEG MARCA VEHICULOS REGISTRO EMPLEADOS GANDOLAS LIVIANA CAMIONES MECANICO
+
+ADMINISTRATIVO CHOFER CURSO PRODUCTO CLIENTE VIAJES UNEG MODELO ENTIDAD RELACION
+
+EXTENDIDO VEHICULO Placa (PK) Marca Añocompra Añomodelo Serialmotor serilcarroc
+
+CAMION placa (PK) Capacidad ejes tipo MARCA ID (PK) descripcion GANDOLA Placa
+
+(PK) Motor peso PRODUCTOS ID(PK) Descripcion Udad existemcia LIVIANO Placa (PK)
+
+Modelo Color poliza VIAJESPROD IDPK) Idviaje Idprod cantidad REGISTROFL MTTOVEHI
+
+MECANICO EMPLEADO CI (PK) Especialidad grdinstruccio CHOFER CI (PK) Tsangre
+
+Contacto Tlfcontacto Licencia Grado Venlic Certmed vencert CI (PK) Apellido
+
+Nombre Tlf Direccion Fingreso tipopersonal CURSOS ID(PK) Descripcion ADMINIST CI
+
+(PK) cargo CURSADMINI ID(PK) CI Curso fechaInicio Horas Fechafin modalidad
+
+IDCPK) Placa Mecanico Fecha des VIAJES ID(PK) Vehiculo Chof

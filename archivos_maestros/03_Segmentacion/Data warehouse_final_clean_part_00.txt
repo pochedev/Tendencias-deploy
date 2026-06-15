@@ -1,0 +1,77 @@
+INTRODUCCION AL DATA WAREHOUSE . Definición: Un almacén de datos o Data
+
+Warehouse (DWH) es un sistema centralizado que recopila, integra y almacena
+
+grandes volúmenes de datos, provenientes de diversas fuentes, estos datos están
+
+organizados para facilitar el análisis y la toma de decisiones. Los sistemas DWH
+
+están diseñados específicamente para el análisis de datos, no para el registro
+
+diario, ya que se enfoca en el análisis de la información en vez de su captura.
+
+Imaginemos que una empresa tiene datos en Excel, en una base de datos SQL y en
+
+un software de marketing. El DWH centraliza todo eso en un solo lugar y
+
+normalmente es medido en gigabytes o terabytes de datos. Es importante que la
+
+empresa cuente con un único Data Warehouse. Así, los miembros de la organización
+
+podrán acceder a una misma fuente de información organizada según convenciones
+
+determinadas por el management. . Diferencia entre el paradigma relacional y el
+
+Data Warehouse Característica Base de Datos Relacional Data Warehouse Propósito
+
+Operaciones del día a día (Vender, registrar). Análisis y toma de decisiones.
+
+Datos Datos actuales y detallados. Datos históricos y agregados. Velocidad
+
+Rápida para insertar y actualizar. Rápida para consultas complejas (reportes).
+
+Diseño Altamente tablas). normalizado (muchas Desnormalizado grandes). (pocas
+
+tablas, muy . Arquitectura de un DWH Un Data Warehouse no es solo una base de
+
+datos grande; es un ecosistema. Su arquitectura se divide generalmente en capas:
+
+. Capa de Origen: Donde viven sus bases de datos relacionales (MySQL,
+
+PostgreSQL), archivos Excel o logs de servidores. . Área de Staging (Etapa
+
+intermedia): ). Aquí no se consultan datos para reportes Es un lugar temporal
+
+donde los datos "aterrizan" para ser limpiados (proceso ETL). Para que los datos
+
+lleguen al Data Warehouse, pasan por un "túnel" llamado ETL: a. Extract
+
+(Extraer): Sacamos los datos de las fuentes originales (sus bases de datos
+
+relacionales). Pág. b. Transform (Transformar): Limpiamos los datos. Por
+
+ejemplo: si en una base de datos el sexo es "M/F" y en otra es "/", lo
+
+estandarizamos. c. Load (Cargar): Metemos los datos limpios en el DWH. . Capa de
+
+Almacenamiento (DWH): Donde los datos ya están transformados y organizados en
+
+modelos de estrella. . Data Marts: Son "sub-almacenes" específicos. Por ejemplo,
+
+un Data Mart solo para Finanzas y otro solo para Recursos Humanos. Ayudan a que
+
+cada departamento encuentre lo suyo más rápido. . ¿Cómo se organiza la
+
+información? (Modelado Multidimensional) En lugar de pensar en muchas tablas
+
+conectadas por llaves foráneas para evitar redundancia, en DWH se usa el Modelo
+
+en Estrella. Componentes del Modelo: • • Tablas de Hechos (Fact Tables): Es la
+
+tabla central. Contiene los eventos cuantitativos (lo que se puede medir).
+
+Ejemplo: precio_vendido, cantidad_vendida. Tablas de Dimensiones: Son las tablas
+
+que rodean a la de hechos. Responden al "quién, dónde, cuándo y qué". Ejemplo:
+
+Dim_Producto, Dim_T

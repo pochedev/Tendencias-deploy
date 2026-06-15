@@ -1,0 +1,54 @@
+GUIA DE REFERNCIA PARA EL DESARROLLO GENERAL DE UN PROYECTO DE CHATBOT. 
+________________________________________
+Módulo 1: La Biblioteca (La Base de Conocimientos)
+El chatbot para hablar, necesita saber qué decir. Este es el paso más importante.
+•	Recopilación: Debemos reunir todos los documentos en formato digital (PDF o Word). Esto incluye los documentos correspondientes y específicos en cada proyecto.
+•	Limpieza: No podemos darle al chatbot archivos desordenados. Debemos asegurar que el texto sea claro y que no falten páginas.
+
+•	Segmentación: El chatbot funciona mejor si dividimos la información en trozos pequeños. 
+
+Consideraciones adicionales específicas:
+Módulo 1:
+Paso 1: Inventario y Recopilación
+El primer paso es reunir todos los "documentos maestros".
+•	¿Qué buscar?: Temas específicos para cada proyecto. Ejemplo: Estados financieros, Cuadro general de ventas, descripción de asignatura Base de Datos, proyecto de diseños de construcción.
+•	El formato: Todo debe estar en formato digital, preferiblemente PDF o Word. 
+Paso 2: La "Limpieza" de Datos
+No podemos entregarle al chatbot archivos con manchas, tachaduras o texto borroso. Debemos asegurar que el contenido sea legible y esté completo.
+•	Eliminar "ruido": En esta etapa quitamos logos repetitivos, números de página en medio del texto o encabezados que puedan confundir a la computadora.
+•	Verificación: Confirmar que no falten artículos o capítulos importantes. Un error aquí podría hacer que el bot dé información incompleta sobre el tema.
+Paso 3: Segmentación (Dividir para Vencer)
+Este es el secreto técnico para que el bot sea eficiente. En lugar de darle un libro de 100 páginas, dividimos el contenido en "fragmentos" de información temática.
+•	Contexto específico: Si un usuario pregunta, el bot no debe leer todo el documento.
+•	Etiquetado: A cada fragmento le asignamos una "etiqueta" o título sencillo.
+________________________________________
+Lista de Chequeo para el Módulo 1
+Utilice esta tabla para organizar sus documentos antes de pasar al siguiente nivel:
+Documento	Estado	Formato	¿Está Segmentado?
+Estado financieros / Dashboard   	Pendiente	PDF	No
+Pensum de Base de datos	Recopilado	Word	Sí
+Diseño básico de construcción	En limpieza	PDF	No
+________________________________________
+Módulo 2: El Cerebro (La Inteligencia Artificial)
+Aquí es donde decidimos cómo va a procesar la información. necesitas programar código complejo; hoy en día existen herramientas que lo hacen por nosotros.
+•	Comprensión del Lenguaje: Usaremos una tecnología que permite al bot entender.
+•	Búsqueda Inteligente: Cuando un estudiante pregunte, el cerebro del bot buscará en "La Biblioteca" (Módulo 1) y redactará una respuesta basada exclusivamente 
+
+Consideraciones adicionales específicas:
+Módulo 2:
+Paso 1: Comprensión del Lenguaje (El Bot que nos entiende).
+Sinónimos y Modismos: Debemos configurar la IA para que entienda en lenguaje natural para frases del mismo significado es decir que refieren a lo mismo.
+•	Detección de Intención: El cerebro debe identificar rápidamente si el usuario está haciendo una pregunta, o pidiendo un documento o simplemente saludando.
+Paso 2: Búsqueda Inteligente (El Bot que investiga)
+A diferencia de un buscador común (como Google) que solo le da una lista de enlaces, este cerebro debe ser capaz de "leer" sus documentos y redactar una respuesta específica.
+•	Conexión con la Biblioteca: El cerebro se conecta directamente a los fragmentos de información que preparamos en el Módulo 1.
+•	Filtro de Verdad: Es vital configurar al bot para que solo responda basándose por ejemplo el pensum de asignatura para el caso de Base de Datos.
+•	 Paso 3: La "Voz" del Bot
+Aunque es un cerebro digital, debe tener una personalidad definida para que la interacción sea fluida.
+•	Tono Institucional: La respuesta debe ser precisa y respetuosa, citando siempre que sea posible el tema o frase del documento especifica.
+•	Claridad: Si el tema es muy enredado, el cerebro de la IA puede ayudar a simplificar la explicación para el usuario.
+Resumen de este módulo
+Tarea	Objetivo	Resultado
+Configurar IA	Que el bot entienda el lenguaje del usuario.	Un bot que entiende preguntas.
+Vincular Datos	Que el bot use los temas escogidos en cada proyecto..	Respuestas confiables y oficiales.
+Definir Tono	Que el bot suene profesional y amable.	Confianza por parte del usuario.

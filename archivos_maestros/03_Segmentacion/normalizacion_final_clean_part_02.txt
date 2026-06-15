@@ -1,0 +1,39 @@
+n de todos los
+
+grupos repetidos y/o atributos multivaluados Segunda Forma Normal (2FN) Elimina
+
+dependencias parciales. Tercera Forma Normal (3FN) Elimina cualquier dependencia
+
+transitiva. Cuarta Forma Normal(4FN) Elimina dependencia multivaluada. • La
+
+normalización es una “ciencia” subjetiva. • Determinar las necesidades de
+
+simplificación depende de nosotros. Las reglas de normalización existen como
+
+guías para crear tablas que sean fáciles de manejar, así como flexibles y
+
+eficientes. • A veces puede ocurrir que normalizar los datos hasta el nivel más
+
+alto no tenga sentido TABLA ACTIVIDAD COD_ACTIVIDAD NOMBRE_ACTIVIDAD PILATES
+
+FITNESS YOGA GIMNASIA TABLA MONITOR TABLA SALA DNI_MONITOR NOMBRE_MONITOR COD
+
+SALA 54332221 J. LUIS HERNANDEZ 65434527 P. GARCIA 45673214 ANA SANZ PABELLON
+
+POLIDEPORTIVO SALA MULTIUSOS SALA MUSCULACION CODIGO COD_ACTIVIDAD DNI_MONITOR
+
+COD_SALA FECHA HORA_I HORA_F TABLA EVENTO Aplique normalización a la siguiente
+
+tabla Codtransaccion Codcuenta 12503 12504 12505 12506 1556 1556 8856 9852
+
+Nombre cliente Luisa Luisa Antonio Rebeca Apellido Cliente Peraza Peraza Ruiz
+
+Gonzalez Sucursal Los pinos Unare Los Pinos Los Pinos Direccion Sucursal Calle C
+
+Av P Calle C Calle C Monto 150 2330 1255 Fecha Tipo cuenta // Ahorro // Ahorro
+
+// Corrient // Ahorro Saldo 1563 1513 15889 158226 Tipo transaccion Depósito
+
+Retiro Deposito Retiro Apellido cajero Angel Jesus Angel Angel Nombre cajero
+
+Perez Rivas Pérez Perez

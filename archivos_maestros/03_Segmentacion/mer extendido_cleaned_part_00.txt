@@ -1,0 +1,211 @@
+Un modelo de entidad-relación extendido, también conocido como
+
+modelo entidad-relación mejorado, es un tipo de diagrama de base
+
+de datos que es similar a los DER normales. Los DER extendidos son
+
+modelos conceptuales de alto nivel que representan de forma
+
+precisa los requisitos de bases de datos complejas.
+
+Los DER extendidos incluyen los mismos conceptos que abarcan los
+
+diagramas DER normales.
+
+¿Qué es lo nuevo en un MERE?
+
+•Subtipos y supertipos (conocidos también como
+
+subclases y superclases)
+
+•Especialización o generalización
+
+•Herencia
+
+•Agregación
+
+SUBTIPO (SUBCLASE):
+
+Cada uno de los subgrupos de instancias de una entidad con
+
+atributos únicos que se han de representar de forma explicita en
+
+el modelo de datos debido a su importancia para el diseño. Esta
+
+representación ha de hacerse en una nueva entidad.
+
+SUPERTIPO (SUPER CLASE):
+
+Una entidad que tiene una relación con uno o más subtipos, y
+
+que queda completamente definida como la unión de dos o más
+
+entidades
+
+La extensión de un subtipo es un sub conjunto de la extensión
+
+del supertipo
+
+RELACIONES SUPERTIPO-SUBTIPO:
+
+-Un subtipo puede tener atributos propios y puede participar en
+
+relaciones por separado.
+
+-Una instancia del subtipo también es instancia del supertipo
+
+-Una instancia no puede existir solo por ser miembro de un
+
+subtipo; también debe ser miembro del supertipo.
+
+-Una instancia del supertipo puede no ser miembro de ningún
+
+subtipo
+
+LEGADO O HERENCIA:
+
+-Un conjunto de entidades de nivel más bajo (subtipo) también
+
+heredan la participación en los de relaciones en los que su
+
+entidad de nivel más alto (supertipo) participa
+
+-Un subtipo “hereda” todos los atributos del supertipo y toda la
+
+relación en la que participa el supertipo.
+
+CLIENTE
+
+Codigo (PK)
+
+RIF
+
+Cedula
+
+TipoCliente
+
+Nombre
+
+Apellido
+
+Dirección
+
+Teléfono
+
+Email
+
+FechaNacimiento
+
+IngresoMensual
+
+EmpresaLabora
+
+DireccionEmpresa
+
+TelefonoEmpresa
+
+Antiguedad
+
+TipoEmpresa
+
+Gerente
+
+Patrimonio
+
+CLIENTE
+
+(SUPERTIPO)
+
+NATURAL
+
+(SUBTIPO)
+
+JURIDICO
+
+(SUBTIPO)
+
+CLIENTE
+
+Codigo (PK)
+
+RIF
+
+TipoCliente
+
+Dirección
+
+Teléfono
+
+Email
+
+JURIDICO
+
+Codigo (PK)
+
+TipoEmpresa
+
+Gerente
+
+Patrimonio
+
+NumeroEmpleados
+
+NumeroEmpleados
+
+Ramo
+
+Ramo
+
+NATURAL
+
+Codigo (PK)
+
+Cedula
+
+Primernombre
+
+SegundoNombre
+
+PrimerApellido
+
+SegundoApellido
+
+Celular
+
+FechaNacimiento
+
+IngresoMensual
+
+EmpresaLabora
+
+DireccionEmpresa
+
+TelefonoEmpresa
+
+Antiguedad
+
+ESPECIALIZACION :
+
+Es el proceso donde se definen subtipos de los supertipos y se
+
+forman las relaciones entre ellos.
+
+En otras palabras, en la especialización un supertipo se
+
+descompone en uno o varios subtipos, los cuales heredan todos
+
+los atributos y relaciones del supertipo, además de tener los
+
+suyos propios.
+
+El conjunto de subtipos se definen con base en las características
+
+diferenciadoras de las instancias de la entidad supertipo
+
+¿CUANDO HACER LA ESPECIALIZACION ?
+
+- Cuando existen atributos que sólo tienen sentido para algunas
+
+instancias de entidad y no para todas (atributos específicos)
+
+-

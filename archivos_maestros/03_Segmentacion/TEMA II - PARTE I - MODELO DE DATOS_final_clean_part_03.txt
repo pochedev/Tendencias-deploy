@@ -1,0 +1,67 @@
+delo de objetos: Encapsulación, Herencia y
+
+Polimorfismo - Los usuarios pueden definir operaciones sobre los datos como
+
+parte de la definición de la base de datos - Se diseñan para trabajar con
+
+lenguajes de programación como Java, C # , C++ entre otros -Inmadurez en el
+
+mercado. No cobró el auge esperado -Algunos DBMS de este modelo: db4objects,
+
+Orion, Zope Object Database A principios de los el paradigma Orientado a Objetos
+
+estaba cobrando un rápido crecimiento. No eran pocas las voces que decían que el
+
+modelo relacional moriría para dar paso a el modelo de BD orientado a objetos.
+
+El tiempo demostró que los dos modelos son importantes, pero las BDOO no
+
+obtuvieron el éxito esperado. Sin embargo el mundo relacional adoptó ciertas
+
+características del mundo de los objetos y es por esto que hoy tenemos las BD
+
+relacionales orientadas a objetos u objeto relacional - Cada registro queda
+
+almacenado como un documento, cada documento tiene un numero de identificación
+
+único, y se puede acceder a el a través de distintos campos -Se usan cuando se
+
+trata de modelar depósitos de conocimiento más que actividades, y los datos no
+
+son en o información datos, realidad extremadamente compleja. -Ejemplo de
+
+manejadores bajo este modelo MongoDB, CouchDB estructurada sino no Fuente:
+
+https://db-engines.com/en/ranking Este es el ranking mundial de DMBS. A su mano
+
+izquierda tienen la tabla actualizada. Hay par de cosas interesantes de
+
+observar, primero, que los primeros lugares siguen estando ocupados por
+
+Manejadores relacionales. También notamos que desde hace dos años no ha variado
+
+la tabla en los primeros lugares, pues siguen apareciendo los mismos
+
+manejadores, siendo liderados por Oracle Una vez creado al modelo lógico es
+
+momento de pasar al modelo físico El modelo físicos de datos representa el
+
+proceso de añadir información a la base de datos. Este modelo muestra todas las
+
+estructuras de tablas, incluyendo nombre de columna, tipo de datos en la
+
+columna, restricciones de la columna, clave primaria, clave foránea, y
+
+relaciones entre tablas. Los modelos de datos físicos: ✓Especifican todas las
+
+tablas y columnas ✓Incluyen claves foráneas para identificar relaciones entre
+
+tablas ✓Pueden ser significativamente diferentes de los modelos de datos lógicos
+
+✓Serán diferentes dependiendo del DBMS que se utilice Bien esta lámina resumen
+
+un poco lo que hemos hablado relacionando cada esquema al ciclo de desarrollo.
+
+Con esto finalizamos esta entrega En la próxima seguiremos hablando del modelado
+
+pero relacionado específicamente al mundo relacional.

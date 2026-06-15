@@ -1,0 +1,77 @@
+remos almacenar
+
+información en la base de datos. ENTIDAD TANGIBLES- INTANGIBLES DEBILES- FUERTES
+
+Unidad II: Modelo de Datos . Una entidad es algo que deseamos caracterizar y que
+
+vamos a almacenar en la BD, puede ser un objeto (tangible o intangible), animal
+
+o persona. Las entidades pueden ser tangibles (aquellas que podemos ver o tocar)
+
+y las intangibles (aquellas que a pesar que sabemos que existen no pueden ser
+
+vistas) Indique qué tipo de entidad (tangible-intangible) son las siguientes:
+
+-Silla -Árbol -Coordinación -Venta -Producto -Asignatura -Profesor Unidad II:
+
+Modelo de Datos . Las entidades en rojo son intangibles, pues a pesar que
+
+sabemos que son eventos que ocurren y poseen sus características propias no las
+
+podemos tocar ni ver. No confundamos la “coordinación” con la oficina física,
+
+esta entidad esta referida a la unidad que opera dentro de un organigrama
+
+Entidades Débiles • Son aquellas que su existencia depende de otra entidad
+
+Entidades Fuertes • Su existencia no depende de otra entidad Unidad II: Modelo
+
+de Datos . Existen entidades que para poder existir se debió haber creado otra
+
+primero, la conceptualización es muy parecida o casi igual a la Integridad
+
+Referencial. Estas entidades se conocen como débiles y su opuesta como Fuertes o
+
+entidades Base Indique qué tipo de entidad (Débil - Fuerte) son las siguientes:
+
+- Estudiante - Libro - PrestamoLibro - Productos - Ventas - Clientes Unidad II:
+
+Modelo de Datos . Las entidades PréstamoLibro y Ventas son las entidades débiles
+
+de la lista, pues su existencia dependerá de las entidades libro y estudiante en
+
+el caso de la entidad Prestamolibro, y productos y clientes para el caso de
+
+ventas. - Conjuntos - Extensión - Ejemplares Instancias. Se denominan ejemplares
+
+a los registros que guardan una serie de características similares o que pueden
+
+ser agrupados o clasificados dadas sus características comunes en grupos bien
+
+delimitados. A los ejemplares también se los conoce como registros de una tabla
+
+de una base de datos. Unidad II: Modelo de Datos . Cuando se mencionan las
+
+palabras registros y tablas, estamos usando terminología del modelo relacional,
+
+vuelvo a repetir, no es lo mismo que el MER. El MER es el padre del modelo
+
+relacional a crear. En el modelo ER nos referimos a entidades, y en el
+
+relacional a las tablas que conforman la BD. Sin embargo, ya que estamos
+
+hablando de entidades conviene tocar algunos conceptos como los que vemos en la
+
+lamina. Tabla (Entidad) Doctor Cedula Nombre Apellido Especialidad Consultorio
+
+.098. SANDRA LUNA CARDIOLOGIA TORRE I, PISO , NRO .910.976 GUILLERMO JIMENEZ
+
+TRAUMATOLOGO TORRE , PISO , .789.653 ANGELA PEREZ CIRUJANO NRO TORRE I, PISO ,
+
+NRO Extensión Instancia, ocurrencia, ejemplar de un tipo de entidad Unidad II:
+
+Modelo de Datos . la intención de la entidad sería: INTENCIÓN DE UNA ENTIDAD.
+
+Esquema de la entidad, conjunto de atributos que la conforman. En la entidad
+
+DOCTOR, Cedula, Nombre,Apellido, Especialidad, Consult

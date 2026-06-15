@@ -1,0 +1,77 @@
+l
+
+programa espacial APOLO APOLO (el mismo programa espacial con el que el hombre
+
+llegó a la luna). El primer alunizaje con tripulación humana fue con el APOLO -
+
+No se garantiza la inexistencia de registros duplicados, pues existe el concepto
+
+de claves. El sistema gestor de base de datos no implementa ningún control sobre
+
+los propios datos, sino que las no queda en manos de las aplicaciones garantizar
+
+duplicaciones de datos - Presentan problemas de integridad referencial pues no
+
+existe garantía de que un registro hijo esté relacionado con un registro padre
+
+válido. - Algunos ejemplos de DBMS jerárquicos son ADABAS, FOCUS, GTM, IMS (IBM)
+
+(considerado el más importante). Esto que les presento son algunos comandos
+
+usados para trabajar con el Sistema Manejador IMS - Su diferencia fundamental es
+
+la modificación del concepto de nodo: se permite que un mismo nodo tenga varios
+
+padres (posibilidad no permitida en el modelo jerárquico). -Sus registros se
+
+organizan como colecciones de grafos - Su gran complejidad hace difícil la
+
+administración de la base de datos. - El SGBD de red más popular es el sistema
+
+IDMS. - Nació en 1970, y fue propuesta por Edgar Frank Codd de los Laboratorios
+
+de IBM). - Es el modelo más difundido hoy en día, debido a las ventajas que
+
+ofrece sobre los otros dos modelos, entre ellas, el rápido entendimiento por
+
+parte de usuarios que no tienen conocimientos profundos sobre Sistemas de Bases
+
+de Datos. Las entidades manejadas se representan en tablas, su idea -
+
+fundamental es el uso de relaciones Por su complejidad, algunos consideraban que
+
+el uso de los modelos Jerarquico y de Red eran solo para eruditos. La aparición
+
+del modelo Relacional rompió la brecha de la complejidad de uso, este modelo es
+
+tan fácil de entender que no se necesita profundos conocimientos en BD. Esta
+
+característica impulsó su crecimiento y es el la década de los cuando grandes
+
+compañías se dedican a crear software especializados para el uso de este modelo,
+
+es decir los RDBMS, y a mediados de los se adapta como estándar en lenguaje SQL
+
+para todos los RDBMS - No hay acceso a los datos predefinido (no hay ruta). Las
+
+búsquedas pueden ser mucho más flexibles, basadas en cualquier campo (DNI,
+
+Nombre, etc.) El lenguaje para construir las consultas a bases de datos los -
+
+relacionales es SQL, un estándar principales motores de bases de datos
+
+relacionales. implementado por - Nacen en los años - Este modelo incorpora todos
+
+los conceptos importantes del modelo de objetos: Encapsulación, Herencia y
+
+Polimorfismo - Los usuarios pueden definir operaciones sobre los datos como
+
+parte de la definición de la base de datos - Se diseñan para trabajar con
+
+lenguajes de programación como Java, C # , C++ entre otros -Inmadurez en el
+
+mercado. No cobró el auge esperado -Algunos DBMS de este modelo: db4objects,
+
+Orion, Zope Object Database A principios de los el paradigma Orientado a Objetos
+
+estaba cobrando un rápido crecimiento. No eran pocas las voces que 

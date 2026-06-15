@@ -1,0 +1,79 @@
+ía de larga
+
+data. “Es una colección de datos persistentes, que pueden compartirse e
+
+interrelacionarse” “Las bases de datos no son meramente una colección de
+
+archivos. Más bien una base de datos es una fuente central de datos son
+
+significativos, compartidos por numerosos usuarios para diversas aplicaciones”
+
+cuales los Sin embargo, para nuestros propósitos, debemos profundizar el
+
+concepto y llevarlo a términos automatizados. Así vamos a conseguir la
+
+definición de varios autores que les comparto, de los cuales quiero destacar
+
+ciertos aspectos: Mannino habla de datos persistentes, esta persistencia está
+
+relacionada a la permanencia o durabilidad de los datos en el tiempo, y vemos
+
+también la palabra “compartirse”. Una de las bondades de las BD es que podemos
+
+compartir esos datos entre los usuarios que así lo requieran en tiempo real. Por
+
+su parte, Kendall y Kendall, hacen mención a “datos significativos”. Los datos
+
+deben tener un significado importante para la organización o usuarios que se
+
+sirvan de estos. No tiene sentido que así no sea. Todo dato almacenado debe
+
+brindar respuesta a una necesidad de información de los usuarios de la BD.
+
+Conjunto de datos relacionados entre si, almacenados sin redundancias en un
+
+soporte de acceso directo. Los datos están interrelacionados y estructurados de
+
+acuerdo a un modelo que sea capaz de recoger el máximo contenido semántico; su
+
+finalidad es servir a una o más aplicaciones de la mejor forma posible. Los
+
+resulten independientes de los programas que los usan; se emplean métodos para
+
+incluir nuevos datos y para modificar o extraer los datos almacenados de modo
+
+almacenan datos que se Esta definición está más completa en el sentido que se
+
+incorporan a los modelos en ella. Es así como vemos que una base de datos surge
+
+de un modelo basado en acontecimientos de la vida real, pues es precisamente que
+
+los datos deben dar respuesta a solicitudes de información de la vida real. El
+
+objetivo de una BD es proporcionar los datos que sean solicitados a tantos
+
+programas o aplicaciones que así lo requieran para dar respuesta a necesidades
+
+de información de los diferentes usuarios. El almacenamiento de estos datos es
+
+totalmente independiente de estos programas a quienes sirve. Colección de datos
+
+estructurados según un modelo que refleje las relaciones y restricciones
+
+existentes en el mundo real. Los datos han de ser compartidos por diferentes
+
+usuarios y aplicaciones, y deben mantenerse independientes de éstas; su
+
+definición y descripción han de ser únicas, estando almacenadas junto con los
+
+mismos. Los tratamientos habrán de conservar la integridad y seguridad de los
+
+datos. Otra definición que recoge lo que hemos venido comentando. Hernan
+
+Hollericht primer ingeniero estadístico de la historia Los discos duros dieron
+
+inicio a las BD, modelo red y jerarquica Consolidadción del modelo relacional
+
+Uso explosivo de WWW, bases de daos con protocolo para la transmisión se
+
+contenido en internet (OAI- P

@@ -1,0 +1,67 @@
+una transacción, los cambios
+
+realizados en la base de datos permanecen, incluso si hay fallos en el sistema A
+
+C I D Componente de Control de Concurrencia Componente de Gestión de
+
+Recuperaciones Componente de Gestión de Transacciones DBMS Los DBMS poseen tres
+
+componentes para controlar la concurrencia, gestionar las recuperaciones y las
+
+transacciones EN RESUMEN, UN DBMS DEBE PERMITIR : ✓ La creación y definición de
+
+la base de datos. ✓ Manipulación de los datos ✓ Eficiencia ✓Privacidad de los
+
+datos ✓ Mantener integridad y consistencia de los datos. (Control de
+
+transacciones) ✓Seguridad de los datos ✓ Mecanismos de copias de respaldo y
+
+recuperación •OLTP: Las bases de datos de tipo OLTP (On Line Transaction
+
+Processing) también son llamadas bases de datos dinámicas lo que significa que
+
+la información se modifica en tiempo real Veamos ahora los tipos de BD. Estas se
+
+clasifican de acuerdo a varios criterios como lo son: -Variabilidad de datos
+
+almacenados -Número de usuarios -Ubicación de sus datos -Modelo de datos -Forma
+
+de administrar los datos •OLAP: Las bases de datos de tipo OLAP (On Line
+
+Analytical Processing) también son llamadas bases de datos estáticas lo que
+
+significa que la información en tiempo real no es generar afectada. Guardan
+
+información que soporte toma de decisiones. empleados datos para ✓BD de
+
+escritorio: soporta solo un usuario al tiempo ✓BD múltiples: múltiples usuarios
+
+al mismo tiempo BD de grupo de trabajo: menos de usuarios BD empresarial: mas de
+
+usuarios (cientos) ✓BD centralizada: todos los datos en un mismo lugar (el mismo
+
+servidor) ✓BD distribuida: datos distribuidos en varios servidores •BD
+
+Jerárquicas •BD de red •BD relacional •BD orientada a objetos •BD documentales
+
+•SQL: la información que almacena la BD está relacionada entre sí. Los datos
+
+relacionados (registros o filas) son almacenados en tablas que constan de varios
+
+campos (columnas). •NoSQL: este tipo de BD pertenecen al modelo No Relacional.
+
+En las BD NoSQL , los datos no tienen porqué estar relacionados entre sí y por
+
+lo tanto no tienen que almacenarse en estructuras fijas como las tablas del
+
+modelo de base de datos relacional. Este tipo de BD están ganando cada vez más
+
+espacio en el mundo de las BD debido a las limitaciones ofrecidas por las BD
+
+relacionales. Con esta lámina finalizamos esta segunda entrega de la unidad. En
+
+la próxima entrega estaremos hablando de los Sistemas de Bases de Datos que no
+
+son lo mismo que los Sistemas Manejadores de BD Les recuerdo que cualquier
+
+comentario pueden o a mi

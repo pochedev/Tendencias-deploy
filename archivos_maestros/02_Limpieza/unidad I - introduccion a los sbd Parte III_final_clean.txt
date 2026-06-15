@@ -1,0 +1,161 @@
+Un Sistema de Base de Datos es el conjunto formado por la base de datos y el
+
+software para la manipulación de la misma por parte de los usuarios que se
+
+sirvan de ella Un SBD está compuesto por: DATOS+HARDWARE+SOFTWARE+USUARIOS En
+
+esta entrega estaremos hablando acerca de los Sistemas de Bases de Datos, de su
+
+arquitectura y de sus usuarios Existen variedad de definiciones que abordan lo
+
+que es un SBD, les presento esta para iniciar Usuario Final Interfaz de
+
+aplicación Peticiones BD Esta imagen explica lo que es un SBD. Un sistema que
+
+sirve a un usuario o varios usuarios, a través de una interfaz creada en algún
+
+lenguaje de programación, por medio de la cual se realiza peticiones a una BD ya
+
+elaborada, haciendo uso de un DBMS. (software especializado encargado del manejo
+
+de una BD) Interfaz de la aplicación (de escritorio, web… BD, almacenamiento,
+
+procesamiento de datos Un SBD se compone de lo que se conoce como Front-End y
+
+Back-End. El Front-End se enfoca en el usuario, en todo con lo que podemos
+
+interactuar, mientras que el Back- End está enfocado en hacer que todo lo que
+
+está detrás de la interfaz de la aplicación funcione correctamente. Toma los
+
+datos, los procesa y los envía al usuario, además de encargarse de las consultas
+
+o peticiones a la Base de Datos. La separación del sistema en front-end y back-
+
+end es un tipo de abstracción que ayuda a mantener las diferentes partes del
+
+sistema separadas ADMINISTRADOR DE LA BASE DE DATOS (DBA) USUARIO PROGRAMADOR
+
+USUARIO FINAL Los SBD posee tres usuarios claramente definidos: -El usuario
+
+final, quien se sirve del sistema y es el que dicta los requerimientos del
+
+mismo. -El programador de aplicaciones, quien es el encargado del diseño y
+
+codificación de la interfaz -El administrador de la BD, quien es el encargado de
+
+gestionar dicha BD Gestión General de Base de Datos Modelado de Datos y Diseño
+
+de Base de Datos Auditoria Asesoría Técnica Inteligencia de negocios y
+
+almacenamiento de datos Resguardo y recuperación de datos Integración con
+
+aplicaciones Dependiendo del tamaño de la organización o empresa, un DBA puede
+
+tener todas estas funciones presentadas en la lámina, o solo alguna de ellas. De
+
+hecho pueden existir varios DBA para una misma base de datos. El modelado y
+
+diseño de la BD en algunas empresas son tareas del analista de datos.
+
+Generalmente un DBA se especializa en el DBMS con el que trabaja la
+
+organización, y su paga también depende del DBMS a manejar. No es lo mismo ser
+
+un DBA de una BD creada en Oracle que ser un DBA de una BD creada en Access. La
+
+arquitectura o Modelo ANSI-SPARC, (American National Standards Institute,
+
+Standards Planning And Requirements Committee), es un estándar de diseño
+
+abstracto para un sistema de bases de datos, fue propuesto por primera vez en el
+
+año de 1975 por la empresa ANSI. El objetivo de esta arquitectura, también
+
+llamada Arquitectura de tres niveles, es separar la vista de los usuarios Esta
+
+arquitectura un enfoque de diseño para bases de datos que divide las vistas de
+
+datos en tres capas: lo que ven los usuarios, la estructura lógica y cómo se
+
+almacenan los datos Bajo este modelo de niveles, cada usuario debe ser capaz de
+
+acceder a los datos que le interesan, teniendo una vista personalizada de dichos
+
+datos. Salvo ciertas excepciones, los usuarios no deberían tener acceso a toda
+
+la data set. Las vistas de datos deben ser independientes: los cambios en una
+
+vista no deben afectar a las demás. Para los usuarios finales debe ser
+
+transparentes los detalles de almacenamiento y funcionamiento del sistema. Es el
+
+más cercano al almacenamiento físico, es decir,, describe la organización física
+
+de los datos, tal y como están almacenados en la computadora (estructuras de
+
+datos en disco y sus rutas de acceso). Describe los detalles de cómo se
+
+almacenan físicamente los relacionados a los archivos que contienen la datos,
+
+información, su organización, los registros, la longitud, los campos que los
+
+componen. € Es el más cercano a los usuarios, es decir, es donde se describen
+
+varios esquemas externos o vistas de usuarios. Cada esquema describe la parte de
+
+la BD que interesa a un grupo de usuarios en este nivel se representa la visión
+
+individual de un usuario o de un grupo de usuarios. € Este esquema describe las
+
+entidades, atributos, relaciones, operaciones de los usuarios y restricciones,
+
+ocultando los detalles de las estructuras físicas de almacenamiento. Representa
+
+la información conceptual contenida en la BD Esquema conceptual Esquema lógico
+
+Algunos expertos señalan que al modelo de capas debe agregarse un subnivel
+
+dentro del nivel lógico, se trata del nivel conceptual. Bajo este nuevo esquema,
+
+se separa el modelo lógico de datos y la conceptualización de la realidad se
+
+trabaja en el esquema conceptual. € Esquema Conceptual: visión desde un punto de
+
+vista organizativo, independiente del SGBD (también conocido como DBMS) que se
+
+utilice, e incluso de la utilización o no de sistemas de bases de datos. En este
+
+esquema se describe la información de la organización (objetos y relaciones)
+
+desde un punto de vista no informático. (diagrama de clases) € Esquema Lógico:
+
+visión expresada en términos de un Sistema Gestor de Base de Datos concreto, o
+
+mejor dicho, de un modelo de datos soportado por un SGBD. En este esquema lógico
+
+se representan las entidades u objetos y relaciones de acuerdo a las
+
+características de dicho modelo, sin entrar todavía en detalles de
+
+representación física. E S Q U E M A E X T E R N O E S Q U E M A C O N C E P T U
+
+A L E S Q U E M A L O G I C O E S Q U E M A I N T E R N O € . El usuario
+
+solicita unos datos y crea una consulta a través de la aplicación . El DBMS
+
+verifica y acepta el esquema externo para ese usuario . Transforma la solicitud
+
+al esquema lógico . Verifica y acepta el esquema lógico . Transforma la
+
+solicitud al esquema físico o interno. . Selecciona la o las tablas implicadas
+
+en la consulta y ejecuta la consulta. . Transforma del esquema interno al
+
+conceptual, y del conceptual al externo Finalmente, el usuario ve los datos
+
+solicitados. . Con esta lámina finalizamos esta entrega, recordando que pueden
+
+dejar sus inquietudes en el foro o enviarlas a mi correo. En la próxima entrega
+
+estaremos hablando acerca de los modelos lógicos de datos.
