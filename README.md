@@ -184,3 +184,16 @@ Si añades o modificas archivos `.txt` en la carpeta `archivos_maestros`, **simp
 ```powershell
 .\venv\Scripts\python terminal_bot.py
 ```
+---
+
+## Web App
+
+Se crearon los siguientes archivos:
+
+web_app.py — Servidor Flask que inicializa el bot con la misma lógica de terminal_bot.py y expone endpoints: GET / (UI), POST /api/chat (enviar mensaje), GET /api/status (estado del bot)
+templates/index.html — Interfaz de chat moderna con indicador de escritura, estado de conexión y diseño responsive
+requirements.txt — Se agregó flask como dependencia
+Para ejecutar la web app:
+
+.\venv\Scripts\python.exe web_app.py
+Luego abre http://localhost:5000 en el navegador. El bot cargará los documentos de archivos_maestros/ en segundo plano y la UI mostrará el estado "Listo" cuando termine.
