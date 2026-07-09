@@ -783,7 +783,7 @@
             <h1>CoreDB <span class="ai-badge">AI</span></h1>
         </div>
         
-        <button class="new-chat-btn" onclick="window.location.reload()">
+        <button class="new-chat-btn" onclick="createNewSession()">
             <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             Nuevo Chat
         </button>
@@ -795,7 +795,7 @@
                     <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
                     Chat IA
                 </a></li>
-                <li><a href="#">
+                <li><a href="#" onclick="setInputValue('Genera el código SQL para modelar una entidad con los siguientes atributos: ')">
                     <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
                     Generador de Código
                 </a></li>
@@ -803,18 +803,14 @@
                     <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
                     Imágenes
                 </a></li>
-                <li><a href="#" onclick="showHistoryMessage(event)">
-                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                    Historial
-                </a></li>
+
             </ul>
         </div>
 
         <div class="sidebar-section">
-            <h3>Proyecto</h3>
-            <ul class="sidebar-nav">
-                <li><a href="#">📁 Documentos Maestros</a></li>
-                <li><a href="#">📁 Biblioteca Institucional</a></li>
+            <h3>Tus Chats</h3>
+            <ul class="sidebar-nav" id="sessionsList" style="max-height: 300px; overflow-y: auto;">
+                <!-- Los chats se cargarán aquí dinámicamente -->
             </ul>
         </div>
 
@@ -924,6 +920,96 @@
             statusBadge.className = 'status-badge ' + state.class;
         }
 
+        // --- Multi-Session Management ---
+        let chatSessions = JSON.parse(localStorage.getItem('chatSessions') || '[]');
+        let currentSessionId = localStorage.getItem('currentSessionId') || null;
+
+        function saveSessions() {
+            localStorage.setItem('chatSessions', JSON.stringify(chatSessions));
+            if (currentSessionId) localStorage.setItem('currentSessionId', currentSessionId);
+        }
+
+        function createNewSession() {
+            currentSessionId = 'session_' + Date.now();
+            chatSessions.unshift({
+                id: currentSessionId,
+                title: 'Nuevo Chat',
+                messages: []
+            });
+            saveSessions();
+            
+            const messages = document.querySelectorAll('.message-row');
+            messages.forEach(msg => {
+                if (msg.id !== 'typingIndicator') msg.remove();
+            });
+            
+            if (dashboardState) dashboardState.style.display = 'flex';
+            renderSessionsList();
+            
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth <= 768 && sidebar) sidebar.classList.remove('show');
+        }
+
+        function switchSession(id) {
+            if (currentSessionId === id) return;
+            currentSessionId = id;
+            localStorage.setItem('currentSessionId', id);
+            
+            const messages = document.querySelectorAll('.message-row');
+            messages.forEach(msg => {
+                if (msg.id !== 'typingIndicator') msg.remove();
+            });
+            
+            loadHistory();
+            renderSessionsList();
+            
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth <= 768 && sidebar) sidebar.classList.remove('show');
+        }
+
+        function renderSessionsList() {
+            const list = document.getElementById('sessionsList');
+            if (!list) return;
+            list.innerHTML = '';
+            
+            chatSessions.forEach(session => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.className = session.id === currentSessionId ? 'active' : '';
+                
+                let displayTitle = session.title;
+                if (displayTitle.length > 25) displayTitle = displayTitle.substring(0, 22) + '...';
+                
+                a.innerHTML = `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg> ${displayTitle}`;
+                
+                a.onclick = (e) => { e.preventDefault(); switchSession(session.id); };
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+        }
+
+        function saveToHistory(role, text) {
+            if (!currentSessionId) {
+                currentSessionId = 'session_' + Date.now();
+                chatSessions.unshift({ id: currentSessionId, title: 'Nuevo Chat', messages: [] });
+            }
+            
+            let session = chatSessions.find(s => s.id === currentSessionId);
+            if (!session) {
+                session = { id: currentSessionId, title: 'Nuevo Chat', messages: [] };
+                chatSessions.unshift(session);
+            }
+            
+            if (role === 'user' && session.messages.length === 0) {
+                session.title = text.substring(0, 30) + (text.length > 30 ? '...' : '');
+            }
+            
+            session.messages.push({role, text});
+            saveSessions();
+            renderSessionsList();
+        }
+
         // Renderiza el mensaje de usuario alineado a la derecha
         function renderUserMessage(text) {
             const div = document.createElement('div');
@@ -994,6 +1080,7 @@
 
             messageInput.value = '';
             renderUserMessage(text);
+            saveToHistory('user', text);
             showTyping();
 
             isSending = true;
@@ -1014,6 +1101,7 @@
 
                 if (response.ok) {
                     renderBotMessage(data.response);
+                    saveToHistory('bot', data.response);
                 } else {
                     renderBotMessage("Error: " + (data.error || "Error del servidor"), true);
                 }
@@ -1029,11 +1117,7 @@
             }
         }
 
-        function showHistoryMessage(e) {
-            e.preventDefault();
-            if (dashboardState) dashboardState.style.display = 'none';
-            renderBotMessage("Aún no tienes un historial de chats guardado. Esta es una sesión completamente nueva. ¡Escríbeme algo para empezar a conversar!");
-        }
+
 
         messageInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -1112,6 +1196,41 @@
         });
         sendButton.addEventListener('click', sendMessage);
 
+        function loadHistory() {
+            let oldHistory = localStorage.getItem('chatHistory');
+            if (oldHistory) {
+                const parsed = JSON.parse(oldHistory);
+                if (parsed.length > 0 && chatSessions.length === 0) {
+                    currentSessionId = 'session_' + Date.now();
+                    chatSessions.push({ id: currentSessionId, title: 'Historial Antiguo', messages: parsed });
+                    saveSessions();
+                }
+                localStorage.removeItem('chatHistory');
+            }
+
+            if (!currentSessionId && chatSessions.length > 0) {
+                currentSessionId = chatSessions[0].id;
+                localStorage.setItem('currentSessionId', currentSessionId);
+            }
+            
+            renderSessionsList();
+
+            let session = chatSessions.find(s => s.id === currentSessionId);
+            if (session && session.messages.length > 0) {
+                if (dashboardState) dashboardState.style.display = 'none';
+                session.messages.forEach(msg => {
+                    if (msg.role === 'user') {
+                        renderUserMessage(msg.text);
+                    } else {
+                        renderBotMessage(msg.text);
+                    }
+                });
+            } else {
+                if (dashboardState) dashboardState.style.display = 'flex';
+            }
+        }
+
+        loadHistory();
         checkStatus();
     </script>
 </body>
