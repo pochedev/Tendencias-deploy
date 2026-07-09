@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import threading
+import base64
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -129,17 +130,37 @@ def chat_endpoint():
         return jsonify({'error': 'El bot no está listo. Revisa que exista la carpeta archivos_maestros con archivos .txt.'}), 503
 
     data = request.get_json()
-    if not data or 'message' not in data:
-        return jsonify({'error': 'Mensaje requerido'}), 400
+    if not data:
+        return jsonify({'error': 'Datos inválidos'}), 400
 
-    user_message = data['message'].strip()
-    if not user_message:
+    user_message = data.get('message', '').strip()
+    image_base64 = data.get('image', None)
+
+    if not user_message and not image_base64:
         return jsonify({'error': 'Mensaje vacío'}), 400
 
+    content_list = []
+    if user_message:
+        content_list.append(user_message)
+
+    if image_base64:
+        try:
+            # image_base64 formato esperado: "data:image/jpeg;base64,/9j/4AAQSk..."
+            header, encoded = image_base64.split(',', 1)
+            mime_type = header.split(':')[1].split(';')[0]
+            image_bytes = base64.b64decode(encoded)
+            
+            image_part = types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
+            content_list.append(image_part)
+        except Exception as e:
+            print("Error procesando imagen adjunta:", e)
+            return jsonify({'error': 'Error procesando la imagen adjunta.'}), 400
+
     try:
-        response = chat.send_message(user_message)
+        response = chat.send_message(content_list)
         return jsonify({'response': response.text})
     except Exception as e:
+        print("Error en chat.send_message:", e)
         return jsonify({'error': str(e)}), 500
 
 
