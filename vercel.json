@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "web_app.py",
+      "app = Flask(__name__)"
+    }
+  ]
+}
