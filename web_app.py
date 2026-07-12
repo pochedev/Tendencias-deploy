@@ -30,13 +30,13 @@ chat = None
 bot_ready = False
 
 system_instruction = (
-    "Eres un asistente institucional y profesional. Tu única fuente de verdad son los documentos "
-    "que se te han proporcionado. Cuando respondas, sé claro, amable y conciso. "
-    "REGLA DE ORO: Responde ÚNICAMENTE basándote en la información de los documentos adjuntos. "
-    "Si la información solicitada no se encuentra en ninguno de los documentos, responde exactamente: "
-    "'Lo siento, no dispongo de esa información en mis documentos oficiales.' "
-    "NO inventes datos ni uses conocimiento externo. "
-    "Cuando sea posible, indica de qué documento proviene la información."
+    "Eres un asistente institucional, experto en bases de datos y diagramación. "
+    "Tu principal fuente de verdad teórica son los documentos que se te han proporcionado. "
+    "SIN EMBARGO, si el usuario te pide que generes algo práctico (como un diagrama Mermaid, código SQL, "
+    "ejemplos o modelos de entidades) basándose en parámetros que él mismo te dé (por ejemplo: 'casa, carro, hombre'), "
+    "DEBES utilizar tus conocimientos generales para generar el diagrama o código solicitado sin dudarlo. "
+    "Solamente aplica la regla de restricción cuando te hagan preguntas puramente teóricas que no estén en tus archivos. "
+    "En esos casos teóricos estrictos, responde: 'Lo siento, no dispongo de esa información en mis documentos oficiales.'"
 )
 
 
@@ -52,70 +52,99 @@ def encontrar_archivos(carpeta_raiz):
                 archivos_encontrados.append(ruta_completa)
     return archivos_encontrados
 
+def limpiar_archivos_gemini():
+    print("\n[0/3] Limpiando archivos anteriores en Gemini para ahorrar cuota...")
+    try:
+        archivos = list(client.files.list())
+        if archivos:
+            print(f"     Se encontraron {len(archivos)} archivos. Eliminando...")
+            for f in archivos:
+                client.files.delete(name=f.name)
+            print("     [OK] Archivos antiguos eliminados.")
+        else:
+            print("     [OK] No hay archivos antiguos.")
+    except Exception as e:
+        print(f"     [!] Error limpiando archivos: {e}")
+
 
 def initialize_bot():
     global chat, bot_ready
-    print("=" * 55)
-    print("  Inicializando el Cerebro del Bot (web_app)")
-    print("=" * 55)
+    import traceback
+    try:
+        limpiar_archivos_gemini()
+        print("=" * 55)
+        print("  Inicializando el Cerebro del Bot (web_app)")
+        print("=" * 55)
 
-    if not os.path.isdir(CARPETA_BIBLIOTECA):
-        print(f"\n[!] No se encontró la carpeta '{CARPETA_BIBLIOTECA}'.")
-        bot_ready = False
-        return
+        if not os.path.isdir(CARPETA_BIBLIOTECA):
+            print(f"\n[!] No se encontro la carpeta '{CARPETA_BIBLIOTECA}'.")
+            bot_ready = False
+            return
 
-    lista_rutas = encontrar_archivos(CARPETA_BIBLIOTECA)
-    if not lista_rutas:
-        print(f"[!] No se encontraron archivos .txt dentro de '{CARPETA_BIBLIOTECA}'.")
-        bot_ready = False
-        return
+        lista_rutas = encontrar_archivos(CARPETA_BIBLIOTECA)
+        if not lista_rutas:
+            print(f"[!] No se encontraron archivos .txt dentro de '{CARPETA_BIBLIOTECA}'.")
+            bot_ready = False
+            return
 
-    print(f"\n[1/3] Escaneando carpeta: {len(lista_rutas)} archivo(s) encontrados.")
-    for ruta in lista_rutas:
-        print(f"       - {ruta}")
+        print(f"\n[1/3] Escaneando carpeta: {len(lista_rutas)} archivo(s) encontrados.")
 
-    print(f"\n[2/3] Subiendo archivos a Gemini...")
-    archivos_subidos = []
-    for i, ruta in enumerate(lista_rutas, start=1):
-        nombre = os.path.basename(ruta)
-        print(f"     Subiendo {i}/{len(lista_rutas)}: '{nombre}'...", end=" ")
-        try:
-            uploaded = client.files.upload(
-                file=ruta,
-                config={'display_name': nombre, 'mime_type': 'text/plain'}
+        print(f"\n[2/3] Subiendo archivos a Gemini...")
+        archivos_subidos = []
+        for i, ruta in enumerate(lista_rutas, start=1):
+            nombre = os.path.basename(ruta)
+            print(f"     Subiendo {i}/{len(lista_rutas)}: '{nombre}'...", end=" ", flush=True)
+            try:
+                uploaded = client.files.upload(
+                    file=ruta,
+                    config={'display_name': nombre, 'mime_type': 'text/plain'}
+                )
+                while uploaded.state.name == 'PROCESSING':
+                    time.sleep(1)
+                    uploaded = client.files.get(name=uploaded.name)
+                if uploaded.state.name == 'FAILED':
+                    print("FALLO (se omite)")
+                else:
+                    archivos_subidos.append(uploaded)
+                    print("[OK]", flush=True)
+            except Exception as e:
+                print(f"ERROR: {e} (se omite)", flush=True)
+
+        if not archivos_subidos:
+            print("[!] Ningun archivo pudo ser subido. Bot NO listo.")
+            bot_ready = False
+            return
+
+        print(f"\n     [OK] {len(archivos_subidos)}/{len(lista_rutas)} archivo(s) subidos.", flush=True)
+
+        print(f"\n[3/3] Conectando Cerebro con la Biblioteca...", flush=True)
+        config = types.GenerateContentConfig(
+            system_instruction=system_instruction,
+            temperature=0.0
+        )
+        partes_archivos = [types.Part.from_uri(file_uri=f.uri, mime_type=f.mime_type) for f in archivos_subidos]
+        
+        history_inicial = [
+            types.Content(
+                role="user",
+                parts=partes_archivos + [types.Part.from_text(text="Estos son todos los documentos. Tenlos en cuenta para responder.")]
+            ),
+            types.Content(
+                role="model",
+                parts=[types.Part.from_text(text="Entendido. Listo para responder.")]
             )
-            while uploaded.state.name == 'PROCESSING':
-                time.sleep(1)
-                uploaded = client.files.get(name=uploaded.name)
-            if uploaded.state.name == 'FAILED':
-                print(f"FALLÓ (se omite)")
-            else:
-                archivos_subidos.append(uploaded)
-                print("✓ OK")
-        except Exception as e:
-            print(f"ERROR: {e} (se omite)")
+        ]
+        chat = client.chats.create(model="gemini-3.5-flash", config=config, history=history_inicial)
 
-    if not archivos_subidos:
-        print("[!] Ningún archivo pudo ser subido.")
+        bot_ready = True
+        print("     [OK] Cerebro conectado exitosamente.\n", flush=True)
+
+    except Exception as fatal:
+        print("\n\n=== ERROR FATAL EN initialize_bot ===", flush=True)
+        traceback.print_exc()
+        print("=====================================\n", flush=True)
         bot_ready = False
-        return
 
-    print(f"\n     ✓ {len(archivos_subidos)}/{len(lista_rutas)} archivo(s) subidos.")
-
-    print(f"\n[3/3] Conectando Cerebro con la Biblioteca...")
-    config = types.GenerateContentConfig(
-        system_instruction=system_instruction,
-        temperature=0.0
-    )
-    chat = client.chats.create(model="gemini-2.5-flash", config=config)
-
-    mensaje_inicial = archivos_subidos + [
-        "Estos son todos los documentos maestros de la institución. "
-        "Léelos y tenlos todos en cuenta para responder mis futuras preguntas."
-    ]
-    chat.send_message(mensaje_inicial)
-    bot_ready = True
-    print("     ✓ Cerebro conectado exitosamente.\n")
 
 
 @app.route('/')
@@ -179,4 +208,4 @@ def start_bot_in_background():
 
 if __name__ == '__main__':
     start_bot_in_background()
-    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)

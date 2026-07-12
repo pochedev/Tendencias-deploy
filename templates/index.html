@@ -1260,7 +1260,7 @@
 
         async function checkStatus() {
             try {
-                const res = await fetch('/api/status');
+                const res = await fetch('/api/status?t=' + Date.now());
                 const data = await res.json();
                 if (data.ready) {
                     setStatus({ label: 'Listo', class: 'ready' });
