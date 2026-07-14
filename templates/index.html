@@ -1268,11 +1268,12 @@
                     sendButton.disabled = false;
                     messageInput.placeholder = 'Escribe tu solicitud. El asistente se encargará del resto...';
                 } else {
-                    setStatus({ label: 'Cargando documentos...', class: 'loading' });
+                    let msg = data.message ? data.message : 'Cargando documentos...';
+                    setStatus({ label: msg, class: 'loading' });
                     setTimeout(checkStatus, 2000);
                 }
             } catch {
-                setStatus({ label: 'Conectando...', class: 'loading' });
+                setStatus({ label: 'Conectando al servidor...', class: 'loading' });
                 setTimeout(checkStatus, 2000);
             }
         }
