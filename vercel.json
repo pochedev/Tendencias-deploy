@@ -1,9 +1,14 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "web_app.py",
-      "app = Flask(__name__)"
+      "src": "web_app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "web_app.py"
     }
   ]
 }
