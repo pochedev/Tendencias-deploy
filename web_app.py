@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import base64
+import threading
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -57,6 +58,10 @@ def ensure_bot_initialized():
         return
     
     is_initializing = True
+    threading.Thread(target=background_initialization, daemon=True).start()
+
+def background_initialization():
+    global chat, bot_ready, is_initializing
     import traceback
     try:
         print("=" * 55)
