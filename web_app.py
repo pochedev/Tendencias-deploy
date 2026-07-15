@@ -25,14 +25,11 @@ CARPETA_BIBLIOTECA = "archivos_maestros"
 EXTENSIONES_VALIDAS = ['.txt', '']
 
 app = Flask(__name__)
-chat = None
 
-# Variables de la Maquina de Estados para Chunking
+# --- Estado global (se reinicia en cada Cold Start de Vercel) ---
+chat = None
 bot_ready = False
-init_phase = 0 
-archivos_pendientes = []
-archivos_subidos = []
-init_message = "Iniciando..."
+init_message = "Esperando primera petición..."
 
 system_instruction = (
     "Eres un asistente institucional, experto en bases de datos y diagramación. "
@@ -43,6 +40,7 @@ system_instruction = (
     "Solamente aplica la regla de restricción cuando te hagan preguntas puramente teóricas que no estén en tus archivos. "
     "En esos casos teóricos estrictos, responde: 'Lo siento, no dispongo de esa información en mis documentos oficiales.'"
 )
+
 
 def encontrar_archivos(carpeta_raiz):
     archivos_encontrados = []
@@ -56,125 +54,151 @@ def encontrar_archivos(carpeta_raiz):
                 archivos_encontrados.append(ruta_completa)
     return archivos_encontrados
 
-def advance_initialization_step():
-    """ 
-    Avanza un único paso de la inicialización cada vez que se llama.
-    Ideal para ser invocado desde /api/status y evitar Timeouts en Serverless.
+
+def crear_chat_con_archivos(archivos_gemini):
+    """Crea la sesión de chat usando archivos que ya existen en Gemini."""
+    global chat, bot_ready, init_message
+    config = types.GenerateContentConfig(
+        system_instruction=system_instruction,
+        temperature=0.0
+    )
+    partes_archivos = [
+        types.Part.from_uri(file_uri=f.uri, mime_type=f.mime_type)
+        for f in archivos_gemini
+    ]
+    history_inicial = [
+        types.Content(
+            role="user",
+            parts=partes_archivos + [types.Part.from_text(text="Estos son todos los documentos. Tenlos en cuenta para responder.")]
+        ),
+        types.Content(
+            role="model",
+            parts=[types.Part.from_text(text="Entendido. Listo para responder.")]
+        )
+    ]
+    chat = client.chats.create(model="gemini-3.5-flash", config=config, history=history_inicial)
+    bot_ready = True
+    init_message = "Cerebro conectado exitosamente."
+    print("[OK] Cerebro conectado exitosamente.", flush=True)
+
+
+def quick_init():
     """
-    global bot_ready, init_phase, archivos_pendientes, archivos_subidos, init_message, chat
-    import traceback
-    
-    if bot_ready or init_phase == 4:
-        return
-
+    Inicialización RÁPIDA al arrancar (module-level / cold start).
+    Solo reutiliza archivos que YA existen en Gemini. No sube nada.
+    Tarda ~2 segundos. Ideal para Vercel Serverless.
+    """
+    global init_message
     try:
-        if init_phase == 0:
-            if not os.path.isdir(CARPETA_BIBLIOTECA):
-                init_message = f"Error: No se encontro la carpeta '{CARPETA_BIBLIOTECA}'."
-                init_phase = 4
-                return
-            
-            lista_rutas = encontrar_archivos(CARPETA_BIBLIOTECA)
-            if not lista_rutas:
-                init_message = f"Error: No se encontraron archivos .txt."
-                init_phase = 4
-                return
-                
-            archivos_pendientes = lista_rutas
-            archivos_subidos = []
-            init_message = "Revisando caché en Gemini..."
-            init_phase = 1
-            print(f"[{init_phase}] {init_message}", flush=True)
+        local_files = encontrar_archivos(CARPETA_BIBLIOTECA)
+        if not local_files:
+            init_message = "No hay archivos en archivos_maestros."
             return
 
-        if init_phase == 1:
-            nombres_locales = {os.path.basename(ruta): ruta for ruta in archivos_pendientes}
-            try:
-                archivos_existentes = list(client.files.list())
-                for f in archivos_existentes:
-                    if f.display_name in nombres_locales:
-                        archivos_subidos.append(f)
-                        del nombres_locales[f.display_name]
-                    else:
-                        try: client.files.delete(name=f.name)
-                        except: pass
-            except Exception as e:
-                print("Error de cache:", e)
+        nombres_locales = {os.path.basename(r) for r in local_files}
 
-            archivos_pendientes = list(nombres_locales.values())
-            
-            if archivos_pendientes:
-                init_message = f"Preparando subida de {len(archivos_pendientes)} archivos..."
-                init_phase = 2
-            else:
-                init_message = "Todos los archivos estaban en caché."
-                init_phase = 3
-            print(f"[{init_phase}] {init_message}", flush=True)
-            return
+        # Consultar qué archivos ya existen en Gemini
+        archivos_gemini = list(client.files.list())
+        archivos_activos = [
+            f for f in archivos_gemini
+            if f.display_name in nombres_locales and f.state.name == 'ACTIVE'
+        ]
+        nombres_activos = {f.display_name for f in archivos_activos}
 
-        if init_phase == 2:
-            if archivos_pendientes:
-                ruta = archivos_pendientes.pop(0)
-                nombre = os.path.basename(ruta)
-                init_message = f"Subiendo: {nombre} ({len(archivos_pendientes)} restantes)..."
-                print(f"[{init_phase}] {init_message}", flush=True)
-                
-                uploaded = client.files.upload(
-                    file=ruta,
-                    config={'display_name': nombre, 'mime_type': 'text/plain'}
-                )
-                
-                retries = 0
-                while uploaded.state.name == 'PROCESSING' and retries < 4:
-                    time.sleep(1)
-                    uploaded = client.files.get(name=uploaded.name)
-                    retries += 1
-                    
-                if uploaded.state.name != 'FAILED':
-                    archivos_subidos.append(uploaded)
-                    
-                if not archivos_pendientes:
-                    init_phase = 3 
-                return
-
-        if init_phase == 3:
-            if not archivos_subidos:
-                init_message = "Error: Ningún archivo pudo ser cargado."
-                init_phase = 4
-                return
-                
-            init_message = "Conectando Cerebro con la Biblioteca..."
-            print(f"[{init_phase}] {init_message}", flush=True)
-            config = types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                temperature=0.0
-            )
-            
-            # Filtrar por seguridad
-            partes_archivos = [types.Part.from_uri(file_uri=f.uri, mime_type=f.mime_type) for f in archivos_subidos if f.state.name != 'PROCESSING']
-            
-            history_inicial = [
-                types.Content(
-                    role="user",
-                    parts=partes_archivos + [types.Part.from_text(text="Estos son todos los documentos. Tenlos en cuenta para responder.")]
-                ),
-                types.Content(
-                    role="model",
-                    parts=[types.Part.from_text(text="Entendido. Listo para responder.")]
-                )
-            ]
-            chat = client.chats.create(model="gemini-3.5-flash", config=config, history=history_inicial)
-            
-            bot_ready = True
-            init_message = "Cerebro conectado exitosamente."
-            print(f"[OK] {init_message}", flush=True)
-            return
+        faltantes = nombres_locales - nombres_activos
+        if not faltantes:
+            # ¡Todos los archivos están listos en Gemini! Conectar el chat al instante.
+            print(f"[QUICK_INIT] Todos los {len(archivos_activos)} archivos encontrados en caché. Conectando...", flush=True)
+            crear_chat_con_archivos(archivos_activos)
+        else:
+            init_message = f"Faltan {len(faltantes)} archivo(s) por subir a Gemini."
+            print(f"[QUICK_INIT] Faltan {len(faltantes)} archivos: {faltantes}", flush=True)
 
     except Exception as e:
-        traceback.print_exc()
-        init_message = f"Error crítico: {e}"
-        init_phase = 4
+        init_message = f"Error en quick_init: {e}"
+        print(f"[QUICK_INIT] Error: {e}", flush=True)
 
+
+def step_upload():
+    """
+    Sube UN SOLO archivo faltante a Gemini por cada llamada.
+    Usa la API de Gemini como fuente de verdad (no variables globales).
+    Si ya no faltan archivos, crea el chat y marca bot_ready = True.
+    """
+    global init_message
+    try:
+        local_files = encontrar_archivos(CARPETA_BIBLIOTECA)
+        if not local_files:
+            init_message = "No hay archivos en archivos_maestros."
+            return
+
+        nombres_locales = {os.path.basename(r): r for r in local_files}
+
+        # Consultar estado actual en Gemini (fuente de verdad)
+        archivos_gemini = list(client.files.list())
+        nombres_en_gemini = {}
+        for f in archivos_gemini:
+            if f.display_name in nombres_locales:
+                if f.state.name == 'ACTIVE':
+                    nombres_en_gemini[f.display_name] = f
+                # Si está PROCESSING, lo dejamos, ya se activará solo
+            else:
+                # Limpiar archivos huérfanos
+                try:
+                    client.files.delete(name=f.name)
+                except:
+                    pass
+
+        # ¿Cuáles faltan?
+        faltantes = [name for name in nombres_locales if name not in nombres_en_gemini]
+
+        if not faltantes:
+            # ¡Todo listo! Crear el chat
+            archivos_activos = list(nombres_en_gemini.values())
+            init_message = "Conectando Cerebro..."
+            print(f"[STEP] Todos los archivos listos. Creando chat...", flush=True)
+            crear_chat_con_archivos(archivos_activos)
+            return
+
+        # Subir SOLO el primero de la lista de faltantes
+        nombre_a_subir = faltantes[0]
+        ruta = nombres_locales[nombre_a_subir]
+        restantes = len(faltantes) - 1
+        init_message = f"Subiendo: {nombre_a_subir} ({restantes} restantes)..."
+        print(f"[STEP] {init_message}", flush=True)
+
+        uploaded = client.files.upload(
+            file=ruta,
+            config={'display_name': nombre_a_subir, 'mime_type': 'text/plain'}
+        )
+
+        # Esperar brevemente a que se active (máx 5 segundos)
+        retries = 0
+        while uploaded.state.name == 'PROCESSING' and retries < 5:
+            time.sleep(1)
+            uploaded = client.files.get(name=uploaded.name)
+            retries += 1
+
+        if uploaded.state.name == 'ACTIVE':
+            print(f"[STEP] '{nombre_a_subir}' subido OK.", flush=True)
+        else:
+            print(f"[STEP] '{nombre_a_subir}' aún procesando (se verificará en la siguiente llamada).", flush=True)
+
+    except Exception as e:
+        init_message = f"Error subiendo archivo: {e}"
+        print(f"[STEP] Error: {e}", flush=True)
+
+
+# ====================================================================
+# INICIALIZACIÓN RÁPIDA AL ARRANCAR (Cold Start de Vercel)
+# Si los archivos ya están en Gemini, el bot estará listo en ~2 segundos.
+# ====================================================================
+quick_init()
+
+
+# ====================================================================
+# RUTAS DE LA APLICACIÓN FLASK
+# ====================================================================
 
 @app.route('/')
 def index():
@@ -184,10 +208,11 @@ def index():
 @app.route('/api/chat', methods=['POST'])
 def chat_endpoint():
     global chat, bot_ready
-    
+
     if not bot_ready:
-        advance_initialization_step()
-    
+        # Intentar quick_init por si ya están los archivos
+        quick_init()
+
     if not bot_ready or chat is None:
         return jsonify({'error': f'El bot aún se está configurando. Estado: {init_message}'}), 503
 
@@ -211,7 +236,7 @@ def chat_endpoint():
             header, encoded = image_base64.split(',', 1)
             mime_type = header.split(':')[1].split(';')[0]
             image_bytes = base64.b64decode(encoded)
-            
+
             image_part = types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
             content_list.append(image_part)
         except Exception as e:
@@ -228,9 +253,12 @@ def chat_endpoint():
 
 @app.route('/api/status', methods=['GET'])
 def status():
-    # Impulsa la carga un archivo a la vez impulsado por el PING del front-end
-    advance_initialization_step()
-    
+    global bot_ready
+
+    if not bot_ready:
+        # Avanzar un paso: subir 1 archivo o crear el chat
+        step_upload()
+
     return jsonify({
         'ready': bot_ready,
         'message': init_message,
